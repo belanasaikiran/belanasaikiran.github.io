@@ -1,6 +1,6 @@
 Hello there!
 
-Iam **saikiran**, Currently learning and Working on <u>Full Stack Development</u> & DevOps. Going to be an active contibutor to GIT soon(currenlty exploring).
+Iam **saikiran** working at LightSpeedAI Labs , Currently learning and Working on <u>Full Stack Development</u> & DevOps. Going to be an active contibutor to GIT soon(currenlty exploring).
 Beside programming, I love playing CS:GO.
 
 A bit more of myself:
