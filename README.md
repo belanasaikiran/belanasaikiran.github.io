@@ -7,7 +7,7 @@ A bit more of myself:
 
 - Always working on something cool.
 - Currently learning Full Stack Development and DevOps.
-- Fun fact: I sleep for four hours in every 12 hours.
+- #Fun fact: I sleep for four hours in every 12 hours.
 - I'm always open to have a chit-chat with you :)
 
 
