@@ -28,7 +28,7 @@ Technologies and Tools I use</b></br>
 
 </br>
 
-
+<a href="https://belanasaikiran.github.io/profile-parallax/" target="_blank" > Resume </a>
 
 
 
