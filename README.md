@@ -23,6 +23,11 @@ Technologies and Tools I use</b></br>
 <img height ="30px" width="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"/>
 <img height ="30px" width="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png"/>
 <img height ="30px" width="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/express/express.png"/>
+<img height ="30px" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png/>
+<img height ="30px" width="30px" src="https://lh3.googleusercontent.com/WgTVt2TUmCDrJuhBVQi84ynGogOcDzzAwKrR4IUxObCoNd-VAVeRph3gQtlUEgYq2yj9OgwtsGw0ylIwigC66jHmy1I0oxJ3GbNaS1criuH6-ohZ39dnwLOdhAzYuqaR1OX5ln7n"/>
+<img height ="30px" width="30px" src="https://w7.pngwing.com/pngs/431/965/png-transparent-figma-designer-computer-icons-material-design-design-rectangle-poster-logo.png"/>
+
+
 
 <img height ="30px" width="30px" src="https://img.icons8.com/color/48/000000/git.png"/>    <img height ="30px" width="30px" src="https://img.icons8.com/dusk/64/000000/docker.png"/> <img height ="30px" width="30px" src="images/arch.png"/><img height ="30px" width="30px" src="https://img.icons8.com/dusk/64/000000/visual-studio-code-2019.png"/>
  <img height ="30px" width="30px" src="images/arch.png"/><img height ="30px" width="30px" src="https://spng.pngfind.com/pngs/s/328-3288645_k8s-logo-hd-png-download.png"/>
