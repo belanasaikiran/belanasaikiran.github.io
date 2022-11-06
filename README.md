@@ -25,6 +25,8 @@ Technologies and Tools I use</b></br>
 <img height ="30px" width="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/express/express.png"/>
 
 <img height ="30px" width="30px" src="https://img.icons8.com/color/48/000000/git.png"/>    <img height ="30px" width="30px" src="https://img.icons8.com/dusk/64/000000/docker.png"/> <img height ="30px" width="30px" src="images/arch.png"/><img height ="30px" width="30px" src="https://img.icons8.com/dusk/64/000000/visual-studio-code-2019.png"/>
+ <img height ="30px" width="30px" src="images/arch.png"/><img height ="30px" width="30px" src="https://spng.pngfind.com/pngs/s/328-3288645_k8s-logo-hd-png-download.png"/>
+  <img height ="30px" width="30px" src="images/arch.png"/><img height ="30px" width="30px" src="https://banner2.cleanpng.com/20180515/zxe/kisspng-jenkins-docker-continuous-delivery-installation-so-5afa799e222331.1197773615263645741398.jpg"/>
 
 </br>
 
