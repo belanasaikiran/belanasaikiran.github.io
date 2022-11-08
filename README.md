@@ -35,13 +35,13 @@ Technologies and Tools I use</b></br>
 
 </br>
 
-<a href="https://belanasaikiran.github.io/profile-parallax/" target="_blank" > Resume </a>
+
 
 
 <img alt="Saikiran Belana Stats" src="https://github-readme-stats.vercel.app/api?username=belanasaikiran&show_icons=true&hide_border=true" />
 
 
-
+<a href="https://belanasaikiran.github.io/profile-parallax/" target="_blank" > Resume </a>
 
 <!---
 Saikiranbelana/Saikiranbelana is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
