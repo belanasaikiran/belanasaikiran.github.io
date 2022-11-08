@@ -15,7 +15,7 @@ A bit more of myself:
 You can also find me Here ↵
 
 <a href="https://www.linkedin.com/in/saikiran-belana-81004613a/"><img height="30px" width="30px" src="https://cdn.pixabay.com/photo/2017/08/22/11/56/linked-in-2668700__340.png"/></a>
-<a href="https://www.instagram.com/seizetheparallel/?hl=en"><img height="30px" width="30px" src="https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266__340.jpg"/></a>
+<a href="https://www.instagram.com/copycharming/?hl=en"><img height="30px" width="30px" src="https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266__340.jpg"/></a>
 </br>
 
 Technologies and Tools I use</b></br>
