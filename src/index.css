@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+  --brown: #463F1A;
+  --light: #eeebe0;
+
+}
+
+
+html{
+  border: 12px solid white;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #eeebe0;
+overflow-x: hidden;
+}
+
+
+
+::-webkit-scrollbar{
+  background-color: var(--light);
+  width: 7px;
+}
+
+
+
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--brown);
+  border-radius: 10px;
+}
+
+.bg{
+position: absolute;
+scale: 1.2;
+right: 0%;
+top: 34.42%;
+bottom: 51.03%;
+
+}
