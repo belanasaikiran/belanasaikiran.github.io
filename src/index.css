@@ -30,7 +30,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #eeebe0;
-overflow-x: hidden;
+/* overflow-x: hidden; */
 }
 
 
@@ -46,6 +46,7 @@ overflow-x: hidden;
 ::-webkit-scrollbar-thumb{
   background-color: var(--brown);
   border-radius: 10px;
+  
 }
 
 .bg{
@@ -55,4 +56,10 @@ right: 0%;
 top: 34.42%;
 bottom: 51.03%;
 
+}
+
+
+
+.light-bg{
+  background-color: var(--light);
 }

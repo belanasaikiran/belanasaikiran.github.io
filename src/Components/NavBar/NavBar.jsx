@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "../../assets/Images/sloth_profile.jpeg";
 
 import { Link } from "react-router-dom";
+import Resume from "../Resume/Resume";
+
+// import Modal from "./Modal";
 
 function NavBar() {
+  // const [showModal, setShowModal] = useState(false);
+
   return (
     <nav className=" flex justify-between  mt-8 text-md px-16">
       <Link to="/" className="text-orange-800 font-medium ">
@@ -21,6 +26,7 @@ function NavBar() {
         <Link
           className="px-4 hover:bg-[#463F1A] hover:text-white    hover:pt-2  transition-all duration-500 ease-in-out "
           to="/Resume"
+          // onClick={()=> setShowModal(true)}
         >
           Resume
         </Link>
@@ -36,7 +42,17 @@ function NavBar() {
         >
           Contact
         </Link>
-      </div>
+      </div>  
+
+
+      {/* {showModal ? (
+        <>
+          <Resume />
+        </>
+      ): null} */}
+
+
+      {/* <Modal /> */}
     </nav>
   );
 }

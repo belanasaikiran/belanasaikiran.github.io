@@ -6,3 +6,5 @@
 4. React PDF
 5. React Icons
 6. React-Router-Dom
+7. typewriter-effect
+8. react-fast-marquee

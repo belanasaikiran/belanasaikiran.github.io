@@ -5,16 +5,18 @@ import NavBar from "./Components/NavBar/NavBar";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Error404 from "./Components/Error404/Error404";
+import Resume from "./Components/Resume/Resume";
 
 function App() {
   return (
     <div className="">
       <BrowserRouter>
         <NavBar />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Error404 />} />
+          <Route path="/resume" element={<Resume />} />
+
         </Routes>
       </BrowserRouter>
     </div>
