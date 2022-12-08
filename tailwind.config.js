@@ -4,7 +4,15 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // Configure your color palette here
+        'brown': '#463F1A',
+        'customRed': '#9A3412',
+        'skin': '#EEEBE0'
+  
+        },
+    },
     screens: {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
@@ -22,5 +30,7 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }

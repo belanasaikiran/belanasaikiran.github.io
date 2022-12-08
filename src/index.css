@@ -18,9 +18,9 @@
 }
 
 
-html{
+/* html{
   border: 12px solid white;
-}
+} */
 
 body {
   margin: 0;
@@ -63,3 +63,4 @@ bottom: 51.03%;
 .light-bg{
   background-color: var(--light);
 }
+
