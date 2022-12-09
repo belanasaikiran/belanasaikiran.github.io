@@ -2,9 +2,18 @@ import ReactBlog from "../../assets/Images/Projects/ReactBlog.png"
 import ThreeJs from "../../assets/Images/Projects/ThreeJsCar.png"
 import TwitterSentimentalAnalysis from "../../assets/Images/Projects/TwitterSentimentalAnalysis.svg"
 import WebTerminal from "../../assets/Images/Projects/webTerminal.png"
-
+import LightSpeedPhotonics from "../../assets/Images/Projects/LightSpeedPhotonicsWebsite.png"
 
 export const ProjectList = [
+    {
+        Name: "LightSpeed Photonics Website",
+        Image: LightSpeedPhotonics,
+        Description: "Official Website for LightSpeed Photonics & LightSpeedAI Labs - Complete Web Development",
+        Link: "https://lightspeedphotonics.com/",
+        type: "Visit Site"
+
+    },
+
     {
         Name: "Web Terminal",
         Image: WebTerminal,

@@ -7,8 +7,8 @@ import Home from "./Components/Home/Home";
 import Error404 from "./Components/Error404/Error404";
 import Resume from "./Components/Resume/Resume";
 import Contact from "./Components/Contact/Contact";
-import Projects from "./Components/Projects/Projects";
 import Footer from "./Components/Footer/Footer";
+import Skills from "./Components/Skills/Skills";
 function App() {
   return (
     <div className="border-8 border-white min-h-screen " >
@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Error404 />} />
           <Route path="/resume" element={<Resume />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />

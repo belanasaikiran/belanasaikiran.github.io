@@ -75,7 +75,7 @@ function NavBar() {
         </Link>
         <Link
           className="px-4 hover:bg-[#463F1A] hover:text-white py-2 transition-all duration-500 ease-in-out"
-          to="/projects"
+          to="/skills"
           onClick={() => {
             setBgColor("#eeebe0");
             setColor("#000");
@@ -83,7 +83,7 @@ function NavBar() {
             ScrollToTop();
           }}
         >
-          Projects
+          Skills
         </Link>
         <Link
           className="px-4 hover:bg-[#463F1A] hover:text-white py-2 transition-all duration-500 ease-in-out"

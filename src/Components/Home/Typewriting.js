@@ -6,7 +6,7 @@ function Typewriting() {
     <div>
       <Typewriter
         options={{
-          strings: ["Full Stack Developer", "DevOps Engineer", "Cloud"],
+          strings: ["Full Stack Developer", "DevOps Engineer", "Cloud Systems Engineer"],
           autoStart: true,
           loop: true,
           deleteSpeed: 20,

@@ -64,3 +64,9 @@ bottom: 51.03%;
   background-color: var(--light);
 }
 
+.item {
+  grid-column: span 1;
+}
+.item:nth-last-child(2):nth-child(odd) {
+	grid-column: 1 / span 1;
+}

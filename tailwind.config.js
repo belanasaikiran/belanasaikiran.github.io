@@ -14,6 +14,8 @@ module.exports = {
         },
     },
     screens: {
+      xs: '320px',
+
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 
@@ -23,12 +25,14 @@ module.exports = {
       'lg': '1100px',
       // => @media (min-width: 1024px) { ... }
 
-      'xl': '1366px',
+      'xl': '1626px',
       // => @media (min-width: 1280px) { ... }
 
       '2xl': '1926px',
       // => @media (min-width: 1536px) { ... }
-    }
+    },
+
+    
   },
   plugins: [
     require('@tailwindcss/forms'),
