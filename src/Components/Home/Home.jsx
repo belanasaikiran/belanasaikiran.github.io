@@ -31,7 +31,7 @@ function Home() {
         {/* <div className="h-10 bg-brown"></div> */}
 
         {/* icons */}
-        <div className=" md:absolute bg-brown md:bg-transparent  z-20 text-white flex md:flex-row flex-col md:gap-0 gap-8  justify-between w-full px-20 text-2xl bottom-[96px] 2xl:px-60 lg:px-40 ">
+        <div className=" md:absolute bg-brown md:bg-transparent  z-20 text-white flex md:flex-row flex-col md:gap-0 gap-8  justify-between w-full px-20 text-2xl bottom-[98px] 2xl:px-60 lg:px-40 ">
           <div className="grid grid-cols-3 md:gap-8 gap-4 text-3xl place-content-center justify-items-center">
             {SocialMedia.map((Social) => (
               <a href={Social.Link} target="blank">
