@@ -1,10 +1,8 @@
 import React, { useState, useRef } from "react";
-import { GoMarkGithub } from "react-icons/go";
-import { ImLinkedin } from "react-icons/im";
-import { GrInstagram } from "react-icons/gr";
 import Image from "../../assets/Images/sloth_profile.jpeg";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
+import { SocialMedia } from "../SocialIcons/Social";
 
 function Contact() {
   const form = useRef();
@@ -34,40 +32,33 @@ function Contact() {
 
   return (
     <div className="min-h-screen text-center bg-[#463F1A] text-skin ">
-      <div className="grid grid-cols-2 content-center  py-32">
+      <div className="grid md:grid-cols-2 grid-cols-1 content-center  py-32">
         <div className="lg:pl-40">
           <div className="grid justify-items-center   ">
             <img src={Image} alt="slothy" className="rounded-full w-[300px] " />
           </div>
 
           <p className="text-3xl py-10"> Saikiran Belana</p>
-          <div className="flex gap-2 text-3xl justify-center">
-            <a href="https://github.com/belanasaikiran" target="blank">
-              <GoMarkGithub />
+          <div className="flex gap-4 text-3xl justify-center">
+          {SocialMedia.map((Social)=>(
+            <a href={Social.Link} target="blank">
+              {Social.Icon}
             </a>
-            <a
-              href="https://www.linkedin.com/in/saikiran-belana-81004613a/"
-              target="blank"
-            >
-              <ImLinkedin />
-            </a>
-            <a href="https://www.instagram.com/copycharming/" target="blank">
-              <GrInstagram />
-            </a>
+          ))}
           </div>
         </div>
 
-        <div>
+        <div className="lg:px-0 p-8">
           <h3 className=" text-3xl text-left font-semibold ">
             {" "}
-            <span className="underline underline-offset-8 decoration-orange-800 decoration-4  ">
+            <span className="underline underline-offset-[10px]  decoration-skin decoration-4  ">
               Send a{" "}
             </span>
             message{" "}
           </h3>
 
           <form
-            className="flex flex-col gap-4 py-10 w-[500px] text-xl text-brown"
+            className="flex flex-col gap-4 py-10 lg:w-[500px] text-xl text-brown"
             ref={form}
             onSubmit={sendEmail}
           >
@@ -94,7 +85,7 @@ function Contact() {
 
             <div className="text-right transition duration-500 ease-in-out ">
               <button
-                className=" p-2 bg-orange-800 text-white group inline-flex gap-2 transition duration-500  hover:bg-gray-800 "
+                className=" p-2 bg-cyan-600  text-white group inline-flex gap-2 transition duration-500  hover:bg-skin hover:text-brown "
                 type="submit"
               >
                 Send Message{" "}

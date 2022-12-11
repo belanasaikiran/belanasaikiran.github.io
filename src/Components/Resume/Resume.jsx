@@ -59,8 +59,8 @@ function Resume() {
   };
 
   return (
-    <div className="min-h-screen text-center 2xl:text-xl py-16 ">
-      <div className="flex justify-center gap-2 text-2xl text-orange-800 mb-10">
+    <div className="min-h-screen  text-center 2xl:text-xl py-16 ">
+      {/* <div className="flex justify-center gap-2 text-2xl text-orange-800 mb-10">
         <button onClick={prevPage} style={{ opacity: LeftArrowOpacity }}>
           <IoMdArrowDropleftCircle />{" "}
         </button>
@@ -71,7 +71,7 @@ function Resume() {
         <button onClick={nextPage} style={{ opacity: rightArrowOpacity }}>
           <IoMdArrowDroprightCircle />
         </button>
-      </div>
+      </div> */}
       <div className=" relative flex justify-center  ">
         {/* <button onClick={prevPage} className="text-6xl">
           <IoMdArrowDropleftCircle />{" "}

@@ -6,12 +6,12 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 function Projects() {
   return (
     <div
-      className="py-20 2xl:px-60 lg:px-40 
-    bg-gradient-to-b from-brown to-skin"
+      className="md:py-20 2xl:px-60 lg:px-40 
+    bg-gradient-to-b from-brown via-brown to-skin"
     >
-      <div className="flex h-48text-skin   ">
-        <img src={Hammer} alt="build" className="h-[150px] " />
-        <h1 className="2xl:text-8xl lg:text-7xl ml-8 gradient-text  ">
+      <div className="flex flex-row h-48 text-skin md:justify-start justify-center  items-center ">
+        <img src={Hammer} alt="build" className="md:h-[150px] h-[56px] " />
+        <h1 className="2xl:text-8xl lg:text-7xl text-4xl md:ml-8 ml-6 gradient-text  ">
           Some Projects <br /> I've Built
         </h1>
       </div>

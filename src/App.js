@@ -11,7 +11,7 @@ import Footer from "./Components/Footer/Footer";
 import Skills from "./Components/Skills/Skills";
 function App() {
   return (
-    <div className="border-8 border-white min-h-screen " >
+    <div className="md:border-8 border-white min-h-screen " >
       <BrowserRouter>
         <NavBar   />
         <Routes>

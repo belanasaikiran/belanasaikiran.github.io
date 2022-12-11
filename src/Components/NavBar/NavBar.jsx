@@ -1,19 +1,35 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import Image from "../../assets/Images/sloth_profile.jpeg";
 // import { useLocation } from "react-router-dom";
-
 import { Link } from "react-router-dom";
+import menu from "../../assets/Images/menu.svg";
+import close from "../../assets/Images/close.svg";
+
+const navLinks = [
+  {
+    name: "Resume",
+    link: "/resume",
+  },
+  {
+    name: "skills",
+    link: "/skills",
+  },
+  {
+    name: "Contact",
+    link: "/contact",
+  },
+];
 
 function NavBar() {
+  const [nav, setNav] = useState(false);
+
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
   const [bgColor, setBgColor] = useState("#eeebe0");
   const [color, setColor] = useState("#000");
   const [mainColor, setMainColor] = useState("#9A3412");
-
-  // const location = useLocation();
-  // // Scroll to top if path changes
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, [location.pathname]);
 
   const changeNavColorScroll = () => {
     if (window.scrollY > 80) {
@@ -21,12 +37,12 @@ function NavBar() {
       setColor("#000");
       setMainColor("#9A3412");
     } else {
-      setBgColor("");
+      setBgColor("#eeebe0");
     }
   };
 
+  // scroll to Top
   window.addEventListener("scroll", changeNavColorScroll);
-
   const ScrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -35,33 +51,77 @@ function NavBar() {
   };
 
   return (
-    <nav
-      className=" flex justify-between  py-4 text-md px-16 sticky top-0 z-[1] backdrop-blur-sm backdrop-opacity-80 transition-all duration-500    "
-      style={{ background: bgColor, color: color }}
+    <div
+      className={`backdrop-opacity-80 transition-all duration-700 ease-in-out  py-4 text-md lg:px-16 px-4 sm:gap-4 sticky top-0 z-[1] z-30 backdrop-blur-sm bg-white md:bg-[${bgColor}] md:text-[${color}]
+      ${nav ? "h-64" : "h-20"}
+      `}
     >
-      <Link
-        to="/"
-        className="text-orange-800 font-medium "
-        style={{ color: mainColor }}
-        onClick={() => {
-          setBgColor("#eeebe0");
-          setColor("#000");
-          setMainColor("#9A3412");
-          ScrollToTop();
-        }}
-      >
-        <div className="flex justify-items-center items-center">
-          <img
-            src={Image}
-            alt="nav head"
-            className="w-[42px] rounded-full mr-4"
-          />
-          <span>Saikiran Belana</span>
-        </div>
-      </Link>
-
-      <div className="flex justify-self-center content-between justify-center items-center  ">
+      <nav className="flex justify-between ">
         <Link
+          to="/"
+          className="text-orange-800 font-medium "
+          style={{ color: mainColor }}
+          onClick={() => {
+            setBgColor("#eeebe0");
+            setColor("#000");
+            setMainColor("#9A3412");
+            ScrollToTop();
+            setNav(false);
+          }}
+        >
+          <div className="flex justify-items-center items-center">
+            <img
+              src={Image}
+              alt="nav head"
+              className="w-[42px] rounded-full mr-4 transition-all duration-700 "
+            />
+            <span className="hidden sm:block">Saikiran Belana</span>
+          </div>
+        </Link>
+
+        <div className="lg:flex hidden justify-self-center content-between justify-center items-center  ">
+          {navLinks.map((navLink) => (
+            <Link
+              className="px-4 hover:bg-[#463F1A] hover:text-white py-2 transition duration-700 ease-in-out "
+              to={navLink.link}
+              onClick={() => {
+                ScrollToTop();
+                setNav(false);
+              }}
+            >
+              {navLink.name}
+            </Link>
+          ))}
+        </div>
+
+        <img
+          src={nav ? close : menu}
+          alt="menu"
+          className="bg-brown p-2 w-[42px] h-[42px] lg:hidden "
+          onClick={handleNav}
+        />
+      </nav>
+
+      {nav ? (
+        <div className="flex  flex-col py-8 text-xl ">
+          {navLinks.map((navLink) => (
+            <Link
+              className="px-4 py-2  "
+              to={navLink.link}
+              onClick={() => {
+                ScrollToTop();
+                setNav(false);
+              }}
+            >
+              {navLink.name}
+            </Link>
+          ))}
+        </div>
+      ) : (
+        <></>
+      )}
+
+      {/* <Link
           className="px-4 hover:bg-[#463F1A] hover:text-white py-2 transition duration-700 ease-in-out "
           to="/Resume"
           onClick={() => {
@@ -96,9 +156,8 @@ function NavBar() {
           }}
         >
           Contact
-        </Link>
-      </div>
-    </nav>
+        </Link> */}
+    </div>
   );
 }
 
