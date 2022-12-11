@@ -25,7 +25,7 @@ function Home() {
         <img
           src={SkyLine}
           alt="Skyline"
-          className="  w-screen  pt-8   scale-x-[-1] md:scale-110   overflow-hidden  place-self-end "
+          className="  w-screen  pt-8   scale-x-[-1] scale-110   overflow-hidden  place-self-end "
         />
 
         {/* icons */}
