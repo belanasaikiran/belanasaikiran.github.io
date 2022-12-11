@@ -41,8 +41,10 @@ Technologies and Tools I use</b></br>
 <img alt="Saikiran Belana Stats" src="https://github-readme-stats.vercel.app/api?username=belanasaikiran&show_icons=true&hide_border=true" />
 
 
-<a href="https://belanasaikiran.github.io/profile-parallax/" target="_blank" > Old Resume </a>
-<a href="" target="_blank" > New Resume(Inprogress) </a>
+
+<a href="https://belanasaikiran.github.io/" target="blank" > Resume - 2022 </a> 
+
+<a href="https://belanasaikiran.github.io/profile-parallax/" target="blank" > Resume - 2021 (old) </a>
 
 <!---
 Saikiranbelana/Saikiranbelana is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
