@@ -8,3 +8,9 @@
 6. React-Router-Dom
 7. typewriter-effect
 8. react-fast-marquee
+
+
+# ToDo
+1. Certifications in Skills
+2. 
+

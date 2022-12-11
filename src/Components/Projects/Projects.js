@@ -5,31 +5,36 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 function Projects() {
   return (
-    <div className="py-20 2xl:px-60 lg:px-40  bg-brown text-skin">
-      <div className="flex h-48 justify-between  text-skin">
-        <h1 className="2xl:text-8xl lg:text-7xl ">
+    <div
+      className="py-20 2xl:px-60 lg:px-40 
+    bg-gradient-to-b from-brown to-skin"
+    >
+      <div className="flex h-48text-skin   ">
+        <img src={Hammer} alt="build" className="h-[150px] " />
+        <h1 className="2xl:text-8xl lg:text-7xl ml-8 gradient-text  ">
           Some Projects <br /> I've Built
         </h1>
-        <img src={Hammer} alt="build" />
       </div>
 
-      <div className="flex flex-wrap justify-center items-stretch  gap-4 w-full  pt-32">
+      <div className="flex flex-wrap justify-center items-stretch   gap-4 w-full  2xl:pt-24 pt-8 lg:px-30">
         {ProjectList.map((Project, index) => (
           <div
             key={index}
-            className="grid content-around item bg-skin text-brown p-2 group lg:w-1/4 md:w-1/3 w-1/2"
+            className="grid content-around justify-center item bg-skin text-brown p-3 group xl:w-auto group  "
           >
-            <div className="relative overflow-hidden">
+            <div className=" overflow-hidden">
               <img
                 src={Project.Image}
                 alt="images"
                 key={index}
-                className="hover:scale-100 scale-110 2xl:h-[400px] xl:h-[285px] lg:h-[250px] h-[200px] w-full  transition-all duration-700"
+                className="group-hover:scale-100 object-cover scale-110 h-[275px] w-[350px]   transition-all duration-700"
               />
             </div>
 
-            <h3 className="text-3xl mt-4 font-semibold ">{Project.Name}</h3>
-            <p className="font-normal mt-2 text-gray-900">
+            <h3 className="text-3xl mt-4 font-semibold max-w-[350px] ">
+              {Project.Name}
+            </h3>
+            <p className="font-normal mt-2 text-gray-900 max-w-[350px] ">
               {Project.Description}
             </p>
 

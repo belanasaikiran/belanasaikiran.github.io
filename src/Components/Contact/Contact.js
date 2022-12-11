@@ -32,10 +32,6 @@ function Contact() {
       );
   };
 
-
-
-
-
   return (
     <div className="min-h-screen text-center bg-[#463F1A] text-skin ">
       <div className="grid grid-cols-2 content-center  py-32">
@@ -46,9 +42,18 @@ function Contact() {
 
           <p className="text-3xl py-10"> Saikiran Belana</p>
           <div className="flex gap-2 text-3xl justify-center">
-            <GoMarkGithub />
-            <ImLinkedin />
-            <GrInstagram />
+            <a href="https://github.com/belanasaikiran" target="blank">
+              <GoMarkGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/saikiran-belana-81004613a/"
+              target="blank"
+            >
+              <ImLinkedin />
+            </a>
+            <a href="https://www.instagram.com/copycharming/" target="blank">
+              <GrInstagram />
+            </a>
           </div>
         </div>
 
@@ -87,13 +92,13 @@ function Contact() {
 
             <p className="text-skin text-left">{Response}</p>
 
-            <div className="text-right transition duration-300 ease-in-out ">
+            <div className="text-right transition duration-500 ease-in-out ">
               <button
-                className=" p-2 bg-orange-800 text-white group inline-flex transition hover:duration-300  hover:bg-gray-800 "
+                className=" p-2 bg-orange-800 text-white group inline-flex gap-2 transition duration-500  hover:bg-gray-800 "
                 type="submit"
               >
                 Send Message{" "}
-                <AiOutlineArrowRight className="mt-1 hidden group-hover:block group-hover:pl-2 transition group-hover:duration-500 ease-in-out " />{" "}
+                <AiOutlineArrowRight className="mt-1  transition duration-500 ease-in-out " />{" "}
               </button>
             </div>
           </form>
