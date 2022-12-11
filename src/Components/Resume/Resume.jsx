@@ -89,7 +89,7 @@ function Resume() {
           <Page
             pageNumber={page}
             scale={width > 786 ? 1.7 : 0.6}
-            className="transition-all duration-1000 ease-in-out"
+            className="transition-all duration-1000 ease-in-out w-full"
           />
         </Document>
         {/* <button onClick={nextPage} className="text-6xl">

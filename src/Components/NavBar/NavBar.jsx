@@ -54,7 +54,7 @@ function NavBar() {
   return (
     <div
       className={`backdrop-opacity-80 transition-all duration-700 ease-in-out  py-4 text-md lg:px-16 px-4 sm:gap-4 sticky top-0  z-30 backdrop-blur-sm bg-white lg:bg-skin md:bg-[${bgColor}] md:text-[${color}]
-      ${nav ? "h-64" : "h-20"}
+      ${nav ? "h-64" : "h-20"} ${window.scrollY > 80 ? 'drop-shadow-md    ': ''}
       `}
     >
       <nav className="flex justify-between ">
