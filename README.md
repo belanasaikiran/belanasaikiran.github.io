@@ -42,9 +42,9 @@ Technologies and Tools I use</b></br>
 
 
 
-<a href="https://belanasaikiran.github.io/" target="_blank" > Resume - 2022 </a> 
+<a href="https://belanasaikiran.github.io/" target="blank" > Resume - 2022 </a> 
 
-<a href="https://belanasaikiran.github.io/profile-parallax/" target="_blank" > Resume - 2021 (old) </a>
+<a href="https://belanasaikiran.github.io/profile-parallax/" target="blank" > Resume - 2021 (old) </a>
 
 <!---
 Saikiranbelana/Saikiranbelana is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
