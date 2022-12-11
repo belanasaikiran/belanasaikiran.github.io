@@ -7,10 +7,7 @@
 5. React Icons
 6. React-Router-Dom
 7. typewriter-effect
-8. react-fast-marquee
+8. react-fast-marquee (❌ - maybe in next version)
 
 
-# ToDo
-1. Certifications in Skills
-2. 
 
