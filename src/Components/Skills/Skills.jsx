@@ -11,7 +11,7 @@ function Skills() {
         <div className="light-bg lg:mx-60  relative ">
     
 
-          <div className="flex flex-wrap justify-center text-gray-800 lg:py-24 py-8 text-xl gap-4  ">
+          <div className="flex flex-wrap justify-center text-gray-800 lg:pb-8 py-8 text-xl gap-4  ">
             {AllSkills.map((Skills, index) => (
               <div
                 className="grid grid-cols-1 justify-items-center gap-8 bg-amber-50 p-4  group place-content-center hover:bg-[#463F1A] hover:text-white  transition duration-1000 xl:w-auto lg:w-1/7 "

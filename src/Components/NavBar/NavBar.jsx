@@ -11,7 +11,7 @@ const navLinks = [
     link: "/resume",
   },
   {
-    name: "skills",
+    name: "Skills",
     link: "/skills",
   },
   {
@@ -44,6 +44,7 @@ function NavBar() {
   // scroll to Top
   window.addEventListener("scroll", changeNavColorScroll);
   const ScrollToTop = () => {
+    setBgColor("#eeebe0");
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -52,7 +53,7 @@ function NavBar() {
 
   return (
     <div
-      className={`backdrop-opacity-80 transition-all duration-700 ease-in-out  py-4 text-md lg:px-16 px-4 sm:gap-4 sticky top-0 z-[1] z-30 backdrop-blur-sm bg-white md:bg-[${bgColor}] md:text-[${color}]
+      className={`backdrop-opacity-80 transition-all duration-700 ease-in-out  py-4 text-md lg:px-16 px-4 sm:gap-4 sticky top-0  z-30 backdrop-blur-sm bg-white lg:bg-skin md:bg-[${bgColor}] md:text-[${color}]
       ${nav ? "h-64" : "h-20"}
       `}
     >
