@@ -81,10 +81,11 @@ function NavBar() {
         </Link>
 
         <div className="lg:flex hidden justify-self-center content-between justify-center items-center  ">
-          {navLinks.map((navLink) => (
+          {navLinks.map((navLink, index) => (
             <Link
               className="px-4 hover:bg-[#463F1A] hover:text-white py-2 transition duration-700 ease-in-out "
               to={navLink.link}
+              key={index}
               onClick={() => {
                 ScrollToTop();
                 setNav(false);
@@ -105,10 +106,12 @@ function NavBar() {
 
       {nav ? (
         <div className="flex  flex-col py-8 text-xl ">
-          {navLinks.map((navLink) => (
+          {navLinks.map((navLink, index) => (
             <Link
               className="px-4 py-2  "
               to={navLink.link}
+              key={index}
+
               onClick={() => {
                 ScrollToTop();
                 setNav(false);
