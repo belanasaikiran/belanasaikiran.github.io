@@ -3,6 +3,7 @@ import ThreeJs from "../../assets/Images/Projects/ThreeJsCar.png"
 import TwitterSentimentalAnalysis from "../../assets/Images/Projects/TwitterSentimentalAnalysis.svg"
 import WebTerminal from "../../assets/Images/Projects/webTerminal.png"
 import LightSpeedPhotonics from "../../assets/Images/Projects/LightSpeedPhotonicsWebsite.png"
+import HangMan from "../../assets/Images/Projects/hangman-django-ui.png"
 
 export const ProjectList = [
     {
@@ -18,6 +19,14 @@ export const ProjectList = [
         Image: WebTerminal,
         Description: "Web Terminal Using xTerm, SSH2 & Socket.io built on NodeJs - BackEnd & ReactJs - FrontEnd",
         Link: "https://github.com/belanasaikiran/Web-Terminal",
+        type: "GitHub"
+    },
+
+    {
+        Name: "HangMan",
+        Image: HangMan,
+        Description: "HangMan Game built on Django Framework - Python",
+        Link: "https://github.com/belanasaikiran/hangman-django",
         type: "GitHub"
     },
     {
