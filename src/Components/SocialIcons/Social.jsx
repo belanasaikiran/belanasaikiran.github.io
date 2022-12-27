@@ -11,7 +11,7 @@ export const SocialMedia = [
     },
     {
         Name: "LinkedIn",
-        Link: "https://www.linkedin.com/in/saikiran-belana-81004613a/",
+        Link: "https://www.linkedin.com/in/belanasaikiran/",
         Icon: <ImLinkedin />
     },
     {

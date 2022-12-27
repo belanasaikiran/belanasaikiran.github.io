@@ -83,7 +83,7 @@ function NavBar() {
         <div className="lg:flex hidden justify-self-center content-between justify-center items-center  ">
           {navLinks.map((navLink, index) => (
             <Link
-              className="px-4 hover:bg-[#463F1A] hover:text-white py-2 transition duration-700 ease-in-out "
+              className="px-4 hover:bg-[#463F1A] hover:text-white py-2  "
               to={navLink.link}
               key={index}
               onClick={() => {
@@ -99,13 +99,13 @@ function NavBar() {
         <img
           src={nav ? close : menu}
           alt="menu"
-          className="bg-brown p-2 w-[42px] h-[42px] lg:hidden "
+          className="bg-brown p-2 w-[42px] h-[42px] lg:hidden hover:pointer "
           onClick={handleNav}
         />
       </nav>
 
       {nav ? (
-        <div className="flex  flex-col py-8 text-xl ">
+        <div className="flex  flex-col py-8 text-xl delay-300 ">
           {navLinks.map((navLink, index) => (
             <Link
               className="px-4 py-2  "
@@ -125,42 +125,7 @@ function NavBar() {
         <></>
       )}
 
-      {/* <Link
-          className="px-4 hover:bg-[#463F1A] hover:text-white py-2 transition duration-700 ease-in-out "
-          to="/Resume"
-          onClick={() => {
-            setBgColor("#eeebe0");
-            setColor("#000");
-            setMainColor("#9A3412");
-            ScrollToTop();
-          }}
-        >
-          Resume
-        </Link>
-        <Link
-          className="px-4 hover:bg-[#463F1A] hover:text-white py-2 transition-all duration-500 ease-in-out"
-          to="/skills"
-          onClick={() => {
-            setBgColor("#eeebe0");
-            setColor("#000");
-            setMainColor("#9A3412");
-            ScrollToTop();
-          }}
-        >
-          Skills
-        </Link>
-        <Link
-          className="px-4 hover:bg-[#463F1A] hover:text-white py-2 transition-all duration-500 ease-in-out"
-          to="/contact"
-          onClick={() => {
-            setBgColor("#463F1A");
-            setColor("#FFF");
-            setMainColor("#FFF");
-            ScrollToTop();
-          }}
-        >
-          Contact
-        </Link> */}
+
     </div>
   );
 }
