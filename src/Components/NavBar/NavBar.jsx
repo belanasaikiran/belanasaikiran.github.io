@@ -7,8 +7,8 @@ import close from "../../assets/Images/close.svg";
 
 const navLinks = [
   {
-    name: "Resume",
-    link: "/resume",
+    name: "CV",
+    link: "/cv",
   },
   {
     name: "Skills",
