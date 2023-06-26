@@ -38,8 +38,9 @@ Technologies and Tools I use</b></br>
 
 
 
+<!---
 <img alt="Saikiran Belana Stats" src="https://github-readme-stats.vercel.app/api?username=belanasaikiran&show_icons=true&hide_border=true" />
-
+--->
 
 
 <a href="https://belanasaikiran.github.io/profile-2021/" target="blank" > Resume - 2022 </a> 
