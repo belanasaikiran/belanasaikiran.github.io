@@ -17,6 +17,12 @@ import Bash from "../../assets/Images/Skills/pngegg.png"
 import AWS from "../../assets/Images/Skills/icons8-amazon-web-services.svg"
 import Azure from "../../assets/Images/Skills/icons8-azure.svg"
 import GitHub from "../../assets/Images/Skills/icons8-github.svg"
+import OpenCL from "../../assets/Images/Skills/OpenCL.png"
+import Slurm from "../../assets/Images/Skills/Slurm.png"
+import Illustrator from "../../assets/Images/Skills/Illustrator.png"
+import Figma from "../../assets/Images/Skills/Figma.png"
+
+
 
 
 export const AllSkills = [
@@ -45,6 +51,14 @@ export const AllSkills = [
   {
     skillName: "TailwindCSS",
     Icon: TailWindCSS,
+  },
+  {
+    skillName: "Figma",
+    Icon: Figma,
+  },
+  {
+    skillName: "Adobe Illustrator",
+    Icon: Illustrator,
   },
 
   {
@@ -83,7 +97,14 @@ export const AllSkills = [
     skillName: "GitHub",
     Icon: GitHub,
   },
-
+  {
+    skillName: "OpenCL",
+    Icon: OpenCL,
+  },
+  {
+    skillName: "Slurm",
+    Icon: Slurm,
+  },
 ]
 
 
@@ -156,11 +177,22 @@ export const CloudDevOpsSkills = [
     skillName: "GitHub",
     Icon: GitHub,
   },
+  {
+    skillName: "OpenCL",
+    Icon: OpenCL,
+  },
 ];
 
 
 
 export const Certificates = [
+  {
+    Course: "The Complete Web Development BootCamp - Angela Yu ",
+    DateOfCompletion: "March 2023",
+    CredentialID: " UC-b5330826-5ac1-4a14-ab24-1c5fa4c12bc7",
+    VerifyLink: "https://www.udemy.com/certificate/UC-b5330826-5ac1-4a14-ab24-1c5fa4c12bc7/"
+  },
+
   {
     Course: "Docker Mastery: with Kubernetes + Swarm from a Docker Captain - Udemy ",
     DateOfCompletion: "Jan 2022",

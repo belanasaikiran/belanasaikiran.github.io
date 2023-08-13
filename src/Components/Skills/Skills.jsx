@@ -9,8 +9,6 @@ function Skills() {
         <h1 className="text-4xl ">Technical Skills</h1>
 
         <div className="light-bg lg:mx-60  relative ">
-    
-
           <div className="flex flex-wrap justify-center text-gray-800 lg:pb-8 py-8 text-xl gap-4  ">
             {AllSkills.map((Skills, index) => (
               <div
@@ -20,9 +18,9 @@ function Skills() {
                 <img
                   src={Skills.Icon}
                   alt={Skills.skillName}
-                  className=" object-cover group-hover:overflow-hidden  transition duration-1000 w-[100px] h-[100px]"
+                  className=" object-cover group-hover:overflow-hidden  transition duration-1000 w-[110px] h-[110px]"
                 />
-                <p className="transition duration-500 ease-linear group-hover:text-xl ">
+                <p className="transition duration-500 ease-linear group-hover:text-xl w-[100px]">
                   {Skills.skillName}
                 </p>
               </div>
