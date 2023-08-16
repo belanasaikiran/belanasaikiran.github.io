@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.57c6de64.css",
-    "main.js": "/static/js/main.149c1d40.js",
+    "main.css": "/static/css/main.6471ffc9.css",
+    "main.js": "/static/js/main.39df8542.js",
     "static/media/LightSpeedPhotonicsWebsite.png": "/static/media/LightSpeedPhotonicsWebsite.dfbdb1535bb3c3889673.png",
     "static/media/ReactBlog.png": "/static/media/ReactBlog.091201008c45f730b6e3.png",
     "static/media/hangman-django-ui.png": "/static/media/hangman-django-ui.0a7b38989f0e9a15af33.png",
@@ -30,15 +30,15 @@
     "static/media/Hammer.svg": "/static/media/Hammer.0d3267eb911d89d2376e7f52534f8f88.svg",
     "static/media/icons8-react-native.svg": "/static/media/icons8-react-native.9235e8f8e2b73d394801330aba87511f.svg",
     "static/media/menu.svg": "/static/media/menu.773d1f3d335d2a46203de2be7f4f4e19.svg",
-    "static/media/icons8-mongodb.svg": "/static/media/icons8-mongodb.ec5b2fbd7dbe9cce6b93be1b3ad2ea6c.svg",
     "index.html": "/index.html",
+    "static/media/icons8-mongodb.svg": "/static/media/icons8-mongodb.ec5b2fbd7dbe9cce6b93be1b3ad2ea6c.svg",
     "static/media/icons8-tailwind-css.svg": "/static/media/icons8-tailwind-css.7e8713d3522b34c4bf6b59dbc9c353b8.svg",
     "static/media/icons8-material-ui.svg": "/static/media/icons8-material-ui.8c7f838ab9442b7a7828ef9c28f50934.svg",
-    "main.57c6de64.css.map": "/static/css/main.57c6de64.css.map",
-    "main.149c1d40.js.map": "/static/js/main.149c1d40.js.map"
+    "main.6471ffc9.css.map": "/static/css/main.6471ffc9.css.map",
+    "main.39df8542.js.map": "/static/js/main.39df8542.js.map"
   },
   "entrypoints": [
-    "static/css/main.57c6de64.css",
-    "static/js/main.149c1d40.js"
+    "static/css/main.6471ffc9.css",
+    "static/js/main.39df8542.js"
   ]
 }
