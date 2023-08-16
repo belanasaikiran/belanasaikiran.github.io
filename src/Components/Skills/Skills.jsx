@@ -8,7 +8,7 @@ function Skills() {
       <div className="bg-skin text-brown text-center pt-8 ">
         <h1 className="text-4xl ">Technical Skills</h1>
 
-        <div className="light-bg lg:mx-60  relative ">
+        <div className="light-bg lg:mx-20 xl:mx-40 2xl:mx-60  relative ">
           <div className="flex flex-wrap justify-center text-gray-800 lg:pb-8 py-8 text-xl gap-4  ">
             {AllSkills.map((Skills, index) => (
               <div
