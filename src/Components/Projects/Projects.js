@@ -6,17 +6,17 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 function Projects() {
   return (
     <div
-      className="md:py-20 2xl:px-60 lg:px-40 
-    bg-gradient-to-b from-brown via-brown to-skin"
+      className="md:py-20 2xl:px-60 xl:px-40 lg:px-20
+    bg-gradient-to-b from-brown via-[#6b612f]  to-skin"
     >
       <div className="flex flex-row h-48 text-skin md:justify-start justify-center  items-center ">
-        <img src={Hammer} alt="build" className="md:h-[150px] h-[56px] " />
+        <img src={Hammer} alt="build" className="lg:h-[150px] h-[56px] " />
         <h1 className="2xl:text-8xl lg:text-7xl text-4xl md:ml-8 ml-6 gradient-text  ">
           Some Projects <br /> I've Built
         </h1>
       </div>
 
-      <div className="flex flex-wrap justify-center items-stretch   gap-4 w-full  2xl:pt-24 pt-8 lg:px-30">
+      <div className="flex flex-wrap justify-center items-stretch gap-4 w-full  2xl:pt-24 pt-8 lg:px-30">
         {ProjectList.map((Project, index) => (
           <div
             key={index}
@@ -27,14 +27,14 @@ function Projects() {
                 src={Project.Image}
                 alt="images"
                 key={index}
-                className="group-hover:scale-100 object-cover scale-110 h-[275px] w-[350px]   transition-all duration-700"
+                className="group-hover:scale-100 object-cover scale-110 xl:h-[275px] xl:w-[350px] h-[200px] w-[300px]  transition-all duration-700"
               />
             </div>
 
-            <h3 className="text-3xl mt-4 font-semibold max-w-[350px] ">
+            <h3 className="text-3xl mt-4 font-semibold xl:max-w-[350px] max-w-[300px]">
               {Project.Name}
             </h3>
-            <p className="font-normal mt-2 text-gray-900 max-w-[350px] ">
+            <p className="font-normal mt-2 text-gray-900 xl:max-w-[350px] max-w-[300px]">
               {Project.Description}
             </p>
 

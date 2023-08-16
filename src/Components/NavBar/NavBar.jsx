@@ -53,7 +53,7 @@ function NavBar() {
 
   return (
     <div
-      className={`backdrop-opacity-80 transition-all duration-700 ease-in-out  py-4 text-md lg:px-16 px-4 sm:gap-4 sticky top-0  z-30 backdrop-blur-sm bg-white lg:bg-skin md:bg-[${bgColor}] md:text-[${color}]
+      className={`backdrop-opacity-80 transition-all duration-700 ease-in-out  py-4 text-md lg:px-16 px-4 sm:gap-4 sticky top-0  z-30  bg-white lg:bg-skin md:bg-[${bgColor}] md:text-[${color}]
       ${nav ? "h-64" : "h-20"} ${window.scrollY > 80 ? 'drop-shadow-md    ': ''}
       `}
     >
@@ -105,7 +105,7 @@ function NavBar() {
       </nav>
 
       {nav ? (
-        <div className="flex  flex-col py-8 text-xl delay-300 ">
+        <div className="flex lg:hidden  flex-col py-8 text-xl delay-300 ">
           {navLinks.map((navLink, index) => (
             <Link
               className="px-4 py-2  "
