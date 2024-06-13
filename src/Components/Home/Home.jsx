@@ -35,14 +35,17 @@ function Home() {
                 <Typewriting />
               </div>
               <ParallaxBannerLayer speed={-8}>
-                <div className=" md:absolute bg-brown md:bg-transparent  z-20 text-white flex md:flex-row flex-col md:gap-0 gap-8  justify-between w-full px-20 text-2xl lg:bottom-48 2xl:px-60 lg:px-40 ">
+                <div className=" md:absolute bg-brown md:bg-transparent  z-20 text-white flex md:flex-row flex-col md:gap-0 gap-8  justify-between w-full px-20 text-2xl lg:bottom-32 2xl:px-60 lg:px-40 ">
+                  <div className="flex items-center gap-8">
                   <div className="grid grid-cols-3 md:gap-8 gap-4 text-3xl place-content-center justify-items-center">
                     {SocialMedia.map((Social, index) => (
                       <a href={Social.Link} target="blank" key={index}>
                         {Social.Icon}
                       </a>
                     ))}
-                  </div>
+            </div>
+            </div>
+
 
                   <div className="group md:border-4 text-center lg:bg-brown">
                     <a
@@ -94,6 +97,7 @@ function Home() {
                 </a>
               ))}
             </div>
+
 
             <div className="group md:border-4 text-center">
               <a

@@ -12,15 +12,15 @@ function Skills() {
           <div className="flex flex-wrap justify-center text-gray-800 lg:pb-8 py-8 text-xl gap-4  ">
             {AllSkills.map((Skills, index) => (
               <div
-                className="grid grid-cols-1 justify-items-center gap-8 bg-amber-50 p-4  group place-content-center hover:bg-[#463F1A] hover:text-white  transition duration-1000 xl:w-auto lg:w-1/7 "
+                className="grid grid-cols-1 justify-items-center  gap-8 bg-amber-50 p-4  group place-content-center hover:bg-[#463F1A] hover:text-white  transition duration-100 xl:w-auto lg:w-1/7 "
                 key={index}
               >
                 <img
                   src={Skills.Icon}
                   alt={Skills.skillName}
-                  className=" object-cover group-hover:overflow-hidden  transition duration-1000 w-[110px] h-[110px]"
+                  className=" object-contain group-hover:hidden  transition duration-100 w-[125px] h-[125px]"
                 />
-                <p className="transition duration-500 ease-linear group-hover:text-xl w-[100px]">
+                <p className="hidden group-hover:block  ease-linear group-hover:text-xl w-[125px] h-[125px] pt-[35%]">
                   {Skills.skillName}
                 </p>
               </div>

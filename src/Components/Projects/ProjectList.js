@@ -4,6 +4,7 @@ import TwitterSentimentalAnalysis from "../../assets/Images/Projects/TwitterSent
 import WebTerminal from "../../assets/Images/Projects/webTerminal.png"
 import LightSpeedPhotonics from "../../assets/Images/Projects/LightSpeedPhotonicsWebsite.png"
 import HangMan from "../../assets/Images/Projects/hangman-django-ui.png"
+import PCConnect from "../../assets/Images/Projects/PCConnect.png"
 
 export const ProjectList = [
     {
@@ -12,6 +13,14 @@ export const ProjectList = [
         Description: "Official Website for LightSpeed Photonics & LightSpeedAI Labs - Complete Web Development",
         Link: "https://lightspeedphotonics.com/",
         type: "Visit Site"
+    },
+
+    {
+        Name: "PC Link",
+        Image: PCConnect,
+        Description: "A cross-platform application to Sync your Mobile with PC - Flutter",
+        Link: "https://github.com/belanasaikiran/PC-Link",
+        type: "GitHub"
     },
 
     {

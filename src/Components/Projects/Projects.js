@@ -7,7 +7,7 @@ function Projects() {
   return (
     <div
       className="md:py-20 2xl:px-60 xl:px-40 lg:px-20
-    bg-gradient-to-b from-brown via-[#6b612f]  to-skin"
+     bg-brown "
     >
       <div className="flex flex-row h-48 text-skin md:justify-start justify-center  items-center ">
         <img src={Hammer} alt="build" className="lg:h-[150px] h-[56px] " />
@@ -27,7 +27,7 @@ function Projects() {
                 src={Project.Image}
                 alt="images"
                 key={index}
-                className="group-hover:scale-100 object-cover scale-110 xl:h-[275px] xl:w-[350px] h-[200px] w-[300px]  transition-all duration-700"
+                className="group-hover:scale-100 object-cover group-hover:object-contain  scale-110 xl:h-[275px] xl:w-[350px] h-[200px] w-[300px]  transition-all duration-700"
               />
             </div>
 

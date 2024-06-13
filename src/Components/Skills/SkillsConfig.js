@@ -21,6 +21,9 @@ import OpenCL from "../../assets/Images/Skills/OpenCL.png"
 import Slurm from "../../assets/Images/Skills/Slurm.png"
 import Illustrator from "../../assets/Images/Skills/Illustrator.png"
 import Figma from "../../assets/Images/Skills/Figma.png"
+import DearIGUI from "../../assets/Images/Skills/DearImGUI.jpg"
+import PHP from "../../assets/Images/Skills/PHP-logo.png"
+import Flutter from "../../assets/Images/Skills/Flutter_logo.png" 
 
 
 
@@ -104,6 +107,18 @@ export const AllSkills = [
   {
     skillName: "Slurm",
     Icon: Slurm,
+  },
+  {
+    skillName: "Dear ImGui",
+    Icon: DearIGUI,
+  },
+  {
+    skillName: "PHP",
+    Icon: PHP,
+  },
+  {
+    skillName: "Flutter",
+    Icon: Flutter,
   },
 ]
 

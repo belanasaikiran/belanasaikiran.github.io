@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "../../assets/Images/sloth_profile.jpeg";
-// import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import menu from "../../assets/Images/menu.svg";
 import close from "../../assets/Images/close.svg";
@@ -22,6 +22,7 @@ const navLinks = [
 
 function NavBar() {
   const [nav, setNav] = useState(false);
+  const location = useLocation().pathname;
 
   const handleNav = () => {
     setNav(!nav);
@@ -54,7 +55,7 @@ function NavBar() {
   return (
     <div
       className={`backdrop-opacity-80 transition-all duration-700 ease-in-out  py-4 text-md lg:px-16 px-4 sm:gap-4 sticky top-0  z-30  bg-white lg:bg-skin md:bg-[${bgColor}] md:text-[${color}]
-      ${nav ? "h-64" : "h-20"} ${window.scrollY > 80 ? 'drop-shadow-md    ': ''}
+      ${nav ? "h-64" : "h-20"} ${window.scrollY > 80 ? 'drop-shadow-md    ' : ''}
       `}
     >
       <nav className="flex justify-between ">
@@ -80,11 +81,16 @@ function NavBar() {
           </div>
         </Link>
 
-        <div className="lg:flex hidden justify-self-center content-between justify-center items-center  ">
-          {navLinks.map((navLink, index) => (
+        <div className={`lg:flex hidden justify-self-center content-between justify-center items-center`}>
+          {navLinks.map((navLink, index) => ((
             <Link
-              className="px-4 hover:bg-[#463F1A] hover:text-white py-2  "
-              to={navLink.link}
+              className={`px-4 hover:bg-[#463f1ab9] hover:text-white py-2 first-letter:
+                ${    location === navLink.link
+                  ? "bg-[#463F1A] text-gray-50 "
+                  : ""
+              }
+                ` }
+              to={navLink.link}s
               key={index}
               onClick={() => {
                 ScrollToTop();
@@ -93,7 +99,7 @@ function NavBar() {
             >
               {navLink.name}
             </Link>
-          ))}
+          )))}
         </div>
 
         <img
