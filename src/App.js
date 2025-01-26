@@ -9,6 +9,10 @@ import Resume from "./Components/Resume/Resume";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import Skills from "./Components/Skills/Skills";
+import Projects from "./Components/Projects/Projects";
+import UCONN from "./Components/UCONN/uconn.jsx";
+
+
 function App() {
   return (
     <div className="md:border-8 border-white min-h-screen " >
@@ -20,8 +24,10 @@ function App() {
           <Route path="/cv" element={<Resume />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/uconn" element={<UCONN />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );

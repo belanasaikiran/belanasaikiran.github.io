@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='text-center m-4'> &#169; 2024 Saikiran Belana</div>
+    <div className='text-center m-4'> &#169; 2025 Saikiran Belana</div>
   )
 }
 

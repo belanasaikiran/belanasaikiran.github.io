@@ -116,6 +116,11 @@ bottom: 51.03%;
 }
 
 
-
+@font-face {
+  font-family: 'KPDutyJNL';
+  src: url('/src/assets/KPDutyJNL.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 

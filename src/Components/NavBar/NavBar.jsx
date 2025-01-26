@@ -4,8 +4,18 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import menu from "../../assets/Images/menu.svg";
 import close from "../../assets/Images/close.svg";
+import UCONN_Logo from "../../assets/Images/uconn_logo.png";
+
+const style = {
+  fontFamily: "KPDutyJNL, sans-serif",
+};
+
 
 const navLinks = [
+  {
+    name: "UCONN",
+    link: "/uconn",
+  },
   {
     name: "CV",
     link: "/cv",
@@ -13,6 +23,10 @@ const navLinks = [
   {
     name: "Skills",
     link: "/skills",
+  },
+  {
+    name: "Projects",
+    link: "/projects",
   },
   {
     name: "Contact",
@@ -97,7 +111,12 @@ function NavBar() {
                 setNav(false);
               }}
             >
-              {navLink.name}
+            
+            {
+              navLink.name === "UCONN" ? <p className="flex items-center gap-1 text-md" style={style}> <img src={UCONN_Logo} alt="navLink" className="w-6" />  {navLink.name} </p>: navLink.name
+            }
+               
+            
             </Link>
           )))}
         </div>

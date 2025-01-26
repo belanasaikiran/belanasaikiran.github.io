@@ -59,6 +59,7 @@ function Home() {
                     </a>
                   </div>
                 </div>
+                <p className='text-center m-4 text-white'> &#169; 2025 Saikiran Belana </p>
               </ParallaxBannerLayer>
             </ParallaxBanner>
           </ParallaxProvider>
@@ -114,7 +115,7 @@ function Home() {
         </div>
       </header>
 
-      <Projects />
+      {/* <Projects /> */}
     </div>
   );
 }
