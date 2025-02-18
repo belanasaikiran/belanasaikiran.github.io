@@ -5,28 +5,28 @@ import MongoDB from "../../assets/Images/Skills/icons8-mongodb.svg";
 import MaterialUI from "../../assets/Images/Skills/icons8-material-ui.svg";
 import TailWindCSS from "../../assets/Images/Skills/icons8-tailwind-css.svg";
 
-
 // devops and cloud
 
-import Docker from "../../assets/Images/Skills/icons8-docker.svg"
-import Kubernetes from "../../assets/Images/Skills/icons8-kubernetes.svg"
-import Vagrant from "../../assets/Images/Skills/icons8-vagrant-an-open-source-software-product-for-building-and-maintaining-portable-virtual-software-96.png"
-import Jenkins from "../../assets/Images/Skills/icons8-jenkins.svg"
-import Linux from "../../assets/Images/Skills/Linux.svg"
-import Bash from "../../assets/Images/Skills/pngegg.png"
-import AWS from "../../assets/Images/Skills/icons8-amazon-web-services.svg"
-import Azure from "../../assets/Images/Skills/icons8-azure.svg"
-import GitHub from "../../assets/Images/Skills/icons8-github.svg"
-import OpenCL from "../../assets/Images/Skills/OpenCL.png"
-import Slurm from "../../assets/Images/Skills/Slurm.png"
-import Illustrator from "../../assets/Images/Skills/Illustrator.png"
-import Figma from "../../assets/Images/Skills/Figma.png"
-import DearIGUI from "../../assets/Images/Skills/DearImGUI.jpg"
-import PHP from "../../assets/Images/Skills/PHP-logo.png"
-import Flutter from "../../assets/Images/Skills/Flutter_logo.png" 
+import Docker from "../../assets/Images/Skills/icons8-docker.svg";
+import Kubernetes from "../../assets/Images/Skills/icons8-kubernetes.svg";
+import Vagrant from "../../assets/Images/Skills/icons8-vagrant-an-open-source-software-product-for-building-and-maintaining-portable-virtual-software-96.png";
+import Jenkins from "../../assets/Images/Skills/icons8-jenkins.svg";
+import Linux from "../../assets/Images/Skills/Linux.svg";
+import Bash from "../../assets/Images/Skills/pngegg.png";
+import AWS from "../../assets/Images/Skills/icons8-amazon-web-services.svg";
+import Azure from "../../assets/Images/Skills/icons8-azure.svg";
+import GitHub from "../../assets/Images/Skills/icons8-github.svg";
+import OpenCL from "../../assets/Images/Skills/OpenCL.png";
+import Slurm from "../../assets/Images/Skills/Slurm.png";
+import Illustrator from "../../assets/Images/Skills/Illustrator.png";
+import Figma from "../../assets/Images/Skills/Figma.png";
+import DearIGUI from "../../assets/Images/Skills/DearImGUI.jpg";
+import PHP from "../../assets/Images/Skills/PHP-logo.png";
+import Flutter from "../../assets/Images/Skills/Flutter_logo.png";
 
-
-
+// Certification
+import UdemyLogo from "../../assets/Images/certifications/Udemy.png";
+import CourseraLogo from "../../assets/Images/certifications/Coursera.png";
 
 export const AllSkills = [
   {
@@ -120,10 +120,7 @@ export const AllSkills = [
     skillName: "Flutter",
     Icon: Flutter,
   },
-]
-
-
-
+];
 
 // Ref
 export const FullStackSkills = [
@@ -198,26 +195,30 @@ export const CloudDevOpsSkills = [
   },
 ];
 
-
-
 export const Certificates = [
   {
+    Image: UdemyLogo,
     Course: "The Complete Web Development BootCamp - Angela Yu ",
     DateOfCompletion: "March 2023",
     CredentialID: " UC-b5330826-5ac1-4a14-ab24-1c5fa4c12bc7",
-    VerifyLink: "https://www.udemy.com/certificate/UC-b5330826-5ac1-4a14-ab24-1c5fa4c12bc7/"
+    VerifyLink:
+      "https://www.udemy.com/certificate/UC-b5330826-5ac1-4a14-ab24-1c5fa4c12bc7/",
   },
 
   {
-    Course: "Docker Mastery: with Kubernetes + Swarm from a Docker Captain - Udemy ",
+    Image: UdemyLogo,
+    Course: "Docker Mastery: with Kubernetes + Swarm from a Docker Captain ",
     DateOfCompletion: "Jan 2022",
     CredentialID: " UC-18f9c634-dda4-4d81-bb0f-71907de16cd5",
-    VerifyLink: "https://www.udemy.com/certificate/UC-18f9c634-dda4-4d81-bb0f-71907de16cd5/"
+    VerifyLink:
+      "https://www.udemy.com/certificate/UC-18f9c634-dda4-4d81-bb0f-71907de16cd5/",
   },
   {
-    Course: "Azure: Create a Virtual Machine and Deploy a Web Server  - Coursera",
+    Image: CourseraLogo,
+    Course: "Azure: Create a Virtual Machine and Deploy a Web Server",
     DateOfCompletion: "December 2022",
     CredentialID: " EQ86HGC9DYM2",
-    VerifyLink: "https://www.coursera.org/account/accomplishments/verify/EQ86HGC9DYM2"
-  }
-]
+    VerifyLink:
+      "https://www.coursera.org/account/accomplishments/verify/EQ86HGC9DYM2",
+  },
+];

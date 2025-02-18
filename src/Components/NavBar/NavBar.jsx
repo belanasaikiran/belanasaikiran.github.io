@@ -5,17 +5,17 @@ import { Link } from "react-router-dom";
 import menu from "../../assets/Images/menu.svg";
 import close from "../../assets/Images/close.svg";
 import UCONN_Logo from "../../assets/Images/uconn_logo.png";
+import { useEffect } from "react";
 
 const style = {
   fontFamily: "KPDutyJNL, sans-serif",
 };
 
-
 const navLinks = [
-  {
-    name: "UCONN",
-    link: "/uconn",
-  },
+  // {
+  //   name: "UCONN",
+  //   link: "/uconn",
+  // },
   {
     name: "CV",
     link: "/cv",
@@ -28,6 +28,9 @@ const navLinks = [
     name: "Projects",
     link: "/projects",
   },
+];
+
+const rightNavLinks = [
   {
     name: "Contact",
     link: "/contact",
@@ -36,13 +39,14 @@ const navLinks = [
 
 function NavBar() {
   const [nav, setNav] = useState(false);
-  const location = useLocation().pathname;
+  let location = useLocation().pathname;
+  const [opacityNav, setOpacityNav] = useState("backdrop-opacity-90");
 
   const handleNav = () => {
     setNav(!nav);
   };
 
-  const [bgColor, setBgColor] = useState("#eeebe0");
+  const [bgColor, setBgColor] = useState("uconn");
   const [color, setColor] = useState("#000");
   const [mainColor, setMainColor] = useState("#9A3412");
 
@@ -66,10 +70,17 @@ function NavBar() {
     });
   };
 
+  useEffect(() => {
+    if (location === "/") {
+      setOpacityNav("backdrop-opacity-0");
+    }
+  }, [location]);
+
   return (
     <div
-      className={`backdrop-opacity-80 transition-all duration-700 ease-in-out  py-4 text-md lg:px-16 px-4 sm:gap-4 sticky top-0  z-30  bg-white lg:bg-skin md:bg-[${bgColor}] md:text-[${color}]
-      ${nav ? "h-64" : "h-20"} ${window.scrollY > 80 ? 'drop-shadow-md    ' : ''}
+      className={`  backdrop-opacity-80 bg-white/50 backdrop-blur-md transition-all duration-700 ease-in-out  py-4 text-lg lg:px-16 px-4 sm:gap-4 sticky top-0  z-30  bg-white md:bg-[${bgColor}] md:text-[${color}]
+      ${nav ? "h-64" : "h-20"} ${window.scrollY > 80 ? "drop-shadow-md    " : ""}
+      ${opacityNav}
       `}
     >
       <nav className="flex justify-between ">
@@ -95,36 +106,56 @@ function NavBar() {
           </div>
         </Link>
 
-        <div className={`lg:flex hidden justify-self-center content-between justify-center items-center`}>
-          {navLinks.map((navLink, index) => ((
+        <div
+          className={`lg:flex hidden justify-self-center content-between justify-center items-center`}
+        >
+          {navLinks.map((navLink, index) => (
             <Link
-              className={`px-4 hover:bg-[#463f1ab9] hover:text-white py-2 first-letter:
-                ${    location === navLink.link
-                  ? "bg-[#463F1A] text-gray-50 "
-                  : ""
-              }
-                ` }
-              to={navLink.link}s
+              className={`px-4 hover:bg-[#0C2443b9] hover:text-white py-2 first-letter:
+                ${location === navLink.link ? "bg-uconn text-gray-50 " : ""}
+                `}
+              to={navLink.link}
+              s
               key={index}
               onClick={() => {
                 ScrollToTop();
                 setNav(false);
               }}
             >
-            
-            {
-              navLink.name === "UCONN" ? <p className="flex items-center gap-1 text-md" style={style}> <img src={UCONN_Logo} alt="navLink" className="w-6" />  {navLink.name} </p>: navLink.name
-            }
-               
-            
+              {navLink.name === "UCONN" ? (
+                <p className="flex items-center gap-1 text-md" style={style}>
+                  {" "}
+                  <img src={UCONN_Logo} alt="navLink" className="w-6" />{" "}
+                  {navLink.name}{" "}
+                </p>
+              ) : (
+                navLink.name
+              )}
             </Link>
-          )))}
+          ))}
         </div>
 
+        <div>
+          {rightNavLinks.map((navLink, index) => (
+            <Link
+              className={`px-4 hover:bg-[#0C2443b9] hidden lg:block hover:text-white py-2 first-letter:
+              ${location === navLink.link ? "bg-uconn text-gray-50 " : ""}
+              `}
+              to={navLink.link}
+              key={index}
+              onClick={() => {
+                ScrollToTop();
+                setNav(false);
+              }}
+            >
+              {navLink.name}
+            </Link>
+          ))}
+        </div>
         <img
           src={nav ? close : menu}
           alt="menu"
-          className="bg-brown p-2 w-[42px] h-[42px] lg:hidden hover:pointer "
+          className="bg-uconn p-2 w-[42px] h-[42px] lg:hidden hover:pointer "
           onClick={handleNav}
         />
       </nav>
@@ -136,7 +167,21 @@ function NavBar() {
               className="px-4 py-2  "
               to={navLink.link}
               key={index}
-
+              onClick={() => {
+                ScrollToTop();
+                setNav(false);
+              }}
+            >
+              {navLink.name}
+            </Link>
+          ))}
+          {rightNavLinks.map((navLink, index) => (
+            <Link
+              className={`px-4 hover:bg-[#0C2443b9] hidden lg:block hover:text-white py-2 first-letter:
+                ${location === navLink.link ? "bg-uconn text-gray-50 " : ""}
+                `}
+              to={navLink.link}
+              key={index}
               onClick={() => {
                 ScrollToTop();
                 setNav(false);
@@ -149,8 +194,6 @@ function NavBar() {
       ) : (
         <></>
       )}
-
-
     </div>
   );
 }

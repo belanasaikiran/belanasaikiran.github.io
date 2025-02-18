@@ -16,7 +16,7 @@ function Contact() {
         "service_qg9biiq",
         "template_r3gu58l",
         form.current,
-        "T1CvxBOfehT8aN-kn"
+        "T1CvxBOfehT8aN-kn",
       )
       .then(
         (result) => {
@@ -26,32 +26,41 @@ function Contact() {
         (error) => {
           console.log(error.text);
           setResponse("An Error Occured!");
-        }
+        },
       );
   };
 
   return (
-    <div className="min-h-screen text-center bg-[#463F1A] text-skin ">
+    <div className="min-h-screen text-center bg-white/40 backdrop-blur-md text-uconn ">
       <div className="grid md:grid-cols-2 grid-cols-1 content-center  py-32">
         <div className="lg:pl-40">
-          <div className="grid justify-items-center   ">
+          <div className="grid justify-items-center">
             <img src={Image} alt="slothy" className="rounded-full w-[300px] " />
           </div>
 
-          <p className="text-3xl py-10"> Saikiran Belana</p>
-          <div className="flex gap-4 text-3xl justify-center">
-          {SocialMedia.map((Social)=>(
-            <a href={Social.Link} target="blank">
-              {Social.Icon}
-            </a>
-          ))}
+          <p className="text-3xl"> Saikiran Belana</p>
+          <p className="text-xl py-2"> Connect with me on social media</p>
+          <div className="flex gap-2 text-3xl justify-center">
+            {SocialMedia.map((Social) => (
+              <a
+                href={Social.Link}
+                target="blank"
+                // hint
+                key={Social.Link}
+                aria-label={Social.Name}
+                style={{ cursor: "pointer" }}
+                title={Social.Name}
+              >
+                {Social.Icon}
+              </a>
+            ))}
           </div>
         </div>
 
         <div className="lg:px-0 p-8">
           <h3 className=" text-3xl text-left font-semibold ">
             {" "}
-            <span className="underline underline-offset-[10px]  decoration-skin decoration-4  ">
+            <span className="underline underline-offset-[10px]  decoration-uconn decoration-4  ">
               Send a{" "}
             </span>
             message{" "}
@@ -85,7 +94,7 @@ function Contact() {
 
             <div className="text-right transition duration-500 ease-in-out ">
               <button
-                className=" p-2 bg-cyan-600  text-white group inline-flex gap-2 transition duration-500  hover:bg-skin hover:text-brown "
+                className=" p-2 bg-uconn  text-white group inline-flex gap-2 transition duration-500  hover:bg-skin hover:text-brown "
                 type="submit"
               >
                 Send Message{" "}

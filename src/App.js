@@ -12,12 +12,22 @@ import Skills from "./Components/Skills/Skills";
 import Projects from "./Components/Projects/Projects";
 import UCONN from "./Components/UCONN/uconn.jsx";
 
+const UCONNBG =
+  "https://images.unsplash.com/photo-1733840161253-f934dbd464ec?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
 function App() {
   return (
-    <div className="md:border-8 border-white min-h-screen " >
+    <div
+      className=" border-white min-h-screen "
+      style={{
+        background: `url(${UCONNBG})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
+    >
       <BrowserRouter>
-        <NavBar   />
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Error404 />} />
