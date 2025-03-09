@@ -18,7 +18,7 @@ const UCONNBG =
 function App() {
   return (
     <div
-      className=" border-white min-h-screen "
+      className="border-white min-h-screen"
       style={{
         background: `url(${UCONNBG})`,
         backgroundSize: "cover",

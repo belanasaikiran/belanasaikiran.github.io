@@ -11,8 +11,6 @@ import {
 
 import Birds from "../../assets/Images/Scape/birds4.svg";
 import City from "../../assets/Images/Scape/CitySkyLine.svg";
-const UCONNBG =
-  "https://images.unsplash.com/photo-1733840161253-f934dbd464ec?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
 function Home() {
   return (
@@ -56,12 +54,12 @@ function Home() {
             {" "}
             &#169; 2025 Saikiran Belana{" "}
           </p>
-          <div className="group md:border-4 text-center lg:bg-brown">
+          <div className="group md:border-4 text-center lg:bg-uconn">
             <a
               href="mailto:saikiransanju22@outlook.com?subject=Interested in Hiring/Collaboration"
               target="blank"
             >
-              <button className="bg-uconn font-semibold p-3  md:translate-x-[-7px] md:translate-y-[-7px]  transition-all duration-700 group-hover:translate-x-0 group-hover:translate-y-0">
+              <button className="bg-red-900 font-semibold p-3  md:translate-x-[-7px] md:translate-y-[-7px]  transition-all duration-700 group-hover:translate-x-0 group-hover:translate-y-0">
                 {" "}
                 Hire Me
               </button>
@@ -101,8 +99,7 @@ function Home() {
               href="mailto:saikiransanju22@outlook.com?subject=Interested in Hiring/Collaboration"
               target="blank"
             >
-              <button className="bg-uconn p-2  md:translate-x-[-7px] md:translate-y-[-7px]  transition-all duration-700 group-hover:translate-x-0 group-hover:translate-y-0">
-                {" "}
+              <button className="bg-red-900 p-2  md:translate-x-[-7px] md:translate-y-[-7px]  transition-all duration-700 group-hover:translate-x-0 group-hover:translate-y-0">
                 Hire Me
               </button>
             </a>
