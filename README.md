@@ -46,7 +46,7 @@ Technologies and Tools I use</b></br>
 --->
 
 
-<a href="https://belanasaikiran.github.io/" target="blank" > Resume - 2023 </a> 
+<a href="https://belanasaikiran.github.io/" target="blank" > Resume - 2023 </a>
 
 <a href="https://belanasaikiran.github.io/profile-2021/" target="blank" > Resume - 2021 (old) </a>
 
@@ -59,3 +59,8 @@ You can click the Preview link to take a look at your changes.
 
 
 
+
+### Color Palette
+
+- #F7D4BB - Name Background
+- #1D4D8E - Accent Color

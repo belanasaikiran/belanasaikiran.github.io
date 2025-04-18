@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         // Configure your color palette here
+        accent: "#1D4D8E",
         brown: "#463F1A",
         customRed: "#9A3412",
         skin: "#EEEBE0",

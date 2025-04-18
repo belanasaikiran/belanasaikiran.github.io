@@ -9,6 +9,16 @@ import ArchPrj from "../../assets/Images/Projects/ArchPrj.png";
 
 export const ProjectList = [
   {
+    Name: "WayNotify",
+    Image:
+      "https://plus.unsplash.com/premium_photo-1682309524785-cf2288f7b544?q=80&w=2712&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    techStack: "C++, CMake, D-Bus, Cairo, Wayland",
+    Description:
+      "A background service that listens for desktop notifications (via D-Bus), then displays them on-screen using Wayland protocols.",
+    Link: "https://github.com/belanasaikiran/WayNotify",
+    type: "Vercel",
+  },
+  {
     Name: "Windborne-Tracker",
     Image:
       "https://raw.githubusercontent.com/belanasaikiran/windborne-tracker/refs/heads/main/screenshot.png",
@@ -19,7 +29,7 @@ export const ProjectList = [
     type: "Vercel",
   },
   {
-    Name: "Dynamic Branch Prediction and Data Cache in Out of Order Pipelined RISC-V Simulator",
+    Name: "Branch Predictor and Data Caches in RISC-V ",
     Image: ArchPrj,
     techStack: "C, GCC",
     Description: (
@@ -35,7 +45,7 @@ export const ProjectList = [
     type: "GitHub",
   },
   {
-    Name: "Kernel System Calls Implementation and Testing",
+    Name: "Kernel system calls implementation",
     Image:
       "https://github.com/belanasaikiran/OS161/blob/main/Labs/Images/print-name-os-kernel.png?raw=true",
     techStack: "Operating Systems, C, Linux, GCC, Makefile",
@@ -52,7 +62,7 @@ export const ProjectList = [
   },
 
   {
-    Name: "File System Management - Operating Systems",
+    Name: "CPU Scheduling & File Management",
     Image:
       "https://github.com/belanasaikiran/File-System-Management/raw/main/images/final_UI.png",
     techStack: "Operating Systems, C++, Linux, DearImGUI, Make tool ",
@@ -82,9 +92,25 @@ export const ProjectList = [
     Link: "https://github.com/belanasaikiran/ComputerSecurity/blob/main/Project1/Report.md",
     type: "GitHub",
   },
+  {
+    Name: "Buffer Overflow Attack Vulnerability Analysis",
+    Image:
+      "https://cdn.invicti.com/app/uploads/2022/06/28121124/buffer-overflow-attacks-1024x538.webp",
+    techStack: "md5collgen, md5sum ",
+    Description: (
+      <div className="">
+        Executed an MD5 collision attack using md5collgen to generate two
+        distinct binary files with identical hashes, demonstrating cryptographic
+        vulnerabilities. Analyzed the security risks of hash collisions in
+        digital authentication and malware verification.
+      </div>
+    ),
+    Link: "https://github.com/belanasaikiran/ComputerSecurity/tree/main/Project2",
+    type: "GitHub",
+  },
 
   {
-    Name: "Car Make & Model Detection using Xception Model (Transfer Learning)",
+    Name: "Car Make & Model Detection using Transfer Learning",
     Image:
       "https://raw.githubusercontent.com/belanasaikiran/Team-6-Big-Data-Project/refs/heads/main/images/results.png",
     techStack: "Operating Systems, C, Linux, GCC, Makefile",
@@ -127,15 +153,15 @@ export const ProjectList = [
     Link: "https://lightspeedphotonics.com/",
     type: "Visit Site",
   },
-  {
-    Name: "PC Link",
-    Image: PCConnect,
-    techStack: "Flutter, Dart, Android, Linux, Bluetooth",
-    Description:
-      "A cross-platform application to Sync your Mobile with PC - Flutter",
-    Link: "https://github.com/belanasaikiran/PC-Link",
-    type: "GitHub",
-  },
+  // {
+  //   Name: "PC Link",
+  //   Image: PCConnect,
+  //   techStack: "Flutter, Dart, Android, Linux, Bluetooth",
+  //   Description:
+  //     "A cross-platform application to Sync your Mobile with PC - Flutter",
+  //   Link: "https://github.com/belanasaikiran/PC-Link",
+  //   type: "GitHub",
+  // },
 
   {
     Name: "Web Terminal",
@@ -170,15 +196,6 @@ export const ProjectList = [
   //     Link: "https://gltf-react.vercel.app/",
   //     type: "See Demo"
   // },
-  {
-    Name: "Twitter Sentimental",
-    Image: TwitterSentimentalAnalysis,
-    techStack: "Python, NLP, NLTK, TextBlob, Tweepy",
-    Description:
-      "A Sentiment Summarization system takes as input a set of documents that contain opinions about some entity of interest. Subsequently, it processes all the given documents and generates a summary of all the input documents.",
-    Link: "https://github.com/belanasaikiran/Tweet-Sentimental-Analysis",
-    type: "GitHub",
-  },
 ];
 
 export const OtherProjectList = [];

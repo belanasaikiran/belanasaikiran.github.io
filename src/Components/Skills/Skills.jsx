@@ -1,24 +1,59 @@
 import React from "react";
 
 import { AllSkills, Certificates } from "./SkillsConfig";
+
 function Skills() {
   return (
-    <div className="bg-white min-h-screen">
+    <div id="skills" className=" min-h-screen mt-16">
       {/* Section 2 - Technical Skills */}
-      <div className=" bg-white text-uconn text-center pt-8 ">
-        <h1 className="text-4xl ">Technical Skills</h1>
+      <div className="text-sm 2xl:text-lg lg:px-16 bg-white text-uconn text-center rounded-tl-full rounded-br-full">
+        <h1 className=" text-white my-8 text-xl 2xl:text-3xl">
+          <span className="bg-accent px-6 py-2  rounded-tl-full rounded-br-full ">
+            Technical Skills
+          </span>
+        </h1>
 
-        <div className="bg-white lg:mx-16 ">
-          <div className="flex flex-wrap justify-center text-gray-800 lg:pb-8 py-8 text-xl gap-4  ">
+        <div className="lg:mx-16 flex">
+          {/* LinkedIn Badge */}
+          <div
+            className="badge-base LI-profile-badge flex justify-center mb-10"
+            data-locale="en_US"
+            data-size="medium"
+            data-theme="light"
+            data-type="HORIZONTAL"
+            data-vanity="belanasaikiran"
+            data-version="v1"
+          >
+            <a
+              className="badge-base__link LI-simple-link"
+              href="https://in.linkedin.com/in/belanasaikiran?trk=profile-badge"
+            >
+              {" "}
+            </a>
+          </div>
+
+          <div className="flex flex-wrap justify-center text-gray-800 lg:pb-8 py-8 2xl:text-xl text-base gap-1  ">
+            <a
+              className="w-full"
+              href="https://github.com/belanasaikiran"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="w-full"
+                src="https://ghchart.rshah.org/1D4D8E/belanasaikiran"
+                alt="GitHub Contributions"
+              />
+            </a>
             {AllSkills.map((Skills, index) => (
               <div
-                className="border-b-uconn   grid grid-cols-1 justify-items-center  md:gap-8  md:p-4  place-content-center hover:bg-uconn hover:text-white  xl:w-auto lg:w-1/7 "
+                className="border-b-uconn grid grid-cols-1 justify-items-center  2xl:gap-4  md:p-4  place-content-center hover:bg-uconn hover:text-white  xl:w-auto lg:w-1/7 "
                 key={index}
               >
                 <img
                   src={Skills.Icon}
                   alt={Skills.skillName}
-                  className=" object-contain group-hover:hidden  transition duration-100 lg:w-[125px] lg:h-[125px] w-[64px] h-[64px] "
+                  className=" object-contain group-hover:hidden  transition duration-100 2xl:w-[100px] 2xl:h-[100px] w-[64px] h-[64px] "
                 />
                 <p className="hidden group-hover:block  ease-linear group-hover:text-xl w-[125px] h-[125px] pt-[35%]">
                   {Skills.skillName}
@@ -29,29 +64,34 @@ function Skills() {
         </div>
       </div>
 
-      <div className="bg-white text-uconn text-center  lg:mx-16 ">
-        <h1 className="text-4xl py-8">Certifications</h1>
-        <div className="grid grid-cols-1  md:place-content-center gap-1 lg:mx-0 mx-2">
+      <div className="bg-white text-uconn text-center   rounded-tl-full rounded-br-full">
+        <h1 className=" text-white text-xl 2xl:text-3xl my-8 ">
+          <span className="bg-accent px-6 py-2  rounded-tl-full rounded-br-full ">
+            Certifications
+          </span>
+        </h1>
+        <div className="grid grid-cols-1 pb-16 lg:mx-64 xl:mx-80 md:place-content-center gap-1  mx-2">
           {Certificates.map((Certificate) => (
-            <div className=" grid  grid-cols-12 text-left  gap-4 text-uconn p-4 transition duration-500 ease-in-out border-b-4 border-uconn">
+            <div className=" grid  grid-cols-12 text-left  gap-4 text-uconn py-4 transition duration-500 ease-in-out border-b-4 border-uconn">
               <div className="col-span-1">
                 <img
                   src={Certificate.Image}
                   alt=""
-                  className="lg:w-20 lg:h-20 h-16 w-16"
+                  className="xl:min-w-20 xl:min-h-20 min-h-16 min-w-16"
                 />
               </div>
               <div className="text-left col-span-10">
                 <div className="flex md:flex-row flex-col gap-4 min-w-full    justify-between">
                   <div className="flex flex-col content-center justify-around min-w-full ">
-                    <h1 className="lg:text-2xl text-lg ">
+                    <h1 className="2xl:text-2xl text-lg ">
                       {Certificate.Course}
                     </h1>
-                    <p className="md:text-lg py-2 text-base ">
-                      Issued: {Certificate.DateOfCompletion}
+                    <p className="2xl:text-lg text-sm py-2  ">
+                      Issued:{" "}
+                      <span className="">{Certificate.DateOfCompletion}</span>
                     </p>
                     <p className="text-sm">
-                      Credential ID {Certificate.CredentialID}
+                      Credential ID: {Certificate.CredentialID}
                     </p>
                   </div>
                   <a
@@ -59,7 +99,7 @@ function Skills() {
                     target="blank"
                     className="place-self-center"
                   >
-                    <button className="bg-uconn text-white text-xl p-1 px-8 py-2">
+                    <button className="bg-uconn text-white text-base p-1 px-4 py-2">
                       Verify
                     </button>
                   </a>

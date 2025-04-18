@@ -1,8 +1,10 @@
 import React, { useState, useRef } from "react";
-import Image from "../../assets/Images/sloth_profile.jpeg";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
 import { SocialMedia } from "../SocialIcons/Social";
+
+const Image =
+  "https://avatars.githubusercontent.com/u/88756154?s=400&u=f35449ed30519431779c4e179fa22c04060ad8c9&v=4";
 
 function Contact() {
   const form = useRef();
@@ -31,15 +33,26 @@ function Contact() {
   };
 
   return (
-    <div className="min-h-screen text-center bg-white/40 backdrop-blur-md text-uconn ">
-      <div className="grid md:grid-cols-2 grid-cols-1 content-center  py-32">
+    <div id="contact" className="text-center text-accent py-32 ">
+      <div className="text-center  text-3xl my-8 pb-16">
+        <h1 className="text-white">
+          <span className="bg-accent px-6 py-2 rounded-tl-full rounded-br-full ">
+            Contact
+          </span>
+        </h1>
+      </div>
+      <div className="grid md:grid-cols-2 grid-cols-1 content-center  ">
         <div className="lg:pl-40">
-          <div className="grid justify-items-center">
-            <img src={Image} alt="slothy" className="rounded-full w-[300px] " />
+          <div className="grid justify-items-center ">
+            <img
+              src={Image}
+              alt="slothy"
+              className="rounded-full w-[300px] grayscale"
+            />
           </div>
 
-          <p className="text-3xl"> Saikiran Belana</p>
-          <p className="text-xl py-2"> Connect with me on social media</p>
+          <p className="text-3xl pt-4"> Saikiran Belana</p>
+          <p className="text-xl py-4"> Connect with me on social media</p>
           <div className="flex gap-2 text-3xl justify-center">
             {SocialMedia.map((Social) => (
               <a

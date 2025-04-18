@@ -2,125 +2,102 @@
 @tailwind components;
 @tailwind utilities;
 
-
-:root{
-  --white: #fff;
-  --black: #1c2b2d;
-  --blue: #31326f;
-  --light-blue: #005490;
-  --color-primary: #9d0191;
-  --color-sec: #db6400;
-  --grey: #eee;
-  --dark-grey: #222831;
-  --brown: #463F1A;
-  --light: #eeebe0;
-  --red: #9A3412;
-
+:root {
+    --white: #fff;
+    --black: #1c2b2d;
+    --blue: #31326f;
+    --light-blue: #005490;
+    --color-primary: #9d0191;
+    --color-sec: #db6400;
+    --grey: #eee;
+    --dark-grey: #222831;
+    --brown: #463f1a;
+    --light: #eeebe0;
+    --red: #9a3412;
 }
-
 
 /* html{
   border: 12px solid white;
 } */
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #eeebe0;
-/* overflow-x: hidden; */
+    margin: 0;
+    font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* overflow-x: hidden; */
 }
 
-
-
-::-webkit-scrollbar{
-  background-color: var(--light);
-  width: 7px;
+::-webkit-scrollbar {
+    background-color: var(--light);
+    width: 7px;
 }
 
-
-
-
-::-webkit-scrollbar-thumb{
-  background-color: var(--brown);
-  border-radius: 10px;
-  
+::-webkit-scrollbar-thumb {
+    background-color: var(--brown);
+    border-radius: 10px;
 }
 
-.bg{
-position: absolute;
-scale: 1.2;
-right: 0%;
-top: 34.42%;
-bottom: 51.03%;
-
+.bg {
+    position: absolute;
+    scale: 1.2;
+    right: 0%;
+    top: 34.42%;
+    bottom: 51.03%;
 }
 
-
-
-.light-bg{
-  background-color: var(--light);
+.light-bg {
+    background-color: var(--light);
 }
 
 .item {
-  grid-column: span 1;
+    grid-column: span 1;
 }
 .item:nth-last-child(2):nth-child(odd) {
-	grid-column: 1 / span 1;
+    grid-column: 1 / span 1;
 }
 
-
-
-.child{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-
 
 .gradient-text {
-  background: -webkit-linear-gradient(#EEEBE0, var(--white));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(#eeebe0, var(--white));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-
-
 
 .sidebar {
-  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-
-
 
 .fade-in {
-	animation: fadeIn 4s;
-  	opacity: 1;
-   padding-top: 0px;
+    animation: fadeIn 4s;
+    opacity: 1;
+    padding-top: 0px;
 }
-
 
 @keyframes fadeIn {
-  from {
-  	opacity: 0;
-    padding-top: 1000px;
-  }
-  to {
- 	opacity: 1;
-   padding-top: 0px;
-  }
+    from {
+        opacity: 0;
+        padding-top: 1000px;
+    }
+    to {
+        opacity: 1;
+        padding-top: 0px;
+    }
 }
-
 
 @font-face {
-  font-family: 'KPDutyJNL';
-  src: url('/src/assets/KPDutyJNL.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: "KPDutyJNL";
+    src: url("/src/assets/KPDutyJNL.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
-
-
