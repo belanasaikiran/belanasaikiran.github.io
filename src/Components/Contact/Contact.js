@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { AiOutlineArrowRight } from "react-icons/ai";
+import { AiFillGithub, AiOutlineArrowRight } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
 import { SocialMedia } from "../SocialIcons/Social";
 
@@ -33,9 +33,12 @@ function Contact() {
   };
 
   return (
-    <div id="contact" className="text-center text-accent py-32 ">
-      <div className="text-center  text-3xl my-8 pb-16">
-        <h1 className="text-white">
+    <div
+      id="contact"
+      className="text-center text-sm 2xl:text-lg text-accent py-32 "
+    >
+      <div className="text-center  my-8 pb-16">
+        <h1 className="text-white text-xl 2xl:text-3xl">
           <span className="bg-accent px-6 py-2 rounded-tl-full rounded-br-full ">
             Contact
           </span>
@@ -52,7 +55,7 @@ function Contact() {
           </div>
 
           <p className="text-3xl pt-4"> Saikiran Belana</p>
-          <p className="text-xl py-4"> Connect with me on social media</p>
+          <p className="pt-2 pb-4"> Connect with me on social media</p>
           <div className="flex gap-2 text-3xl justify-center">
             {SocialMedia.map((Social) => (
               <a
@@ -80,25 +83,25 @@ function Contact() {
           </h3>
 
           <form
-            className="flex flex-col gap-4 py-10 lg:w-[500px] text-xl text-brown"
+            className="flex flex-col gap-4 py-10 lg:w-[500px] text-brown"
             ref={form}
             onSubmit={sendEmail}
           >
             <input
               type="text"
               placeholder="Name"
-              className="border-none caret-[#463F1A] "
+              className="border-accent rounded-xl caret-[#463F1A] "
               name="name"
             />
             <input
               type="email"
-              placeholder="Email"
-              className="border-none caret-[#463F1A] "
+              placeholder="Your email address"
+              className="border-accent rounded-xl caret-[#463F1A] "
               name="email"
             />
             <textarea
               placeholder="Message"
-              className="border-none caret-[#463F1A]"
+              className="border-accent rounded-xl caret-[#463F1A]"
               rows={8}
               name="message"
             ></textarea>
@@ -115,6 +118,50 @@ function Contact() {
               </button>
             </div>
           </form>
+        </div>
+      </div>
+      <div className="hidden  grid-cols-2 justify-around">
+        {/* LinkedIn Badge */}
+        <div
+          className="badge-base LI-profile-badge flex justify-center mb-10"
+          data-locale="en_US"
+          data-size="medium"
+          data-theme="light"
+          data-type="HORIZONTAL"
+          data-vanity="belanasaikiran"
+          data-version="v1"
+        >
+          <a
+            className="badge-base__link LI-simple-link"
+            href="https://in.linkedin.com/in/belanasaikiran?trk=profile-badge"
+          >
+            {" "}
+          </a>
+        </div>
+        {/* Github Badge */}
+        <div className="border h-[300px] w-[280px] rounded-lg">
+          <p className="flex min-w-full items-center text-2xl font-semibold bg-brown-500">
+            GitHub{" "}
+            <span>
+              <AiFillGithub />
+            </span>
+          </p>
+          <div className="flex flex-col px-4 py-4">
+            <img
+              src="https://github.com/belanasaikiran.png"
+              alt="Belana Sai Kiran"
+              className="w-[50px] h-[50px] object-cover rounded-full "
+            />
+            <bold className="font-bold text-black text-[16px]">
+              Sai Kiran Belana
+            </bold>
+            <a
+              className="rounded-xl border-4 px-3 py-2 font-bold"
+              href="https://github.com/belanasaikiran"
+            >
+              View Profile
+            </a>
+          </div>
         </div>
       </div>
     </div>

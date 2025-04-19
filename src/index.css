@@ -101,3 +101,30 @@ body {
     font-weight: normal;
     font-style: normal;
 }
+
+.unsplash_link {
+    color: var(--brown);
+    text-decoration: none;
+    background-color: white;
+    padding: 2px 8px;
+}
+
+.unsplash_link:hover {
+    color: var(--red);
+    text-decoration: underline;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.term-font {
+    /* get font https://cdn.jsdelivr.net/gh/mshaugh/nerdfont-webfonts@v3.3.0/build/firacode-nerd-font.css
+ */
+    font-family: "Quantico", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.heading-font {
+    font-family: "Quantico", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

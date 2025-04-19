@@ -16,7 +16,7 @@ export const ProjectList = [
     Description:
       "A background service that listens for desktop notifications (via D-Bus), then displays them on-screen using Wayland protocols.",
     Link: "https://github.com/belanasaikiran/WayNotify",
-    type: "Vercel",
+    type: "GitHub",
   },
   {
     Name: "Windborne-Tracker",
@@ -48,7 +48,7 @@ export const ProjectList = [
     Name: "Kernel system calls implementation",
     Image:
       "https://github.com/belanasaikiran/OS161/blob/main/Labs/Images/print-name-os-kernel.png?raw=true",
-    techStack: "Operating Systems, C, Linux, GCC, Makefile",
+    techStack: "OS, C, Linux, GCC, Makefile",
     Description: (
       <div className="">
         Developed and validated multithreaded applications in OS/161 by
@@ -65,7 +65,7 @@ export const ProjectList = [
     Name: "CPU Scheduling & File Management",
     Image:
       "https://github.com/belanasaikiran/File-System-Management/raw/main/images/final_UI.png",
-    techStack: "Operating Systems, C++, Linux, DearImGUI, Make tool ",
+    techStack: "OS, C++, DearImGUI, Make ",
     Description: (
       <div className="">
         Developed a file system GUI using Dear ImGui, enabling users to manage
@@ -96,7 +96,7 @@ export const ProjectList = [
     Name: "Buffer Overflow Attack Vulnerability Analysis",
     Image:
       "https://cdn.invicti.com/app/uploads/2022/06/28121124/buffer-overflow-attacks-1024x538.webp",
-    techStack: "md5collgen, md5sum ",
+    techStack: "C, GCC ",
     Description: (
       <div className="">
         Executed an MD5 collision attack using md5collgen to generate two
@@ -113,7 +113,7 @@ export const ProjectList = [
     Name: "Car Make & Model Detection using Transfer Learning",
     Image:
       "https://raw.githubusercontent.com/belanasaikiran/Team-6-Big-Data-Project/refs/heads/main/images/results.png",
-    techStack: "Operating Systems, C, Linux, GCC, Makefile",
+    techStack: "Python, TensorFlow, Keras, Xception",
     Description: (
       <div className="">
         Developed an ML model using the Xception architecture to classify car

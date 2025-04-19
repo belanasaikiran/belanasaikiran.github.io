@@ -1,53 +1,28 @@
+// Modal.js
 import React from "react";
 
-export default function Modal() {
-  const [showModal, setShowModal] = React.useState(false);
+const Modal = ({ isOpen, onClose, children, classes }) => {
+  if (!isOpen) return null;
 
-  const onClick = () => {
-    setShowModal(false);
-  };
-
-  const keepOpen = () => {
-    setShowModal(true);
-  };
   return (
-    <>
-      <button
-        className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-        type="button"
-        onClick={() => setShowModal(true)}
+    <div
+      className={`fixed min-h-screen inset-0 z-100 flex items-center justify-center bg-black bg-opacity-50 ${classes}`}
+      onClick={onClose} // Click outside to close
+    >
+      <div
+        className="bg-white dark:bg-gray-100 p-10 rounded-lg shadow-lg w-full max-w-3xl relative"
+        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
       >
-        Resume
-      </button>
-      {showModal ? (
-        <>
-          <div
-            className="justify-center items-center flex  overflow-y-auto fixed inset-0 z-40 outline-none focus:outline-none "
-            // onClick={onClick}
-          >
-            <div
-              className="relative w-auto my-6 mx-auto max-w-6xl"
-              onClick={keepOpen}
-            >
-              {/* <button
-                className="text-red-500 bg-white background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                type="button"
-                onClick={() => setShowModal(false)}
-              >
-                Close
-              </button> */}
-              <p className="bg-white p-10">Hello</p>
-
-            </div>
-          </div>
-
-
-          <div
-            onClick={onClick}
-            className="opacity-25 fixed inset-0 z-40 bg-black"
-          ></div>
-        </>
-      ) : null}
-    </>
+        <button
+          className="absolute top-2 right-4 text-gray-500 hover:text-gray-800 dark:hover:text-white text-2xl font-bold"
+          onClick={onClose}
+        >
+          ×
+        </button>
+        {children}
+      </div>
+    </div>
   );
-}
+};
+
+export default Modal;

@@ -16,9 +16,9 @@ const UCONNBG =
 
 function App() {
   return (
-    <div className=" min-h-screen">
+    <div className=" min-h-screen ">
       <NavBar />
-      <div className="px-48">
+      <div className="px-4 md:px-8 lg:px-24 xl:px-48">
         <Home />
         {/* <Resume /> */}
         <Projects />

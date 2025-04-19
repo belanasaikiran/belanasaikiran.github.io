@@ -23,12 +23,34 @@ import Figma from "../../assets/Images/Skills/Figma.png";
 import DearIGUI from "../../assets/Images/Skills/DearImGUI.jpg";
 import PHP from "../../assets/Images/Skills/PHP-logo.png";
 import Flutter from "../../assets/Images/Skills/Flutter_logo.png";
+import Cpp from "../../assets/Images/Skills/CPlusPlus.webp";
 
 // Certification
 import UdemyLogo from "../../assets/Images/certifications/Udemy.png";
 import CourseraLogo from "../../assets/Images/certifications/Coursera.png";
 
 export const AllSkills = [
+  {
+    skillName: "C++",
+    Icon: Cpp,
+  },
+  {
+    skillName: "Yocto - Linux",
+    Icon: Linux,
+  },
+  {
+    skillName: "Bash",
+    Icon: Bash,
+  },
+
+  {
+    skillName: "Docker",
+    Icon: Docker,
+  },
+  {
+    skillName: "Kubernetes",
+    Icon: Kubernetes,
+  },
   {
     skillName: "NodeJs",
     Icon: NodeJs,
@@ -65,14 +87,6 @@ export const AllSkills = [
   },
 
   {
-    skillName: "Docker",
-    Icon: Docker,
-  },
-  {
-    skillName: "Kubernetes",
-    Icon: Kubernetes,
-  },
-  {
     skillName: "Vagrant",
     Icon: Vagrant,
   },
@@ -80,14 +94,7 @@ export const AllSkills = [
     skillName: "Jenkins",
     Icon: Jenkins,
   },
-  {
-    skillName: "Yocto - Linux",
-    Icon: Linux,
-  },
-  {
-    skillName: "Bash",
-    Icon: Bash,
-  },
+
   {
     skillName: "AWS",
     Icon: AWS,

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import menu from "../../assets/Images/menu.svg";
 import close from "../../assets/Images/close.svg";
 import UCONN_Logo from "../../assets/Images/uconn_logo.png";
+import Modal from "./Modal";
 
 const Image =
   "https://avatars.githubusercontent.com/u/88756154?s=400&u=f35449ed30519431779c4e179fa22c04060ad8c9&v=4";
@@ -32,6 +33,7 @@ function NavBar() {
   const [bgColor, setBgColor] = useState("uconn");
   const [color, setColor] = useState("#000");
   const [mainColor, setMainColor] = useState("#9A3412");
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleNav = () => setNav(!nav);
 
@@ -82,13 +84,13 @@ function NavBar() {
 
   return (
     <div
-      className={`text-sm 2xl:text-lg backdrop-opacity-10 bg-white/0 backdrop-blur-md transition-all duration-700 ease-in-out   lg:px-48 px-4 sm:gap-4 sticky top-0 z-30 bg-white md:bg-[${bgColor}] md:text-[${color}]
+      className={`text-sm 2xl:text-lg backdrop-opacity-0 bg-white/0 backdrop-blur-md transition-all duration-700 ease-in-out md:px-8 lg:px-24  xl:px-48 px-4 sm:gap-4 sticky top-0 z-30 bg-white md:bg-[${bgColor}] md:text-[${color}]
       ${nav ? "h-48" : "h-20"} ${window.scrollY > 80 ? "drop-shadow-md h-14 my-0 mx-[10%] xl:mx-[20%] 2xl:mx-[25%]" : "h-16 text-xl mt-4"}
       ${opacityNav}
       `}
     >
       <div
-        className={`${window.scrollY > 80 ? "bg-accent rounded-bl-full rounded-br-full " : ""}`}
+        className={`${window.scrollY > 80 ? "bg-accent rounded-bl-full rounded-br-full drop-shadow-lg   " : ""}`}
       >
         <nav className="flex justify-between">
           <a
@@ -117,20 +119,19 @@ function NavBar() {
             className={`${window.scrollY > 80 ? "rounded-none" : roundedNavCSS} text-white lg:flex hidden justify-self-center content-between justify-center items-center`}
           >
             {navLinks.map((navLink, index) =>
-              navLink.link === "Download CV" ? (
-                <a
-                  className={`px-4 hover:text-white py-2`}
-                  href={navLink.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+              navLink.name === "Download CV" ? (
+                <button
+                  className={`px-4 hover:bg-[#0C2443b9] hover:text-white py-2  ${window.scrollY > 80 && navLink.name === "Contact" ? " hover:bg-[#0C2443b9] hover:rounded-br-full" : ""}
+                    ${window.scrollY > 80 ? "" : "rounded-full"}
+                    `}
                   key={index}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(navLink.link);
+                  onClick={() => {
+                    setIsOpen(true);
+                    console.log("Download CV");
                   }}
                 >
                   {navLink.name}
-                </a>
+                </button>
               ) : (
                 <a
                   className={`px-4 hover:bg-[#0C2443b9] hover:text-white py-2  ${window.scrollY > 80 && navLink.name === "Contact" ? " hover:bg-[#0C2443b9] hover:rounded-br-full" : ""}
@@ -188,6 +189,33 @@ function NavBar() {
           ))}
         </div>
       )}
+
+      <Modal
+        classes="text-md lg:text-xl"
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+      >
+        <p className="my-2"> You can download using the following command:</p>
+
+        <div className="mb-2 bg-uconn text-white rounded-lg">
+          <div className="flex justify-between bg-gray-900">
+            <p className="bg-gray-800 rounded-md p-[3px]">Bash</p>
+            <p className="bg-gray-800 rounded-md p-[3px]">copy</p>
+          </div>
+          <p className="p-2">
+            curl -o Resume-Saikiran-Belana.pdf \
+            https://raw.githubusercontent.com/belanasaikiran/belanasaikiran/main/Resume-Saikiran-Belana.pdf
+          </p>
+        </div>
+        <div className="flex flex-col gap-2 mt-4">
+          <p>Nah... I'm Lazy, I'll just open it. </p>
+          <p>
+            <button className="px-4 py-2 bg-uconn text-white rounded hover:bg-red-600">
+              View Resume
+            </button>
+          </p>
+        </div>
+      </Modal>
     </div>
   );
 }
