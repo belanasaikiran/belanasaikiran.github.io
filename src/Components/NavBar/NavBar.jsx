@@ -204,16 +204,20 @@ function NavBar() {
           </div>
           <p className="p-2">
             curl -o Resume-Saikiran-Belana.pdf \
-            https://raw.githubusercontent.com/belanasaikiran/belanasaikiran/main/Resume-Saikiran-Belana.pdf
+            https://raw.githubusercontent.com/belanasaikiran/belanasaikiran.github.io/2025/src/Components/Resume/Resume-Saikiran-Belana.pdf
           </p>
         </div>
         <div className="flex flex-col gap-2 mt-4">
           <p>Nah... I'm Lazy, I'll just open it. </p>
-          <p>
+          <a
+            href="https://github.com/belanasaikiran/belanasaikiran.github.io/blob/2025/src/Components/Resume/Resume-Saikiran-Belana.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <button className="px-4 py-2 bg-uconn text-white rounded hover:bg-red-600">
               View Resume
             </button>
-          </p>
+          </a>
         </div>
       </Modal>
     </div>
