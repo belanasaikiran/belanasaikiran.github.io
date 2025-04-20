@@ -102,10 +102,10 @@ function NavBar() {
       ${opacityNav}
       `}
     >
-      <div
-        className={`${window.scrollY > 80 ? "bg-accent rounded-bl-full rounded-br-full drop-shadow-lg   " : ""}`}
-      >
-        <nav className="flex justify-between">
+      <div className={`${window.scrollY > 80 ? "  drop-shadow-lg   " : ""}`}>
+        <nav
+          className={`flex justify-between ${window.scrollY > 80 ? "bg-accent  rounded-br-[25px] rounded-bl-[25px]" : ""}`}
+        >
           <a
             href="#home"
             className={` ${window.scrollY > 80 ? "" : roundedNavCSS} text-gray-100  font-medium `}
@@ -116,11 +116,11 @@ function NavBar() {
               scrollToSection("#home");
             }}
           >
-            <div className="flex justify-items-center items-center text-xl">
+            <div className="flex justify-items-center items-center text-lg  ">
               <img
                 src={Image}
                 alt="nav head"
-                className={`w-[42px] rounded-full  transition-all duration-700 grayscale ${window.scrollY > 80 ? "rounded-tl-none text-lg" : ""}`}
+                className={`w-[42px]  rounded-full   transition-all duration-700 grayscale ${window.scrollY > 80 ? "rounded-tl-none " : ""} ${nav ? "text-sm" : "text-lg"}`}
               />
               <span className=" px-2 pr-3 sm:block">Saikiran Belana </span>
             </div>
@@ -129,7 +129,7 @@ function NavBar() {
           <img
             src={nav ? close : menu}
             alt="menu"
-            className={`block lg:hidden bg-accent p-2  w-[36px] h-[36px]   hover:pointer  ${window.scrollY > 80 ? "rounded-br-full mr-2 w-[30px] h-[30px] mt-1" : " rounded-full"}`}
+            className={`block lg:hidden bg-accent p-2  w-[36px] h-[36px]   hover:pointer  ${window.scrollY > 80 ? "rounded-br-full mr-2 w-[42px] h-[42px] " : " rounded-full"}`}
             onClick={handleNav}
           />
 
@@ -139,7 +139,7 @@ function NavBar() {
               lg:flex  lg:flex-row justify-self-center
               content-between justify-center items-center transition-all ease-in-out duration-300
               ${nav ? "flex flex-col absolute z-100 right-4 top-12 py-4 rounded-3xl" : "hidden"}
-              ${window.scrollY > 80 ? "bg-accent rounded-br-full text-lg " : ""}
+              ${window.scrollY > 80 ? "bg-accent rounded-br-[25px] text-lg " : ""}
               `}
           >
             {navLinks.map((navLink, index) =>
