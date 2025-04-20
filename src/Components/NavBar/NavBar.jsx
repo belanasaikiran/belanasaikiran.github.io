@@ -34,6 +34,19 @@ function NavBar() {
   const [color, setColor] = useState("#000");
   const [mainColor, setMainColor] = useState("#9A3412");
   const [isOpen, setIsOpen] = useState(false);
+  const command = `curl -o Resume-Saikiran-Belana.pdf https://raw.githubusercontent.com/belanasaikiran/belanasaikiran.github.io/2025/src/Components/Resume/Resume-Saikiran-Belana.pdf`;
+
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(command);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // reset after 2s
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+    }
+  };
 
   const handleNav = () => setNav(!nav);
 
@@ -84,8 +97,9 @@ function NavBar() {
 
   return (
     <div
-      className={`text-sm 2xl:text-lg backdrop-opacity-0 bg-white/0 backdrop-blur-md transition-all duration-700 ease-in-out md:px-8 lg:px-24  xl:px-48 px-4 sm:gap-4 sticky top-0 z-30 bg-white md:bg-[${bgColor}] md:text-[${color}]
+      className={`text-sm 2xl:text-lg backdrop-opacity-0 bg-white/0 backdrop-blur-md transition-all duration-700 ease-in-out md:px-8 lg:px-24  xl:px-48 px-4 sm:gap-4 sticky top-0 z-30 bg-white lg:bg-[${bgColor}] md:text-[${color}]
       ${nav ? "h-48" : "h-20"} ${window.scrollY > 80 ? "drop-shadow-md h-14 my-0 mx-[10%] xl:mx-[20%] 2xl:mx-[25%]" : "h-16 text-xl mt-4"}
+      ${nav && window.scrollY > 80 ? "" : ""}
       ${opacityNav}
       `}
     >
@@ -109,20 +123,32 @@ function NavBar() {
                 alt="nav head"
                 className={`w-[42px] rounded-full  transition-all duration-700 grayscale ${window.scrollY > 80 ? "rounded-tl-none" : ""}`}
               />
-              <span className="hidden px-2 pr-3 sm:block">
-                Saikiran Belana{" "}
-              </span>
+              <span className=" px-2 pr-3 sm:block">Saikiran Belana </span>
             </div>
           </a>
 
+          <img
+            src={nav ? close : menu}
+            alt="menu"
+            className={`block lg:hidden bg-accent p-2 w-[36px] h-[36px]   hover:pointer  ${window.scrollY > 80 ? "rounded-br-full mr-2 w-[30px] h-[30px] mt-1" : " rounded-full"}`}
+            onClick={handleNav}
+          />
+
+          {/* Right Menu */}
           <div
-            className={`${window.scrollY > 80 ? "rounded-none" : roundedNavCSS} text-white lg:flex hidden justify-self-center content-between justify-center items-center`}
+            className={`${window.scrollY > 80 ? "rounded-none" : roundedNavCSS} text-white
+              lg:flex  lg:flex-row justify-self-center
+              content-between justify-center items-center transition-all ease-in-out duration-300
+              ${nav ? "flex flex-col absolute z-100 right-4 top-12 py-4 rounded-3xl" : "hidden"}
+              ${window.scrollY > 80 ? "bg-accent rounded-3xl   text-lg " : ""}
+              `}
           >
             {navLinks.map((navLink, index) =>
               navLink.name === "Download CV" ? (
                 <button
-                  className={`px-4 hover:bg-[#0C2443b9] hover:text-white py-2  ${window.scrollY > 80 && navLink.name === "Contact" ? " hover:bg-[#0C2443b9] hover:rounded-br-full" : ""}
+                  className={` px-4 hover:bg-[#0C2443b9] hover:text-white py-2
                     ${window.scrollY > 80 ? "" : "rounded-full"}
+                    ${nav ? "border-b-2 px-8" : ""}
                     `}
                   key={index}
                   onClick={() => {
@@ -134,8 +160,9 @@ function NavBar() {
                 </button>
               ) : (
                 <a
-                  className={`px-4 hover:bg-[#0C2443b9] hover:text-white py-2  ${window.scrollY > 80 && navLink.name === "Contact" ? " hover:bg-[#0C2443b9] hover:rounded-br-full" : ""}
+                  className={`px-4 hover:bg-[#0C2443b9] hover:text-white py-2   ${window.scrollY > 80 && navLink.name === "Contact" ? " hover:bg-[#0C2443b9] hover:rounded-br-full" : ""}
                     ${window.scrollY > 80 ? "" : "rounded-full"}
+                    ${nav ? "border-b-2 w-full px-8 " : ""}
                     `}
                   href={navLink.link}
                   key={index}
@@ -149,46 +176,8 @@ function NavBar() {
               ),
             )}
           </div>
-
-          <img
-            src={nav ? close : menu}
-            alt="menu"
-            className="bg-uconn p-2 w-[42px] h-[42px] lg:hidden hover:pointer "
-            onClick={handleNav}
-          />
         </nav>
       </div>
-
-      {nav && (
-        <div className="flex lg:hidden flex-col py-4  delay-300 ">
-          {navLinks.map((navLink, index) => (
-            <a
-              className="px-4 py-2"
-              href={navLink.link}
-              key={index}
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection(navLink.link);
-              }}
-            >
-              {navLink.name}
-            </a>
-          ))}
-          {rightNavLinks.map((navLink, index) => (
-            <a
-              className="px-4 hover:bg-[#0C2443b9] hover:text-white py-2"
-              href={navLink.link}
-              key={index}
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection(navLink.link);
-              }}
-            >
-              {navLink.name}
-            </a>
-          ))}
-        </div>
-      )}
 
       <Modal
         classes="text-md lg:text-xl"
@@ -200,11 +189,15 @@ function NavBar() {
         <div className="mb-2 bg-uconn text-white rounded-lg">
           <div className="flex justify-between bg-gray-900">
             <p className="bg-gray-800 rounded-md p-[3px]">Bash</p>
-            <p className="bg-gray-800 rounded-md p-[3px]">copy</p>
+            <button
+              onClick={handleCopy}
+              className="bg-gray-800 rounded-md px-2 py-[3px] hover:bg-gray-700 transition"
+            >
+              {copied ? "Copied!" : "Copy"}
+            </button>
           </div>
-          <p className="p-2">
-            curl -o Resume-Saikiran-Belana.pdf \
-            https://raw.githubusercontent.com/belanasaikiran/belanasaikiran.github.io/2025/src/Components/Resume/Resume-Saikiran-Belana.pdf
+          <p className="p-2 text-lg font-[Quantico] break-words whitespace-pre-wrap">
+            {command}
           </p>
         </div>
         <div className="flex flex-col gap-2 mt-4">
