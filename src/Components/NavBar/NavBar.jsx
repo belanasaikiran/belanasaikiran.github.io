@@ -159,7 +159,7 @@ function NavBar() {
                 </button>
               ) : (
                 <a
-                  className={`px-4 hover:bg-[#0C2443b9] hover:text-white py-2   ${window.scrollY > 80 && navLink.name === "Contact" ? " hover:bg-[#0C2443b9] hover:rounded-br-full" : ""}
+                  className={`px-4 hover:bg-[#0C2443b9] hover:text-white py-2   ${window.scrollY > 80 && navLink.name === "Contact" ? " hover:bg-[#0C2443b9] hover:rounded-br-[25px]" : ""}
                     ${window.scrollY > 80 ? "" : "rounded-full"}
                     ${nav ? "border-b-2 w-full px-8 " : ""}
                     `}
