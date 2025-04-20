@@ -24,7 +24,6 @@ const navLinks = [
   { name: "Contact", link: "#contact" },
 ];
 
-const rightNavLinks = [];
 const roundedNavCSS = "rounded-full bg-accent";
 
 function NavBar() {
@@ -97,7 +96,7 @@ function NavBar() {
 
   return (
     <div
-      className={`text-sm 2xl:text-lg backdrop-opacity-0 bg-white/0 backdrop-blur-md transition-all duration-700 ease-in-out md:px-8 lg:px-24  xl:px-48 px-4 sm:gap-4 sticky top-0 z-30 bg-white lg:bg-[${bgColor}] md:text-[${color}]
+      className={`text-sm 2xl:text-lg backdrop-opacity-0 bg-white/0 backdrop-blur-md transition-all duration-700 ease-in-out md:px-8 lg:px-24  xl:px-48 px-4 sm:gap-4 sticky top-0 z-50 bg-white lg:bg-[${bgColor}] md:text-[${color}]
       ${nav ? "h-48" : "h-20"} ${window.scrollY > 80 ? "drop-shadow-md h-14 my-0 mx-[10%] xl:mx-[20%] 2xl:mx-[25%]" : "h-16 text-xl mt-4"}
       ${nav && window.scrollY > 80 ? "" : ""}
       ${opacityNav}
@@ -117,11 +116,11 @@ function NavBar() {
               scrollToSection("#home");
             }}
           >
-            <div className="flex justify-items-center items-center">
+            <div className="flex justify-items-center items-center text-xl">
               <img
                 src={Image}
                 alt="nav head"
-                className={`w-[42px] rounded-full  transition-all duration-700 grayscale ${window.scrollY > 80 ? "rounded-tl-none" : ""}`}
+                className={`w-[42px] rounded-full  transition-all duration-700 grayscale ${window.scrollY > 80 ? "rounded-tl-none text-lg" : ""}`}
               />
               <span className=" px-2 pr-3 sm:block">Saikiran Belana </span>
             </div>
@@ -130,17 +129,17 @@ function NavBar() {
           <img
             src={nav ? close : menu}
             alt="menu"
-            className={`block lg:hidden bg-accent p-2 w-[36px] h-[36px]   hover:pointer  ${window.scrollY > 80 ? "rounded-br-full mr-2 w-[30px] h-[30px] mt-1" : " rounded-full"}`}
+            className={`block lg:hidden bg-accent p-2  w-[36px] h-[36px]   hover:pointer  ${window.scrollY > 80 ? "rounded-br-full mr-2 w-[30px] h-[30px] mt-1" : " rounded-full"}`}
             onClick={handleNav}
           />
 
           {/* Right Menu */}
           <div
-            className={`${window.scrollY > 80 ? "rounded-none" : roundedNavCSS} text-white
+            className={`${window.scrollY > 80 ? "" : roundedNavCSS} text-white
               lg:flex  lg:flex-row justify-self-center
               content-between justify-center items-center transition-all ease-in-out duration-300
               ${nav ? "flex flex-col absolute z-100 right-4 top-12 py-4 rounded-3xl" : "hidden"}
-              ${window.scrollY > 80 ? "bg-accent rounded-3xl   text-lg " : ""}
+              ${window.scrollY > 80 ? "bg-accent rounded-br-full text-lg " : ""}
               `}
           >
             {navLinks.map((navLink, index) =>
