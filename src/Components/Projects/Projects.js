@@ -1,8 +1,5 @@
 import React from "react";
-import Hammer from "../../assets/Images/Hammer.svg";
-import { ProjectList, OtherProjectList } from "./ProjectList";
-import { AiOutlineArrowRight } from "react-icons/ai";
-import UCONN_Logo from "../../assets/Images/uconn_logo.png";
+import { ProjectList } from "./ProjectList";
 
 export default function Projects() {
   return (
@@ -39,19 +36,16 @@ export default function Projects() {
                       <p className="text-[12px] italic text-blue-900">
                         {Project.techStack}
                       </p>
-                      <p>
-                        <a
-                          href={Project.Link}
-                          target="blank"
-                          className="text-[12px] md:absolute md:h-full md:w-full md:bg-uconn/80 md:flex md:items-center md:justify-center md:-bottom-10 md:group-hover:bottom-0 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300"
-                        >
-                          <button className="bg-accent font-semibold inline-flex  md:p-4 p-[2px] rounded-2xl text-white md:group  md:group-hover:bg-white md:group-hover:text-uconn transition-all duration-300 ease-in-out  ">
-                            <span>{Project.type}</span>
-                            <AiOutlineArrowRight className="md:group-hover:ml-1 mt-[2px]  transition-all duration-300 ease-in-out -right-2  " />
-                          </button>
-                        </a>
-                      </p>
                     </div>
+                    <a
+                      href={Project.Link}
+                      target="blank"
+                      className="text-[12px] md:absolute md:h-full md:w-full md:bg-uconn/80 md:flex md:items-center md:justify-center md:-bottom-10 md:group-hover:bottom-0 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300"
+                    >
+                      <button className="bg-accent font-semibold inline-flex  md:p-4 p-[2px] rounded-2xl text-white md:group  md:group-hover:bg-white md:group-hover:text-uconn transition-all duration-300 ease-in-out  ">
+                        <span>{Project.type} ↗</span>
+                      </button>
+                    </a>
                   </div>
                 </div>
               ))}
