@@ -19,6 +19,16 @@ export const ProjectList = [
     type: "GitHub",
   },
   {
+    Name: "Trusted Module Platform 2.0 - Nokia",
+    Image:
+      "https://cdn.prod.website-files.com/659196fa73ab4e0a962e3994/65e7418064826dcd7adbd7b2_TPM%2520vs%2520Passwords.png",
+    techStack: "TPM, Linux",
+    Description:
+      "A background service that listens for desktop notifications (via D-Bus), then displays them on-screen using Wayland protocols.",
+    Link: "https://belanasaikiran.github.io/ComputerSecurity/Project4/",
+    type: "GitHub",
+  },
+  {
     Name: "Windborne-Tracker",
     Image:
       "https://raw.githubusercontent.com/belanasaikiran/windborne-tracker/refs/heads/main/screenshot.png",
@@ -89,7 +99,7 @@ export const ProjectList = [
         digital authentication and malware verification.
       </div>
     ),
-    Link: "https://github.com/belanasaikiran/ComputerSecurity/blob/main/Project1/Report.md",
+    Link: "https://belanasaikiran.github.io/ComputerSecurity/Project1/Report.html",
     type: "GitHub",
   },
   {
@@ -105,7 +115,7 @@ export const ProjectList = [
         digital authentication and malware verification.
       </div>
     ),
-    Link: "https://github.com/belanasaikiran/ComputerSecurity/tree/main/Project2",
+    Link: "https://belanasaikiran.github.io/ComputerSecurity/Project2/",
     type: "GitHub",
   },
 

@@ -29,6 +29,9 @@ import Cpp from "../../assets/Images/Skills/CPlusPlus.webp";
 import UdemyLogo from "../../assets/Images/certifications/Udemy.png";
 import CourseraLogo from "../../assets/Images/certifications/Coursera.png";
 
+const NCL_logo =
+  "https://www.competitionsciences.org/wp-content/uploads/2020/01/National-Cyber-League-Logo.png";
+
 export const AllSkills = [
   {
     skillName: "C++",
@@ -203,6 +206,13 @@ export const CloudDevOpsSkills = [
 ];
 
 export const Certificates = [
+  {
+    Image: NCL_logo,
+    Course: "NCL Spring 2025 Team Game",
+    DateOfCompletion: "May 2025",
+    CredentialID: "7K5JUJQPLXJL",
+    VerifyLink: "https://cyberskyline.com/report/7K5JUJQPLXJL",
+  },
   {
     Image: UdemyLogo,
     Course: "The Complete Web Development BootCamp - Angela Yu ",
