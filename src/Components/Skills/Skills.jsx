@@ -11,7 +11,7 @@ function Skills() {
       <div className=" min-h-screen mt-16">
         {/* Section 2 - Technical Skills */}
         <div
-          className={`text-sm 2xl:text-lg lg:px-16 bg-white text-uconn ${theme === "dark" ? "bg-gray-800" : "bg-accent"}  text-center rounded-bl-full rounded-tr-full `}
+          className={`text-sm 2xl:text-lg lg:px-16 text-uconn ${theme === "dark" ? "bg-gray-800" : "bg-gray-50 "}  text-center rounded-bl-full rounded-tr-full `}
         >
           <h1 className=" text-white my-8 text-xl 2xl:text-3xl">
             <span
