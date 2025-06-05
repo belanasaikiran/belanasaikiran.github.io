@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { AiFillGithub, AiOutlineArrowRight } from "react-icons/ai";
 import emailjs from "@emailjs/browser";
 import { SocialMedia } from "../SocialIcons/Social";
+import { useTheme } from "../../context/ThemeContext";
 
 const Image =
   "https://avatars.githubusercontent.com/u/88756154?s=400&u=f35449ed30519431779c4e179fa22c04060ad8c9&v=4";
@@ -9,6 +10,7 @@ const Image =
 function Contact() {
   const form = useRef();
   const [Response, setResponse] = useState("");
+  const { theme } = useTheme();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -39,14 +41,16 @@ function Contact() {
     >
       <div className="text-center  my-8 pb-16">
         <h1 className="text-white text-xl 2xl:text-3xl">
-          <span className="bg-accent px-6 py-2 rounded-tl-full rounded-br-full ">
+          <span
+            className={`font-[Quantico] ${theme === "dark" ? "bg-darkAccent text-black" : "bg-accent"}  bg-accent px-6 py-2 rounded-tl-full rounded-br-full `}
+          >
             Contact
           </span>
         </h1>
       </div>
       <div className="grid md:grid-cols-2 grid-cols-1 content-center  ">
-        <div className="lg:pl-40">
-          <div className="grid justify-items-center ">
+        <div className={`lg:pl-40 ${theme === "dark" ? "text-white" : ""} `}>
+          <div className="grid justify-items-center  ">
             <img
               src={Image}
               alt="slothy"
@@ -55,7 +59,12 @@ function Contact() {
           </div>
 
           <p className="text-3xl pt-4"> Saikiran Belana</p>
-          <p className="pt-2 pb-4"> Connect with me on social media</p>
+          <p
+            className={`pt-2 pb-4 ${theme === "dark" ? "text-darkAccent" : ""}`}
+          >
+            {" "}
+            Connect with me on social media
+          </p>
           <div className="flex gap-2 text-3xl justify-center">
             {SocialMedia.map((Social) => (
               <a
@@ -74,9 +83,13 @@ function Contact() {
         </div>
 
         <div className="lg:px-0 p-8">
-          <h3 className=" text-3xl text-left font-semibold ">
+          <h3
+            className={`${theme === "dark" ? "text-darkAccent" : ""} text-3xl text-left font-semibold `}
+          >
             {" "}
-            <span className="underline underline-offset-[10px]  decoration-uconn decoration-4  ">
+            <span
+              className={`${theme === "dark" ? "text-white " : ""} underline underline-offset-[10px]  decoration-uconn decoration-4  `}
+            >
               Send a{" "}
             </span>
             message{" "}
@@ -90,18 +103,18 @@ function Contact() {
             <input
               type="text"
               placeholder="Name"
-              className="border-accent rounded-xl caret-[#463F1A] "
+              className={`${theme === "dark" ? "bg-gray-800 text-gray-50" : ""} border-accent rounded-xl caret-[#463F1A]`}
               name="name"
             />
             <input
               type="email"
               placeholder="Your email address"
-              className="border-accent rounded-xl caret-[#463F1A] "
+              className={`${theme === "dark" ? "bg-gray-800 text-gray-50" : ""} border-accent rounded-xl caret-[#463F1A]`}
               name="email"
             />
             <textarea
               placeholder="Message"
-              className="border-accent rounded-xl caret-[#463F1A]"
+              className={`${theme === "dark" ? "bg-gray-800 text-gray-50" : ""} border-accent rounded-xl caret-[#463F1A]`}
               rows={8}
               name="message"
             ></textarea>
@@ -110,7 +123,7 @@ function Contact() {
 
             <div className="text-right transition duration-500 ease-in-out ">
               <button
-                className=" p-2 bg-uconn  text-white group inline-flex gap-2 transition duration-500  hover:bg-skin hover:text-brown "
+                className={` ${theme === "dark" ? "bg-darkAccent text-black" : "bg-uconn"} p-2  text-white group inline-flex gap-2 transition duration-500  hover:bg-skin hover:text-brown `}
                 type="submit"
               >
                 Send Message{" "}

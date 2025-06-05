@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import menu from "../../assets/Images/menu.svg";
 import close from "../../assets/Images/close.svg";
 import Modal from "./Modal";
+import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
+import { useTheme } from "../../context/ThemeContext";
 
 const Image =
   "https://avatars.githubusercontent.com/u/88756154?s=400&u=f35449ed30519431779c4e179fa22c04060ad8c9&v=4";
@@ -19,7 +21,7 @@ const navLinks = [
   { name: "Contact", link: "#contact" },
 ];
 
-const roundedNavCSS = "rounded-full bg-accent";
+const roundedNavCSS = "rounded-full";
 
 function NavBar() {
   const [nav, setNav] = useState(false);
@@ -28,6 +30,7 @@ function NavBar() {
   const [color, setColor] = useState("#000");
   const [mainColor, setMainColor] = useState("#9A3412");
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
   const command = `curl -o Resume-Saikiran-Belana.pdf https://raw.githubusercontent.com/belanasaikiran/belanasaikiran.github.io/2025/src/Components/Resume/Resume-Saikiran-Belana.pdf`;
 
   const [copied, setCopied] = useState(false);
@@ -91,7 +94,7 @@ function NavBar() {
 
   return (
     <div
-      className={`text-sm 2xl:text-lg backdrop-opacity-0 bg-white/0 backdrop-blur-md transition-all duration-700 ease-in-out md:px-8 lg:px-24  xl:px-48 px-4 sm:gap-4 sticky top-0 z-50 bg-white lg:bg-[${bgColor}] md:text-[${color}]
+      className={`font-[Quantico] text-sm 2xl:text-lg backdrop-opacity-0 backdrop-blur-md transition-all duration-700 ease-in-out md:px-8 lg:px-24 xl:px-48 px-4 sm:gap-4 sticky top-0 z-50 ${theme === "dark" ? " text-black" : `text-white bg-white/0 lg:bg-[${bgColor}] md:text-[${color}]`}
       ${nav ? "h-48" : "h-20"} ${window.scrollY > 80 ? "drop-shadow-md h-14 my-0 mx-[10%]  lg:mx-[20%] xl:mx-[22%] 2xl:mx-[25%]" : "h-16 text-xl mt-4"}
       ${nav && window.scrollY > 80 ? "" : ""}
       ${opacityNav}
@@ -99,11 +102,11 @@ function NavBar() {
     >
       <div className={`${window.scrollY > 80 ? "  drop-shadow-lg   " : ""}`}>
         <nav
-          className={`flex justify-between ${window.scrollY > 80 ? "bg-accent  rounded-br-[25px] rounded-bl-[25px]" : ""}`}
+          className={`flex justify-between items-center ${window.scrollY > 80 ? `${theme === "dark" ? "bg-darkAccent text-black" : "bg-accent"} rounded-br-[25px] rounded-bl-[25px] ` : ""} `}
         >
           <a
             href="#home"
-            className={` ${window.scrollY > 80 ? "" : roundedNavCSS} text-gray-100  font-medium `}
+            className={` ${window.scrollY > 80 ? "rounded-bl-full" : roundedNavCSS}  font-medium ${theme === "dark" ? "bg-darkAccent" : "bg-accent"}`}
             // style={{ color: mainColor }}
             onClick={(e) => {
               e.preventDefault();
@@ -121,26 +124,61 @@ function NavBar() {
             </div>
           </a>
 
-          <img
-            src={nav ? close : menu}
-            alt="menu"
-            className={`block lg:hidden bg-accent p-2  w-[36px] h-[36px]   hover:pointer  ${window.scrollY > 80 ? "rounded-br-full mr-2 w-[42px] h-[42px] " : " rounded-full"}`}
-            onClick={handleNav}
-          />
+          <div className="flex items-center">
+            <button
+              onClick={toggleTheme}
+              className={`mr-2 flex items-center justify-center ${theme === "dark" ? "hover:bg-gray-800" : "hover:bg-[#0C2443b9]"} hover:text-white p-2 rounded-full lg:hidden`}
+              aria-label={
+                theme === "dark"
+                  ? "Switch to light mode"
+                  : "Switch to dark mode"
+              }
+            >
+              {theme === "dark" ? (
+                <MdOutlineLightMode size={20} className="text-black" />
+              ) : (
+                <MdOutlineDarkMode size={20} className="text-white" />
+              )}
+            </button>
+            <img
+              src={nav ? close : menu}
+              alt="menu"
+              className={`block lg:hidden ${theme === "dark" ? "bg-black" : "bg-accent"} p-2 w-[36px] h-[36px] hover:pointer ${window.scrollY > 80 ? "rounded-br-full mr-2 w-[42px] h-[42px] " : " rounded-full"}`}
+              onClick={handleNav}
+            />
+          </div>
 
           {/* Right Menu */}
+
           <div
-            className={`${window.scrollY > 80 ? "" : roundedNavCSS} text-white
+            className={`${window.scrollY > 80 ? "" : roundedNavCSS} text-white ${theme === "dark" ? "bg-darkAccent text-black" : "bg-accent"}
               lg:flex  lg:flex-row justify-self-center
               content-between justify-center items-center transition-all ease-in-out duration-300
               ${nav ? "flex flex-col absolute z-100 right-4 top-12 py-4 rounded-3xl" : "hidden"}
-              ${window.scrollY > 80 ? "bg-accent rounded-br-[25px] text-lg " : ""}
+              ${window.scrollY > 80 ? `${theme === "dark" ? "bg-darkAccent" : "bg-accent"} rounded-br-[25px] text-lg ` : ""}
               `}
           >
+            {/* Toggle Light and Dark Modes */}
+            <button
+              onClick={toggleTheme}
+              className={`flex items-center justify-center ${theme === "dark" ? "hover:bg-darkAccent" : "hover:bg-[#0C2443b9]"} hover:text-white p-2 rounded-full ${window.scrollY > 80 ? "hidden" : ""}`}
+              aria-label={
+                theme === "dark"
+                  ? "Switch to light mode"
+                  : "Switch to dark mode"
+              }
+            >
+              {theme === "dark" ? (
+                <MdOutlineLightMode size={20} />
+              ) : (
+                <MdOutlineDarkMode size={20} />
+              )}
+            </button>
+
             {navLinks.map((navLink, index) =>
               navLink.name === "Get CV" ? (
                 <button
-                  className={` px-4 hover:bg-[#0C2443b9] hover:text-white py-2
+                  className={` px-4 ${theme === "dark" ? "hover:bg-gray-800" : "hover:bg-[#0C2443b9]"} hover:text-white py-2
                     ${window.scrollY > 80 ? "" : "rounded-full"}
                     ${nav ? "border-b-2 px-8" : ""}
                     `}
@@ -154,7 +192,7 @@ function NavBar() {
                 </button>
               ) : (
                 <a
-                  className={`px-4 hover:bg-[#0C2443b9] hover:text-white py-2   ${window.scrollY > 80 && navLink.name === "Contact" ? " hover:bg-[#0C2443b9] hover:rounded-br-[25px]" : ""}
+                  className={`px-4 ${theme === "dark" ? "hover:bg-gray-800" : "hover:bg-[#0C2443b9]"} hover:text-white py-2   ${window.scrollY > 80 && navLink.name === "Contact" ? ` ${theme === "dark" ? "hover:bg-gray-800" : "hover:bg-[#0C2443b9]"} hover:rounded-br-[25px]` : ""}
                     ${window.scrollY > 80 ? "" : "rounded-full"}
                     ${nav ? "border-b-2 w-full px-8 " : ""}
                     `}
@@ -170,6 +208,7 @@ function NavBar() {
               ),
             )}
           </div>
+          {/* <div></div> */}
         </nav>
       </div>
 
@@ -180,12 +219,18 @@ function NavBar() {
       >
         <p className="my-2"> You can Get using the following command:</p>
 
-        <div className="mb-2 bg-uconn text-white rounded-lg">
+        <div
+          className={`mb-2 ${theme === "dark" ? "bg-black" : "bg-uconn"} text-white rounded-lg`}
+        >
           <div className="flex justify-between bg-gray-900">
-            <p className="bg-gray-800 rounded-md p-[3px]">Bash</p>
+            <p
+              className={`${theme === "dark" ? "bg-black" : "bg-gray-800"} rounded-md p-[3px]`}
+            >
+              Bash
+            </p>
             <button
               onClick={handleCopy}
-              className="bg-gray-800 rounded-md px-2 py-[3px] hover:bg-gray-700 transition"
+              className={`${theme === "dark" ? "bg-black" : "bg-gray-800"} rounded-md px-2 py-[3px] ${theme === "dark" ? "hover:bg-gray-800" : "hover:bg-gray-700"} transition`}
             >
               {copied ? "Copied!" : "Copy"}
             </button>
@@ -201,7 +246,9 @@ function NavBar() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="px-4 py-2 bg-uconn text-white rounded hover:bg-red-600">
+            <button
+              className={`px-4 py-2 ${theme === "dark" ? "bg-black" : "bg-uconn"} text-white rounded ${theme === "dark" ? "hover:bg-gray-800" : "hover:bg-red-600"}`}
+            >
               View Resume
             </button>
           </a>

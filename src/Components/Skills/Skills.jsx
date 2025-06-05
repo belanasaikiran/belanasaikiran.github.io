@@ -1,15 +1,22 @@
 import React from "react";
 
 import { AllSkills, Certificates } from "./SkillsConfig";
+import { useTheme } from "../../context/ThemeContext";
 
 function Skills() {
+  const { theme } = useTheme();
+
   return (
     <div id="skills" className="flex">
       <div className=" min-h-screen mt-16">
         {/* Section 2 - Technical Skills */}
-        <div className="text-sm 2xl:text-lg lg:px-16 bg-white text-uconn text-center rounded-bl-full rounded-tr-full">
+        <div
+          className={`text-sm 2xl:text-lg lg:px-16 bg-white text-uconn ${theme === "dark" ? "bg-gray-800" : "bg-accent"}  text-center rounded-bl-full rounded-tr-full `}
+        >
           <h1 className=" text-white my-8 text-xl 2xl:text-3xl">
-            <span className="bg-accent px-6 py-2   rounded-tl-full rounded-br-full ">
+            <span
+              className={`font-[Quantico]   ${theme === "dark" ? "bg-darkAccent text-black" : "bg-accent"} px-6 py-2   rounded-tl-full rounded-br-full `}
+            >
               Technical Skills
             </span>
           </h1>
@@ -30,7 +37,7 @@ function Skills() {
               </a>
               {AllSkills.map((Skills, index) => (
                 <div
-                  className="border-b-uconn grid grid-cols-1 justify-items-center  2xl:gap-4  md:p-4  place-content-center hover:bg-uconn hover:text-white  xl:w-auto lg:w-1/7 "
+                  className={`border-b-uconn grid grid-cols-1 justify-items-center  2xl:gap-4  md:p-4  place-content-center ${theme === "dark" ? "hover:bg-darkAccent" : "hover:bg-uconn"}   hover:text-white  xl:w-auto lg:w-1/7`}
                   key={index}
                 >
                   <img
@@ -47,9 +54,13 @@ function Skills() {
           </div>
         </div>
 
-        <div className="bg-white text-uconn text-center   rounded-tl-full rounded-br-full">
+        <div
+          className={`text-uconn text-center  ${theme === "dark" ? "bg-gray-800 text-white" : "bg-gray-50"}  rounded-tl-full rounded-br-full`}
+        >
           <h1 className=" text-white text-xl 2xl:text-3xl mb-8  ">
-            <span className="bg-accent px-6 py-2   rounded-tl-full rounded-br-full ">
+            <span
+              className={`${theme === "dark" ? "bg-darkAccent text-black" : "bg-accent"} px-6 py-2   rounded-tl-full rounded-br-full `}
+            >
               Certifications
             </span>
           </h1>
@@ -57,7 +68,7 @@ function Skills() {
             {Certificates.map((Certificate, index) => (
               <div
                 key={index}
-                className=" grid  grid-cols-12 text-left  gap-4 text-uconn py-4 transition duration-500 ease-in-out border-b-4 border-uconn"
+                className={` grid  grid-cols-12 text-left  gap-4 ${theme === "dark" ? "text-white border-darkAccent" : "text-uconn"}  py-4 transition duration-500 ease-in-out border-b-4 border-uconn`}
               >
                 <div className="col-span-1">
                   <img
@@ -85,7 +96,9 @@ function Skills() {
                       target="blank"
                       className="place-self-center"
                     >
-                      <button className="bg-uconn text-white text-base p-1 px-4 py-2">
+                      <button
+                        className={`${theme === "dark" ? "bg-darkAccent text-black" : "bg-uconn "} text-white text-base p-1 px-4 py-2`}
+                      >
                         Verify
                       </button>
                     </a>

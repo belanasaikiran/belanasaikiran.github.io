@@ -32,12 +32,12 @@ body {
 }
 
 ::-webkit-scrollbar {
-    background-color: var(--light);
+    background-color: var(--dark-grey);
     width: 7px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--brown);
+    background-color: var(--light-blue);
     border-radius: 10px;
 }
 
