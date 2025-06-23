@@ -19,6 +19,16 @@ export const ProjectList = [
     type: "GitHub",
   },
   {
+    Name: "WoW",
+    Image:
+      "https://raw.githubusercontent.com/belanasaikiran/PowerAutoUI/refs/heads/main/ScreenShot/demo.png",
+    techStack: "NodeJs, NextJs, Eleven Labs API, Gemini API",
+    Description:
+      "WoW is an AI-powered data visualization application that allows users to upload data files and generate interactive charts through natural language prompts. Using a conversational interface, users can analyze their data, create customized visualizations, and gain insights without needing to write code.",
+    Link: "https://github.com/belanasaikiran/PowerAutoUI",
+    type: "GitHub",
+  },
+  {
     Name: "WayNotify",
     Image:
       "https://plus.unsplash.com/premium_photo-1682309524785-cf2288f7b544?q=80&w=2712&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
