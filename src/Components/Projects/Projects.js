@@ -14,7 +14,7 @@ export default function Projects() {
           <div className="text-center  text-xl 2xl:text-3xl my-8">
             <h1 className=" text-white  ">
               <span
-                className={`font-[Quantico]  ${theme === "dark" ? "bg-darkAccent text-black" : "bg-accent"}  bg-accent px-6 py-2 rounded-tl-full rounded-br-full heading-font`}
+                className={`font-[Quantico]  ${theme === "dark" ? "bg-darkAccent text-black" : "bg-accent"}  px-6 py-2 rounded-tl-full rounded-br-full heading-font`}
               >
                 Projects
               </span>

@@ -42,7 +42,7 @@ function Contact() {
       <div className="text-center  my-8 pb-16">
         <h1 className="text-white text-xl 2xl:text-3xl">
           <span
-            className={`font-[Quantico] ${theme === "dark" ? "bg-darkAccent text-black" : "bg-accent"}  bg-accent px-6 py-2 rounded-tl-full rounded-br-full `}
+            className={`font-[Quantico] ${theme === "dark" ? "bg-darkAccent text-black" : "bg-accent"}  px-6 py-2 rounded-tl-full rounded-br-full `}
           >
             Contact
           </span>
