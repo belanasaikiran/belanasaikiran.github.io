@@ -94,8 +94,8 @@ function NavBar() {
 
   return (
     <div
-      className={`font-[Quantico] text-sm 2xl:text-lg backdrop-opacity-0 backdrop-blur-md transition-all duration-700 ease-in-out md:px-8 lg:px-24 xl:px-48 px-4 sm:gap-4 sticky top-0 z-50 ${theme === "dark" ? " text-black" : `text-white bg-white/0 lg:bg-[${bgColor}] md:text-[${color}]`}
-      ${nav ? "h-48" : "h-20"} ${window.scrollY > 80 ? "drop-shadow-md h-14 my-0 mx-[10%]  lg:mx-[20%] xl:mx-[22%] 2xl:mx-[25%]" : "h-16 text-xl mt-4"}
+      className={`font-[Quantico] text-sm 2xl:text-base backdrop-opacity-0 backdrop-blur-md transition-all duration-700 ease-in-out md:px-8 lg:px-24 xl:px-48 px-4 sm:gap-4 sticky top-0 z-50 ${theme === "dark" ? " text-black" : `text-white bg-white/0 lg:bg-[${bgColor}] md:text-[${color}]`}
+      ${nav ? "h-48" : "h-20"} ${window.scrollY > 80 ? "drop-shadow-md h-14 my-0 mx-[10%]  lg:mx-[20%] xl:mx-[22%] 2xl:mx-[25%]" : "h-16 text-sm mt-4"}
       ${nav && window.scrollY > 80 ? "" : ""}
       ${opacityNav}
       `}
@@ -114,11 +114,11 @@ function NavBar() {
               scrollToSection("#home");
             }}
           >
-            <div className="flex justify-items-center items-center text-lg  ">
+            <div className="flex justify-items-center items-center text-base  ">
               <img
                 src={Image}
                 alt="nav head"
-                className={`w-[42px]  rounded-full   transition-all duration-700 grayscale ${window.scrollY > 80 ? "rounded-tl-none " : ""} ${nav ? "text-sm" : "text-lg"}`}
+                className={`w-[42px]  rounded-full   transition-all duration-700 grayscale ${window.scrollY > 80 ? "rounded-tl-none " : ""} ${nav ? "text-sm" : "text-base"}`}
               />
               <span className=" px-2 pr-3 sm:block">Saikiran Belana </span>
             </div>
@@ -155,7 +155,7 @@ function NavBar() {
               lg:flex  lg:flex-row justify-self-center
               content-between justify-center items-center transition-all ease-in-out duration-300
               ${nav ? "flex flex-col absolute z-100 right-4 top-12 py-4 rounded-3xl" : "hidden"}
-              ${window.scrollY > 80 ? `${theme === "dark" ? "bg-darkAccent" : "bg-accent"} rounded-br-[25px] text-lg ` : ""}
+              ${window.scrollY > 80 ? `${theme === "dark" ? "bg-darkAccent" : "bg-accent"} rounded-br-[25px] text-base ` : ""}
               `}
           >
             {/* Toggle Light and Dark Modes */}
@@ -217,37 +217,64 @@ function NavBar() {
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
       >
-        <p className="my-2"> You can Get using the following command:</p>
+        <p className={`my-2 ${theme === "dark" ? "text-white" : "text-black"}`}>
+          Do you use CURL ? <br />
+        </p>
 
         <div
-          className={`mb-2 ${theme === "dark" ? "bg-black" : "bg-uconn"} text-white rounded-lg`}
+          className={`mb-2 rounded-lg border-2 ${
+            theme === "dark"
+              ? "bg-darkAccent text-black border-gray-600"
+              : "bg-uconn text-white border-transparent"
+          }`}
         >
-          <div className="flex justify-between bg-gray-900">
-            <p
-              className={`${theme === "dark" ? "bg-black" : "bg-gray-800"} rounded-md p-[3px]`}
-            >
-              Bash
-            </p>
+          {/* Header with Bash label and Copy button */}
+          <div
+            className={`flex justify-between items-center px-3 py-1 text-sm font-medium ${
+              theme === "dark"
+                ? "bg-[#F9E79F] text-black"
+                : "bg-gray-800 text-white"
+            }`}
+          >
+            <p>Bash | Powershell</p>
             <button
               onClick={handleCopy}
-              className={`${theme === "dark" ? "bg-black" : "bg-gray-800"} rounded-md px-2 py-[3px] ${theme === "dark" ? "hover:bg-gray-800" : "hover:bg-gray-700"} transition`}
+              className={`rounded-md px-2 py-[3px] transition ${
+                theme === "dark"
+                  ? "bg-gray-200 text-black hover:bg-gray-300"
+                  : "bg-gray-700 text-white hover:bg-gray-600"
+              }`}
             >
               {copied ? "Copied!" : "Copy"}
             </button>
           </div>
-          <p className="p-2 text-lg font-[Quantico] break-words whitespace-pre-wrap">
+
+          {/* Command content */}
+          <p className="p-3 text-base font-[Quantico] break-words whitespace-pre-wrap">
             {command}
           </p>
         </div>
+
+        {/* Resume Section */}
         <div className="flex flex-col gap-2 mt-4">
-          <p>Nah... I'm Lazy, I'll just open it. </p>
+          <p
+            className={`text-sm ${
+              theme === "dark" ? "text-gray-300" : "text-gray-700"
+            }`}
+          >
+            Nah... I'm lazy, I'll just open it.
+          </p>
           <a
             href="https://github.com/belanasaikiran/belanasaikiran.github.io/blob/2025/src/Components/Resume/Resume-Saikiran-Belana.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
             <button
-              className={`px-4 py-2 ${theme === "dark" ? "bg-black" : "bg-uconn"} text-white rounded ${theme === "dark" ? "hover:bg-gray-800" : "hover:bg-red-600"}`}
+              className={`px-4 py-2 rounded font-semibold transition ${
+                theme === "dark"
+                  ? "bg-black text-white border-2 border-gray-600 hover:bg-gray-800"
+                  : "bg-uconn text-white hover:bg-red-600"
+              }`}
             >
               View Resume
             </button>

@@ -1,15 +1,9 @@
 import { GoMarkGithub } from "react-icons/go";
 import { ImLinkedin } from "react-icons/im";
 import { GrInstagram, GrTwitter } from "react-icons/gr";
-import { SiUnsplash } from "react-icons/si";
+import { SiReddit, SiUnsplash } from "react-icons/si";
 
 export const SocialMedia = [
-  {
-    Name: "X / Twitter",
-    Link: "https://x.com/saikiranbelana",
-    Icon: <GrTwitter />,
-    backgroundColor: "bg-[#1DA1F2]", // Twitter/X blue
-  },
   {
     Name: "LinkedIn",
     Link: "https://www.linkedin.com/in/belanasaikiran/",
@@ -35,5 +29,11 @@ export const SocialMedia = [
     Link: "https://unsplash.com/@belanasaikiran",
     Icon: <SiUnsplash />,
     backgroundColor: "bg-[#111111]", // Unsplash dark
+  },
+  {
+    Name: "Reddit",
+    Link: "https://www.reddit.com/user/CopyCharming/",
+    Icon: <SiReddit />,
+    backgroundColor: "bg-[#CB502C]", // LinkedIn blue
   },
 ];

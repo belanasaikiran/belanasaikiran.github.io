@@ -88,7 +88,7 @@ function Contact() {
           >
             {" "}
             <span
-              className={`${theme === "dark" ? "text-white " : ""} underline underline-offset-[10px]  decoration-uconn decoration-4  `}
+              className={`decoration-uconn ${theme === "dark" ? "text-white decoration-white" : ""} underline underline-offset-[10px]   decoration-4  `}
             >
               Send a{" "}
             </span>
@@ -103,18 +103,18 @@ function Contact() {
             <input
               type="text"
               placeholder="Name"
-              className={`${theme === "dark" ? "bg-gray-800 text-gray-50" : ""} border-accent rounded-xl caret-[#463F1A]`}
+              className={`${theme === "dark" ? "bg-gray-800 text-gray-50 border-darkAccent" : ""} border-accent rounded-xl caret-[#463F1A]`}
               name="name"
             />
             <input
               type="email"
               placeholder="Your email address"
-              className={`${theme === "dark" ? "bg-gray-800 text-gray-50" : ""} border-accent rounded-xl caret-[#463F1A]`}
+              className={`${theme === "dark" ? "bg-gray-800 text-gray-50 border-darkAccent" : ""} border-accent rounded-xl caret-[#463F1A]`}
               name="email"
             />
             <textarea
               placeholder="Message"
-              className={`${theme === "dark" ? "bg-gray-800 text-gray-50" : ""} border-accent rounded-xl caret-[#463F1A]`}
+              className={`${theme === "dark" ? "bg-gray-800 text-gray-50 border-darkAccent" : ""} border-accent rounded-xl caret-[#463F1A]`}
               rows={8}
               name="message"
             ></textarea>

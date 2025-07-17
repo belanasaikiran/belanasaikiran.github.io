@@ -11,7 +11,7 @@ function Skills() {
       <div className=" min-h-screen mt-16">
         {/* Section 2 - Technical Skills */}
         <div
-          className={`text-sm 2xl:text-lg lg:px-16 text-uconn ${theme === "dark" ? "bg-gray-800" : "bg-gray-50 "}  text-center rounded-bl-full rounded-tr-full `}
+          className={`text-sm 2xl:text-lg lg:px-16 text-uconn ${theme === "dark" ? "bg-gray-900" : "bg-gray-50 "}  text-center rounded-bl-full rounded-tr-full `}
         >
           <h1 className=" text-white my-8 text-xl 2xl:text-3xl">
             <span
@@ -31,7 +31,7 @@ function Skills() {
               >
                 <img
                   className="w-full"
-                  src="https://ghchart.rshah.org/1D4D8E/belanasaikiran"
+                  src={`https://ghchart.rshah.org/${theme === "dark" ? "3E5F44" : "1D4D8E"}/belanasaikiran`}
                   alt="GitHub Contributions"
                 />
               </a>
@@ -55,7 +55,7 @@ function Skills() {
         </div>
 
         <div
-          className={`text-uconn text-center  ${theme === "dark" ? "bg-gray-800 text-white" : "bg-gray-50"}  rounded-tl-full rounded-br-full`}
+          className={`text-uconn text-center  ${theme === "dark" ? "bg-gray-900 text-white" : "bg-gray-50"}  rounded-tl-full rounded-br-full`}
         >
           <h1 className=" text-white text-xl 2xl:text-3xl mb-8  ">
             <span
@@ -68,7 +68,7 @@ function Skills() {
             {Certificates.map((Certificate, index) => (
               <div
                 key={index}
-                className={` grid  grid-cols-12 text-left  gap-4 ${theme === "dark" ? "text-white border-darkAccent" : "text-uconn"}  py-4 transition duration-500 ease-in-out border-b-4 border-uconn`}
+                className={` grid  grid-cols-12 text-left border-b-4  gap-4 ${theme === "dark" ? "text-white border-darkAccent" : "text-uconn"}  py-4 transition duration-500 ease-in-out `}
               >
                 <div className="col-span-1">
                   <img

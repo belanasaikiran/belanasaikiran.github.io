@@ -8,7 +8,7 @@ export default function Projects() {
   return (
     <div id="projects" className="md:flex ">
       <div
-        className={`md:py-0 text-sm 2xl:text-lg lg:px-16 px-4 mt-20  ${theme === "dark" ? "bg-gray-800" : "bg-gray-50"}  rounded-tl-full rounded-br-full  `}
+        className={`md:py-0 text-sm 2xl:text-lg lg:px-16 px-4 mt-20  ${theme === "dark" ? "bg-gray-900" : "bg-gray-50"}  rounded-tl-full rounded-br-full  `}
       >
         <div className="w-full mt-16 pb-20">
           <div className="text-center  text-xl 2xl:text-3xl my-8">
