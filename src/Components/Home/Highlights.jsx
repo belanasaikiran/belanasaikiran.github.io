@@ -39,19 +39,18 @@ export default function Highlights() {
       description: "🏆 At Microsoft Hack Night, we took home Best Use of..",
       appBuilt: (
         <p>
-          Built the{" "}
           <a
             href="https://github.com/ramchandra3101/Hacakthan-Nyc"
             target="_blank"
             rel="noreferrer"
             className={`${theme === "dark" ? "text-darkAccent" : "text-accent"} font-bold`}
           >
-            Highlights NY IntelliNews{" "}
+            Mood Muse{" "}
           </a>
         </p>
       ),
       // strictly one image only
-      img: "https://media.licdn.com/dms/image/v2/D4D22AQFg3RSGZGwswQ/feedshare-shrink_2048_1536/B4DZcA5qx1GwAo-/0/1748066808624?e=1755734400&v=beta&t=2ODR4kMbWGSI5DOSebrnsP5x1n8YPwZ-fUMpK3v14O0",
+      img: "https://github.com/belanasaikiran/belanasaikiran.github.io/blob/2025/src/assets/Images/moodMuse.jpeg?raw=true",
       platform: "LinkedIn",
       github: "https://github.com/ramchandra3101/Hacakthan-Nyc",
       icon: <ImLinkedin />,
