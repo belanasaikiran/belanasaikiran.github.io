@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { AiFillGithub, AiOutlineArrowRight } from "react-icons/ai";
+import { FaLinkedin, FaTwitter } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import { SocialMedia } from "../SocialIcons/Social";
 import { useTheme } from "../../context/ThemeContext";
@@ -8,30 +9,18 @@ const Image =
   "https://avatars.githubusercontent.com/u/88756154?s=400&u=f35449ed30519431779c4e179fa22c04060ad8c9&v=4";
 
 function Contact() {
-  const form = useRef();
-  const [Response, setResponse] = useState("");
   const { theme } = useTheme();
+  const [copied, setCopied] = useState(false);
+  const command = "saikiranbelana@gmail.com";
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_qg9biiq",
-        "template_r3gu58l",
-        form.current,
-        "T1CvxBOfehT8aN-kn",
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setResponse("Message Sent Successfully");
-        },
-        (error) => {
-          console.log(error.text);
-          setResponse("An Error Occured!");
-        },
-      );
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(command);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // reset after 2s
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+    }
   };
 
   return (
@@ -39,17 +28,8 @@ function Contact() {
       id="contact"
       className="text-center text-sm 2xl:text-lg text-accent py-32 "
     >
-      <div className="text-center  my-8 pb-16">
-        <h1 className="text-white text-xl 2xl:text-3xl">
-          <span
-            className={`font-[Quantico] ${theme === "dark" ? "bg-darkAccent text-black" : "bg-accent"}  px-6 py-2 rounded-tl-full rounded-br-full `}
-          >
-            Contact
-          </span>
-        </h1>
-      </div>
-      <div className="grid md:grid-cols-2 grid-cols-1 content-center  ">
-        <div className={`lg:pl-40 ${theme === "dark" ? "text-white" : ""} `}>
+      <div className="  ">
+        {/* <div className={`lg:pl-40 ${theme === "dark" ? "text-white" : ""} `}>
           <div className="grid justify-items-center  ">
             <img
               src={Image}
@@ -80,100 +60,102 @@ function Contact() {
               </a>
             ))}
           </div>
-        </div>
+        </div>*/}
 
-        <div className="lg:px-0 p-8">
+        <div className="lg:px-0 p-8 text-center">
           <h3
-            className={`${theme === "dark" ? "text-darkAccent" : ""} text-3xl text-left font-semibold `}
+            className={`${theme === "dark" ? "text-white" : "text-gray-900"} text-3xl md:text-4xl font-semibold mb-8`}
           >
-            {" "}
+            Wanna{" "}
             <span
-              className={`decoration-uconn ${theme === "dark" ? "text-white decoration-white" : ""} underline underline-offset-[10px]   decoration-4  `}
+              className={`${theme === "dark" ? "text-darkAccent" : "text-accent"} underline decoration-4 underline-offset-4`}
             >
-              Send a{" "}
-            </span>
-            message{" "}
+              Build
+            </span>{" "}
+            something together?
           </h3>
 
-          <form
-            className="flex flex-col gap-4 py-10 lg:w-[500px] text-brown"
-            ref={form}
-            onSubmit={sendEmail}
-          >
-            <input
-              type="text"
-              placeholder="Name"
-              className={`${theme === "dark" ? "bg-gray-800 text-gray-50 border-darkAccent" : ""} border-accent rounded-xl caret-[#463F1A]`}
-              name="name"
-            />
-            <input
-              type="email"
-              placeholder="Your email address"
-              className={`${theme === "dark" ? "bg-gray-800 text-gray-50 border-darkAccent" : ""} border-accent rounded-xl caret-[#463F1A]`}
-              name="email"
-            />
-            <textarea
-              placeholder="Message"
-              className={`${theme === "dark" ? "bg-gray-800 text-gray-50 border-darkAccent" : ""} border-accent rounded-xl caret-[#463F1A]`}
-              rows={8}
-              name="message"
-            ></textarea>
-
-            <p className="text-skin text-left">{Response}</p>
-
-            <div className="text-right transition duration-500 ease-in-out ">
-              <button
-                className={` ${theme === "dark" ? "bg-darkAccent text-black" : "bg-uconn"} p-2  text-white group inline-flex gap-2 transition duration-500  hover:bg-skin hover:text-brown `}
-                type="submit"
+          <div className="max-w-md mx-auto space-y-6 flex flex-col md:flex-row md:space-y-0 md:space-x-0 md:gap-4">
+            {/* Email Section */}
+            <div
+              className={`rounded-lg px-6 py-4 transition shadow-lg  ${
+                theme === "dark"
+                  ? "bg-darkBrownBG text-gray-900 border border-gray-700"
+                  : "bg-white text-gray-900 border border-gray-200"
+              }`}
+            >
+              <p
+                className={`text-sm font-semibold mb-2 ${theme === "dark" ? "text-gray-50" : "text-gray-900"}`}
               >
-                Send Message{" "}
-                <AiOutlineArrowRight className="mt-1  transition duration-500 ease-in-out " />{" "}
+                EMAIL
+              </p>
+              <button
+                onClick={handleCopy}
+                className={`px-4 py-2 rounded-md font-semibold transition text-xs ${
+                  theme === "dark"
+                    ? "bg-darkAccent text-gray-900 hover:bg-opacity-80"
+                    : "bg-uconn text-white hover:bg-opacity-90"
+                }`}
+              >
+                {copied ? "✓ Copied!" : "Copy Email → "}
               </button>
             </div>
-          </form>
-        </div>
-      </div>
-      <div className="hidden  grid-cols-2 justify-around">
-        {/* LinkedIn Badge */}
-        <div
-          className="badge-base LI-profile-badge flex justify-center mb-10"
-          data-locale="en_US"
-          data-size="medium"
-          data-theme="light"
-          data-type="HORIZONTAL"
-          data-vanity="belanasaikiran"
-          data-version="v1"
-        >
-          <a
-            className="badge-base__link LI-simple-link"
-            href="https://in.linkedin.com/in/belanasaikiran?trk=profile-badge"
-          >
-            {" "}
-          </a>
-        </div>
-        {/* Github Badge */}
-        <div className="border h-[300px] w-[280px] rounded-lg">
-          <p className="flex min-w-full items-center text-2xl font-semibold bg-brown-500">
-            GitHub{" "}
-            <span>
-              <AiFillGithub />
-            </span>
-          </p>
-          <div className="flex flex-col px-4 py-4">
-            <img
-              src="https://github.com/belanasaikiran.png"
-              alt="Belana Sai Kiran"
-              className="w-[50px] h-[50px] object-cover rounded-full "
-            />
-            <bold className="font-bold text-black text-[16px]">
-              Sai Kiran Belana
-            </bold>
-            <a
-              className="rounded-xl border-4 px-3 py-2 font-bold"
-              href="https://github.com/belanasaikiran"
+
+            {/* Social Links Section */}
+            <div
+              className={`rounded-lg px-6 py-4 transition shadow-lg ${
+                theme === "dark"
+                  ? "bg-darkBrownBG text-white border border-gray-700"
+                  : "bg-white text-gray-900 border border-gray-200"
+              }`}
             >
-              View Profile
-            </a>
+              <p
+                className={`text-sm font-semibold mb-4 ${theme === "dark" ? "text-darkAccent" : "text-uconn"}`}
+              >
+                CONNECT WITH ME
+              </p>
+              <div className="flex justify-center gap-6 text-3xl">
+                <a
+                  href="https://linkedin.com/in/belanasaikiran"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className={`transition hover:scale-110 ${
+                    theme === "dark"
+                      ? "text-blue-400 hover:text-blue-300"
+                      : "text-blue-600 hover:text-blue-700"
+                  }`}
+                >
+                  <FaLinkedin />
+                </a>
+                <a
+                  href="https://twitter.com/belanasaikiran"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitter"
+                  className={`transition hover:scale-110 ${
+                    theme === "dark"
+                      ? "text-sky-400 hover:text-sky-300"
+                      : "text-sky-500 hover:text-sky-600"
+                  }`}
+                >
+                  <FaTwitter />
+                </a>
+                <a
+                  href="https://github.com/belanasaikiran"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className={`transition hover:scale-110 ${
+                    theme === "dark"
+                      ? "text-gray-300 hover:text-white"
+                      : "text-gray-700 hover:text-gray-900"
+                  }`}
+                >
+                  <AiFillGithub />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

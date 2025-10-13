@@ -4,6 +4,8 @@ import menu from "../../assets/Images/menu.svg";
 import close from "../../assets/Images/close.svg";
 import Modal from "./Modal";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
+import { IoIosCloseCircleOutline } from "react-icons/io";
+import { RiMenu3Fill } from "react-icons/ri";
 import { useTheme } from "../../context/ThemeContext";
 
 const Image =
@@ -127,7 +129,7 @@ function NavBar() {
           <div className="flex items-center">
             <button
               onClick={toggleTheme}
-              className={`mr-2 flex items-center justify-center ${theme === "dark" ? "hover:bg-gray-800" : "hover:bg-[#0C2443b9]"} hover:text-white p-2 rounded-full lg:hidden`}
+              className={`mr-2 flex items-center justify-center ${theme === "dark" ? "hover:bg-gray-800 " : "hover:bg-[#0C2443b9]"} hover:text-white p-2 rounded-full lg:hidden`}
               aria-label={
                 theme === "dark"
                   ? "Switch to light mode"
@@ -140,12 +142,20 @@ function NavBar() {
                 <MdOutlineDarkMode size={20} className="text-white" />
               )}
             </button>
-            <img
-              src={nav ? close : menu}
-              alt="menu"
-              className={`block lg:hidden ${theme === "dark" ? "bg-black" : "bg-accent"} p-2 w-[36px] h-[36px] hover:pointer ${window.scrollY > 80 ? "rounded-br-full mr-2 w-[42px] h-[42px] " : " rounded-full"}`}
-              onClick={handleNav}
-            />
+
+            {nav ? (
+              <IoIosCloseCircleOutline
+                size={20}
+                className={`block lg:hidden ${theme === "dark" ? " bg-darkAccent " : "bg-accent text-white"} p-2 w-[36px] h-[36px] hover:pointer ${window.scrollY > 80 ? "rounded-br-full mr-2 w-[42px] h-[42px] " : " rounded-full"}`}
+                onClick={handleNav}
+              />
+            ) : (
+              <RiMenu3Fill
+                size={20}
+                className={`block lg:hidden ${theme === "dark" ? " bg-darkAccent " : "bg-accent text-white"} p-2 w-[36px] h-[36px] hover:pointer ${window.scrollY > 80 ? "rounded-br-full mr-2 w-[42px] h-[42px] " : " rounded-full"}`}
+                onClick={handleNav}
+              />
+            )}
           </div>
 
           {/* Right Menu */}

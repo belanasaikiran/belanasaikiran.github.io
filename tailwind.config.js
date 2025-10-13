@@ -6,7 +6,10 @@ module.exports = {
     extend: {
       colors: {
         // Configure your color palette here
-        darkAccent: "#BAC0A3",
+        // darkAccent: "#BAC0A3", // old color
+        darkAccent: "#F9CE98",
+        darkBrownBG: "#201201",
+        leaf: "#F9CE98",
         accent: "#1D4D8E",
         brown: "#463F1A",
         customRed: "#9A3412",

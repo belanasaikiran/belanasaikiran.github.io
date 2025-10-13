@@ -1,9 +1,11 @@
-import React from 'react'
-
 function Footer() {
+  const currentDate = new Date();
   return (
-    <div className='text-center m-4 dark:text-gray-300 transition-colors duration-300'> &#169; 2025 Saikiran Belana</div>
-  )
+    <div className="text-center py-8 dark:text-gray-300 transition-colors duration-300">
+      {" "}
+      &#169; {currentDate.getFullYear()} Saikiran Belana
+    </div>
+  );
 }
 
-export default Footer
+export default Footer;

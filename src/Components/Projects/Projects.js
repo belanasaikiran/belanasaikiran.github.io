@@ -8,13 +8,13 @@ export default function Projects() {
   return (
     <div id="projects" className="md:flex ">
       <div
-        className={`md:py-0 text-sm 2xl:text-lg lg:px-16 px-4 mt-20  ${theme === "dark" ? "bg-gray-900" : "bg-gray-50"}  rounded-tl-full rounded-br-full  `}
+        className={`md:py-0 text-sm 2xl:text-lg lg:px-16 px-4 mt-20  dark:bg-leaf bg-gray-50 rounded-tl-full rounded-br-full  `}
       >
         <div className="w-full mt-16 pb-20">
           <div className="text-center  text-xl 2xl:text-3xl my-8">
             <h1 className=" text-white  ">
               <span
-                className={`font-[Quantico]  ${theme === "dark" ? "bg-darkAccent text-black" : "bg-accent"}  px-6 py-2 rounded-tl-full rounded-br-full heading-font`}
+                className={`font-[Quantico]  ${theme === "dark" ? "bg-darkAccent text-black border border-darkBrownBG shadow-md" : "bg-accent"}  px-6 py-2 rounded-tl-full rounded-br-full heading-font`}
               >
                 Projects
               </span>
@@ -26,7 +26,7 @@ export default function Projects() {
               {ProjectList.map((Project, index) => (
                 <div
                   key={index}
-                  className={`w-full text-sm 2xl:text-lg 2xl:max-w-[300px]  md:max-w-[250px] ${theme === "dark" ? "bg-gray-700 text-white" : " bg-gray-200 text-uconn"} rounded-xl  group   group xl:w-auto  `}
+                  className={`w-full text-sm 2xl:text-lg 2xl:max-w-[300px]  md:max-w-[250px] ${theme === "dark" ? "bg-darkBrownBG text-white border border-gray-400" : " bg-gray-200 text-uconn border-gray-300 border"} rounded-xl  group   group xl:w-auto  `}
                 >
                   <div className="flex h-[100px] md:h-auto justify-items-start items-center md:flex-col md:relative md:overflow-hidden rounded-xl ">
                     <div className="max-w-[150px] md:max-w-[300px] md:flex justify-center ">

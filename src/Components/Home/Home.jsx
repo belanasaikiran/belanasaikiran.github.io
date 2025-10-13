@@ -1,10 +1,18 @@
 import React, { useState } from "react";
+import ReactDOM from "react-dom";
 import Typewriter from "typewriter-effect";
 import Highlights from "./Highlights";
 import { useTheme } from "../../context/ThemeContext";
-import Socials from "./socials";
+import { FaCamera, FaLink } from "react-icons/fa";
 const HomeBG =
   "https://images.unsplash.com/photo-1724365437529-ae10ac6573e8?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+
+const DARKBG =
+  // "https://images.unsplash.com/photo-1724365437293-1a3cdd4b77de?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070";
+  "https://images.unsplash.com/photo-1730909063129-70581e603ea0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987";
+
+const IntroImage =
+  "https://raw.githubusercontent.com/belanasaikiran/belanasaikiran.github.io/refs/heads/oct2025/src/assets/Images/intro_image.jpeg";
 
 const WHITEMOUNTAINS =
   "https://images.unsplash.com/photo-1743262629805-6ff1f640e680?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
@@ -14,20 +22,18 @@ function Home() {
   const { theme } = useTheme();
 
   return (
-    <div>
-      <div
-        className={`border-none grid lg:grid-cols-5 gap-3 ${theme === "dark" ? "bg-black" : ""}`}
-      >
-        <div className="lg:min-h-[80vh] 2xl:text-lg transition-all duration-500 ease-in-out col-span-3">
+    <div className={`rounded-tr-full rounded-bl-full dark:bg-leaf bg-gray-50 `}>
+      <div className={`border-none grid lg:grid-cols-1 gap-3 `}>
+        <div className="lg:min-h-[55vh] 2xl:text-lg transition-all duration-500 ease-in-out col-span-3">
           <div
-            className="2xl:text-4xl lg:text-xl md:text-xl lg:min-h-[75vh]  text-base flex justify-left items-start text-left lg:py-8 font-[Quantico]  rounded-2xl shadow-2xl drop-shadow-2xl bg-gray-500 bg-blend-multiply transition-all duration-500 ease-in-out"
+            className="2xl:text-4xl lg:text-xl md:text-xl lg:min-h-[50vh]  text-base flex justify-left items-start text-left py-4 font-[Quantico]  rounded-2xl shadow-2xl drop-shadow-2xl bg-gray-600 bg-blend-multiply transition-all duration-500 ease-in-out"
             style={{
-              backgroundImage: `url(${theme === "dark" ? WHITEMOUNTAINS : HomeBG})`,
+              backgroundImage: `url(${theme === "dark" ? DARKBG : HomeBG})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           >
-            <div className="lg:pl-10 pl-4 pt-4 text-white text-xl">
+            <div className=" px-4  text-white text-xl">
               <div className="pb-4">
                 <span
                   className={`${theme === "dark" ? "text-darkAccent" : "text-[#B2E7AE]"}`}
@@ -40,7 +46,7 @@ function Home() {
                       autoStart: true,
                       loop: false,
                       delay: 10,
-                      cursor: "|",
+                      cursor: "█",
                     }}
                     onInit={(typewriter) => {
                       typewriter
@@ -61,80 +67,130 @@ function Home() {
                 </span>
 
                 {showSecond && (
-                  <div className=" pt-4 flex flex-col gap-8">
-                    <Typewriter
-                      options={{
-                        autoStart: true,
-                        loop: false,
-                        delay: 10,
-                        cursor: "|",
+                  <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4 ">
+                    <div
+                      className=" lg:col-span-1 my-4 rounded-xl min-h-[330px] max-h-[400px] min-w-max"
+                      style={{
+                        backgroundImage: `url(${IntroImage})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
                       }}
-                      onInit={(typewriter) => {
-                        typewriter
-                          .typeString(
-                            "I'm <span class='text-white font-semibold'>Saikiran Belana</span><br />",
-                          )
-                          .pauseFor(500)
-                          .typeString("- CS Grad Student @UCONN <br />")
-                          .pauseFor(500)
-                          .typeString("- Student Developer at UCONN<br />")
-                          .pauseFor(700)
-                          .typeString(
-                            "- Interests: Software Engineering, Operating Systems, Systems Security <br /> & Embedded Systems<br /> <br />",
-                          )
-                          .pauseFor(500)
-                          .typeString(
-                            "> When I'm not coding, you can find me playing OverCooked 2<br />",
-                          )
-                          .pauseFor(500)
-                          .typeString(
-                            "> In my free time, I do street photography.<br /><br />",
-                          )
-                          .typeString(
-                            `&nbsp;📸 Check out my photos on
-                        <a class='underline ${theme === "dark" ? "text-darkAccent" : "text-[#B2E7AE]"}' href='https://unsplash.com/@belanasaikiran' target='_blank'>Unsplash ↗</a><br /><br />`,
-                          )
+                    ></div>
+                    <div className="md:col-span-2 lg:col-span-3 pt-4 flex flex-col gap-8">
+                      <Typewriter
+                        options={{
+                          autoStart: true,
+                          loop: false,
+                          delay: 3,
+                          cursor: "█",
+                        }}
+                        onInit={(typewriter) => {
+                          typewriter
+                            .typeString(
+                              "I'm <span class='text-white font-semibold'>Saikiran Belana</span><br />",
+                            )
+                            .pauseFor(50)
+                            .typeString("- CS Grad Student @UConn <br />")
+                            .pauseFor(50)
+                            .typeString(
+                              "- Student Developer at UConn ITS<br />",
+                            )
+                            .pauseFor(100)
+                            .typeString(
+                              "- Interests: Software Engineering, Operating Systems, Systems Security & Low Level Programmings<br /> <br />",
+                            )
+                            .pauseFor(50)
+                            .typeString(
+                              "- When I'm not coding, you can find me playing OverCooked 2<br />",
+                            )
+                            .pauseFor(50)
+                            .typeString(
+                              "- In my free time, I do street photography.<br /><br />",
+                            )
+                            // .typeString(
+                            //   `&nbsp;  <span id="camera-icon-placeholder"></span> Check out my
+                            // <a class='underline bg-white text-black' href='https://unsplash.com/@belanasaikiran' target='_blank'>Unsplash ↗</a> <br /> `,
+                            // )
+                            // .callFunction(() => {
+                            //   const placeholder = document.getElementById(
+                            //     "camera-icon-placeholder",
+                            //   );
+                            //   if (placeholder) {
+                            //     const iconWrapper =
+                            //       document.createElement("span");
+                            //     iconWrapper.style.display = "inline-block";
+                            //     iconWrapper.style.verticalAlign = "middle";
+                            //     iconWrapper.style.color = "white";
+                            //     const root = ReactDOM.createRoot(iconWrapper);
+                            //     root.render(<FaCamera />);
+                            //     placeholder.parentNode.replaceChild(
+                            //       iconWrapper,
+                            //       placeholder,
+                            //     );
+                            //   }
+                            // })
 
-                          //   .typeString(
-                          //     `&nbsp;🔗 Let's connect:<br />
-                          // `,
-                          //   )
+                            //   .typeString(
+                            //     `&nbsp;🔗 Let's connect:<br />
+                            // `,
+                            //   )
 
-                          // .typeString(
-                          //   `
-                          // <a href='https://linkedin.com/in/belanasaikiran' target='_blank' class='text-blue-400 underline'>  LinkedIn</a> |
-                          // <a href='https://github.com/belanasaikiran' target='_blank' class='text-gray-300 underline'>GitHub</a>
-                          // `,
-                          // )
+                            // .typeString(
+                            //   `
+                            // <a href='https://linkedin.com/in/belanasaikiran' target='_blank' class='text-blue-400 underline'>  LinkedIn</a> |
+                            // <a href='https://github.com/belanasaikiran' target='_blank' class='text-gray-300 underline'>GitHub</a>
+                            // `,
+                            // )
 
-                          // My Social Media Profiles
+                            // My Social Media Profiles
+                            .pauseFor(1000)
+                            .typeString(
+                              `
+                              &nbsp; <span id="lets-connect" class="text-white mb-2"></span> Let's connect:
+                             <span>   </span> <a href='https://linkedin.com/in/belanasaikiran' target='_blank' class='bg-blue-400 underline px-2 mt-2'>  LinkedIn ↗</a> |
+                              <a href='https://github.com/belanasaikiran' target='_blank' class='bg-gray-900 underline px-2' >GitHub ↗</a> |
+                              <a href='https://instagram.com/copycharming' target='_blank' class='from-orange-400 to-pink-600 bg-gradient-to-tr underline px-2'>Instagram ↗</a> |
+                              <a class='underline bg-white text-black' href='https://unsplash.com/@belanasaikiran' target='_blank'>Unsplash ↗</a>
+                              `,
+                            )
+                            .callFunction(() => {
+                              const placeholder =
+                                document.getElementById("lets-connect");
+                              if (placeholder) {
+                                const iconWrapper =
+                                  document.createElement("span");
+                                iconWrapper.style.display = "inline-block";
+                                iconWrapper.style.verticalAlign = "middle";
+                                const root = ReactDOM.createRoot(iconWrapper);
+                                root.render(<FaLink />);
+                                placeholder.parentNode.replaceChild(
+                                  iconWrapper,
+                                  placeholder,
+                                );
+                              }
+                            })
 
-                          // Add more info from github profile
+                            // Add more info from github profile
 
-                          .callFunction(() => {
-                            // Remove second cursor at the end if you want
-                            const cursor = document.querySelector(
-                              ".Typewriter__cursor",
-                            );
-                            if (cursor) cursor.style.display = "none";
-                          })
-                          .start();
-                      }}
-                    />
+                            .callFunction(() => {
+                              // Remove second cursor at the end if you want
+                              const cursor = document.querySelector(
+                                ".Typewriter__cursor",
+                              );
+                              if (cursor) cursor.style.display = "none";
+                            })
+                            .start();
+                        }}
+                      />
+                    </div>
                   </div>
                 )}
               </div>
             </div>
           </div>
         </div>
-
-        <div
-          className={`col-span-2 rounded-tr-full rounded-bl-full ${theme === "dark" ? "bg-gray-900 " : "bg-gray-50 "} h-full place-content-center`}
-        >
-          <Highlights />
-        </div>
       </div>
-      <Socials />
+      <Highlights />
     </div>
   );
 }
