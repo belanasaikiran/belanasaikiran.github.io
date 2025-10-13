@@ -22,18 +22,20 @@ function Home() {
   const { theme } = useTheme();
 
   return (
-    <div className={`rounded-tr-full rounded-bl-full dark:bg-leaf bg-gray-50 `}>
+    <div
+      className={`rounded-tr-full rounded-bl-full dark:bg-leaf   dark:bg-blend-multiply`}
+    >
       <div className={`border-none grid lg:grid-cols-1 gap-3 `}>
-        <div className="lg:min-h-[55vh] 2xl:text-lg transition-all duration-500 ease-in-out col-span-3">
+        <div className="lg:min-h-[40vh] 2xl:text-lg transition-all duration-500 ease-in-out col-span-3">
           <div
-            className="2xl:text-4xl lg:text-xl md:text-xl lg:min-h-[50vh]  text-base flex justify-left items-start text-left py-4 font-[Quantico]  rounded-2xl shadow-2xl drop-shadow-2xl bg-gray-600 bg-blend-multiply transition-all duration-500 ease-in-out"
+            className="2xl:text-4xl lg:text-xl md:text-xl lg:min-h-[40vh]  text-base flex justify-left items-start text-left font-[Quantico] rounded-2xl shadow-2xl drop-shadow-2xl bg-gray-800 bg-blend-multiply transition-all duration-500 ease-in-out"
             style={{
               backgroundImage: `url(${theme === "dark" ? DARKBG : HomeBG})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           >
-            <div className=" px-4  text-white text-xl">
+            <div className=" px-4  text-white text-xl py-4 w-full h-full bg-white/10 backdrop-blur-[4px] rounded-2xl">
               <div className="pb-4">
                 <span
                   className={`${theme === "dark" ? "text-darkAccent" : "text-[#B2E7AE]"}`}
@@ -143,14 +145,15 @@ function Home() {
                             // )
 
                             // My Social Media Profiles
+                            // &nbsp; -> for space
                             .pauseFor(1000)
                             .typeString(
-                              `
-                              &nbsp; <span id="lets-connect" class="text-white mb-2"></span> Let's connect:
-                             <span>   </span> <a href='https://linkedin.com/in/belanasaikiran' target='_blank' class='bg-blue-400 underline px-2 mt-2'>  LinkedIn ↗</a> |
-                              <a href='https://github.com/belanasaikiran' target='_blank' class='bg-gray-900 underline px-2' >GitHub ↗</a> |
-                              <a href='https://instagram.com/copycharming' target='_blank' class='from-orange-400 to-pink-600 bg-gradient-to-tr underline px-2'>Instagram ↗</a> |
-                              <a class='underline bg-white text-black' href='https://unsplash.com/@belanasaikiran' target='_blank'>Unsplash ↗</a>
+                              `Let's connect: <span id="lets-connect" class="text-white mb-2"> </span> <br />
+
+                              <a href='https://linkedin.com/in/belanasaikiran' target='_blank' class='bg-blue-400 underline px-2 mt-2 rounded-md'>LinkedIn ↗</a> |
+                              <a href='https://github.com/belanasaikiran' target='_blank' class='bg-gray-900 underline px-2 rounded-md' >GitHub ↗</a> |
+                              <a href='https://instagram.com/copycharming' target='_blank' class='from-orange-400 to-pink-600 bg-gradient-to-tr underline px-2 rounded-md'>Instagram ↗</a> |
+                              <a class='underline bg-white text-black rounded-md px-2' href='https://unsplash.com/@belanasaikiran ' target='_blank'>Unsplash ↗</a>
                               `,
                             )
                             .callFunction(() => {

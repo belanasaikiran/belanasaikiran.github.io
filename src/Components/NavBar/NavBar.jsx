@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 // import Image from "../../assets/Images/sloth_profile.jpeg";
-import menu from "../../assets/Images/menu.svg";
-import close from "../../assets/Images/close.svg";
 import Modal from "./Modal";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 import { IoIosCloseCircleOutline } from "react-icons/io";
@@ -96,13 +94,15 @@ function NavBar() {
 
   return (
     <div
-      className={`font-[Quantico] text-sm 2xl:text-base backdrop-opacity-0 backdrop-blur-md transition-all duration-700 ease-in-out md:px-8 lg:px-24 xl:px-48 px-4 sm:gap-4 sticky top-0 z-50 ${theme === "dark" ? " text-black" : `text-white bg-white/0 lg:bg-[${bgColor}] md:text-[${color}]`}
-      ${nav ? "h-48" : "h-20"} ${window.scrollY > 80 ? "drop-shadow-md h-14 my-0 mx-[10%]  lg:mx-[20%] xl:mx-[22%] 2xl:mx-[25%]" : "h-16 text-sm mt-4"}
+      className={`font-[Quantico] text-sm 2xl:text-base backdrop-opacity-0 backdrop-blur-md transition-all duration-700 ease-in-out md:px-8 lg:px-[16%] px-4 sm:gap-4 sticky top-0 z-50 ${theme === "dark" ? " text-black" : `text-white bg-white/0 lg:bg-[${bgColor}] md:text-[${color}]`}
+      ${nav ? "h-48" : "h-20"} ${window.scrollY > 80 ? "drop-shadow-md h-14 my-0 mx-[10%]  lg:mx-[16%] xl:mx-[20%] " : "h-16 text-sm mt-4"}
       ${nav && window.scrollY > 80 ? "" : ""}
       ${opacityNav}
       `}
     >
-      <div className={`${window.scrollY > 80 ? "  drop-shadow-lg   " : ""}`}>
+      <div
+        className={`${window.scrollY > 80 ? "  drop-shadow-lg  text-xs  " : ""}`}
+      >
         <nav
           className={`flex justify-between items-center ${window.scrollY > 80 ? `${theme === "dark" ? "bg-darkAccent text-black" : "bg-accent"} rounded-br-[25px] rounded-bl-[25px] ` : ""} `}
         >
@@ -116,17 +116,17 @@ function NavBar() {
               scrollToSection("#home");
             }}
           >
-            <div className="flex justify-items-center items-center text-base  ">
+            <div className="flex justify-items-center items-center   ">
               <img
                 src={Image}
                 alt="nav head"
-                className={`w-[42px]  rounded-full   transition-all duration-700 grayscale ${window.scrollY > 80 ? "rounded-tl-none " : ""} ${nav ? "text-sm" : "text-base"}`}
+                className={`w-[36px]  rounded-full   transition-all duration-700  ${window.scrollY > 80 ? "rounded-tl-none " : ""} ${nav ? "text-sm" : "text-base"}`}
               />
-              <span className=" px-2 pr-3 sm:block">Saikiran Belana </span>
+              <span className="px-2 pr-3 sm:block">Saikiran Belana </span>
             </div>
           </a>
 
-          <div className="flex items-center">
+          <div className="flex items-center text-sm">
             <button
               onClick={toggleTheme}
               className={`mr-2 flex items-center justify-center ${theme === "dark" ? "hover:bg-gray-800 " : "hover:bg-[#0C2443b9]"} hover:text-white p-2 rounded-full lg:hidden`}
@@ -163,9 +163,9 @@ function NavBar() {
           <div
             className={`${window.scrollY > 80 ? "" : roundedNavCSS} text-white ${theme === "dark" ? "bg-darkAccent text-black" : "bg-accent"}
               lg:flex  lg:flex-row justify-self-center
-              content-between justify-center items-center transition-all ease-in-out duration-300
+              content-between justify-center items-center transition-all ease-in-out duration-300 text-sm
               ${nav ? "flex flex-col absolute z-100 right-4 top-12 py-4 rounded-3xl" : "hidden"}
-              ${window.scrollY > 80 ? `${theme === "dark" ? "bg-darkAccent" : "bg-accent"} rounded-br-[25px] text-base ` : ""}
+              ${window.scrollY > 80 ? `${theme === "dark" ? "bg-darkAccent" : "bg-accent"} rounded-br-[25px] text-xs ` : ""}
               `}
           >
             {/* Toggle Light and Dark Modes */}

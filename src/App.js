@@ -14,7 +14,7 @@ function App() {
     <ThemeProvider>
       <div className="font-[Quantico] min-h-screen my-[-20px] pt-[20px] bg-dark dark:bg-darkBrownBG dark:text-white transition-colors duration-300">
         <NavBar />
-        <div className="px-4 md:px-8 lg:px-24 xl:px-48">
+        <div className="px-4 md:px-8 lg:px-[16%]">
           <Home />
           {/* <Resume /> */}
           <Projects />

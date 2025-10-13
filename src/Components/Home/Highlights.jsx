@@ -96,7 +96,7 @@ export default function Highlights() {
   return (
     <div className="p-4">
       <h1
-        className={`font-[Quantico] text-center mb-4 text-3xl text-accent ${theme === "dark" ? "text-darkBrownBG" : "text-accent"} font-bold`}
+        className={`font-[Quantico] text-center mb-4 text-3xl text-accent ${theme === "dark" ? "text-darkAccent" : "text-accent"} font-bold`}
       >
         Recent Highlights
       </h1>
@@ -114,7 +114,7 @@ export default function Highlights() {
               key={id}
             >
               {/* Image Section */}
-              <div className="min-w-[160px] max-w-[160px] h-[160px] overflow-hidden">
+              <div className="min-w-[120px] max-w-[140px] h-[160px] overflow-hidden">
                 <PhotoView src={event.img}>
                   <img
                     src={event.img}

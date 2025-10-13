@@ -1,5 +1,3 @@
-import React from "react";
-
 import { AllSkills, Certificates } from "./SkillsConfig";
 import { useTheme } from "../../context/ThemeContext";
 
@@ -11,7 +9,7 @@ function Skills() {
       <div className=" min-h-screen mt-16">
         {/* Section 2 - Technical Skills */}
         <div
-          className={`text-sm 2xl:text-lg lg:px-16 text-uconn dark:bg-leaf bg-gray-50  text-center rounded-bl-full rounded-tr-full `}
+          className={`text-sm 2xl:text-lg lg:px-16 text-uconn dark:bg-leaf dark:bg-blend-multiply bg-gray-50  text-center rounded-bl-full rounded-tr-full `}
         >
           <h1 className=" text-white my-8 text-xl 2xl:text-3xl">
             <span
@@ -21,8 +19,8 @@ function Skills() {
             </span>
           </h1>
 
-          <div className="dark:text-shadow-outline dark:[text-shadow:0.5px_0.5px_1px_#fff] lg:mx-16 flex flex-column md:flex-row justify-center lg:justify-between ">
-            <div className="flex flex-wrap justify-center  text-gray-800 lg:pb-8 py-4 2xl:text-xl text-base gap-1  ">
+          <div className="  lg:mx-16 flex flex-column md:flex-row justify-center lg:justify-between ">
+            <div className="flex flex-wrap justify-center dark:text-white text-gray-800 lg:pb-8 py-4 2xl:text-xl text-base gap-1  ">
               {theme !== "dark" ? (
                 <a
                   className="w-full"
@@ -69,11 +67,11 @@ function Skills() {
               Certifications
             </span>
           </h1>
-          <div className=" dark:[text-shadow:0.5px_0.5px_1px_#eee] grid grid-cols-1 pb-16 lg:mx-64 xl:mx-80 md:place-content-center gap-1  mx-2">
+          <div className="dark:text-white grid grid-cols-1 pb-16 lg:mx-64 xl:mx-80 md:place-content-center gap-1  mx-2">
             {Certificates.map((Certificate, index) => (
               <div
                 key={index}
-                className={` grid  grid-cols-12 text-left border-b-4  gap-4 ${theme === "dark" ? "text-uconn border-darkAccent" : "text-uconn"}  py-4 transition duration-500 ease-in-out `}
+                className={`dark:text-white grid  grid-cols-12 text-left border-b-4  gap-4 ${theme === "dark" ? "text-uconn border-darkAccent" : "text-uconn"}  py-4 transition duration-500 ease-in-out `}
               >
                 <div className="col-span-1">
                   <img

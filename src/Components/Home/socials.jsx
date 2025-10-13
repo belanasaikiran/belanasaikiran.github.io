@@ -1,6 +1,5 @@
 import { SocialMedia } from "../SocialIcons/Social";
 import { useTheme } from "../../context/ThemeContext";
-import React, { useState } from "react";
 
 export default function Socials() {
   const { theme } = useTheme();
