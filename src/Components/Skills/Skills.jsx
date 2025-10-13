@@ -67,11 +67,11 @@ function Skills() {
               Certifications
             </span>
           </h1>
-          <div className="dark:text-white grid grid-cols-1 pb-16 lg:mx-64 xl:mx-80 md:place-content-center gap-1  mx-2">
+          <div className="dark:text-white grid grid-cols-1 lg:grid-cols-2 pb-16 gap-4 lg:mx-[5%] md:place-content-center  mx-2">
             {Certificates.map((Certificate, index) => (
               <div
                 key={index}
-                className={`dark:text-white grid  grid-cols-12 text-left border-b-4  gap-4 ${theme === "dark" ? "text-uconn border-darkAccent" : "text-uconn"}  py-4 transition duration-500 ease-in-out `}
+                className={`dark:text-white grid  grid-cols-12 text-left border-b-4 border-rounded dark:border-darkAccent border-uconn gap-4 ${theme === "dark" ? "text-uconn border-darkAccent" : "text-uconn"}  py-4 transition duration-500 ease-in-out `}
               >
                 <div className="col-span-1">
                   <img
@@ -80,27 +80,25 @@ function Skills() {
                     className="xl:min-w-20 xl:min-h-20 min-h-16 min-w-16"
                   />
                 </div>
-                <div className="text-left col-span-10">
-                  <div className="flex md:flex-row flex-col gap-4 min-w-full    justify-between">
-                    <div className="flex flex-col content-center justify-around min-w-full ">
-                      <h1 className="2xl:text-2xl text-lg ">
-                        {Certificate.Course}
-                      </h1>
-                      <p className="2xl:text-lg text-sm py-2  ">
-                        Issued:{" "}
-                        <span className="">{Certificate.DateOfCompletion}</span>
-                      </p>
-                      <p className="text-sm">
-                        Credential ID: {Certificate.CredentialID}
-                      </p>
-                    </div>
+                <div className="text-left col-span-11">
+                  <div className="flex flex-col content-center justify-around min-w-full gap-2">
+                    <h1 className="2xl:text-2xl text-lg ">
+                      {Certificate.Course}
+                    </h1>
+                    <p className="2xl:text-lg text-sm  ">
+                      Issued:{" "}
+                      <span className="">{Certificate.DateOfCompletion}</span>
+                    </p>
+                    <p className="text-sm ">
+                      Credential ID: {Certificate.CredentialID}
+                    </p>
                     <a
                       href={Certificate.VerifyLink}
                       target="blank"
-                      className="place-self-center"
+                      className=""
                     >
                       <button
-                        className={`${theme === "dark" ? "bg-darkAccent text-black" : "bg-uconn "} text-white text-base p-1 px-4 py-2`}
+                        className={`${theme === "dark" ? "bg-darkAccent text-black" : "bg-uconn "} text-white  rounded-md text-base p-1 px-4 py-2`}
                       >
                         Verify
                       </button>

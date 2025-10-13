@@ -129,7 +129,7 @@ function Contact() {
                   <FaLinkedin />
                 </a>
                 <a
-                  href="https://twitter.com/belanasaikiran"
+                  href="https://twitter.com/saikiranbelana"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Twitter"

@@ -35,7 +35,7 @@ function Home() {
               backgroundPosition: "center",
             }}
           >
-            <div className=" px-4  text-white text-xl py-4 w-full h-full bg-white/10 backdrop-blur-[4px] rounded-2xl">
+            <div className=" px-4  text-white text-xl py-4 w-full h-full bg-white/10 backdrop-blur-[4px] lg:min-h-[40vh]  rounded-2xl">
               <div className="pb-4">
                 <span
                   className={`${theme === "dark" ? "text-darkAccent" : "text-[#B2E7AE]"}`}
