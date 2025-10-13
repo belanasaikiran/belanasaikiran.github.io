@@ -40,7 +40,7 @@ function Skills() {
 
               {AllSkills.map((Skills, index) => (
                 <div
-                  className={`border-b-uconn grid grid-cols-1 justify-items-center  2xl:gap-4  md:p-4  place-content-center ${theme === "dark" ? "hover:bg-darkAccent" : "hover:bg-uconn"}   hover:text-white  xl:w-auto lg:w-1/7`}
+                  className={`border-b-uconn grid grid-cols-1 justify-items-center  2xl:gap-4  md:p-4  place-content-center ${theme === "dark" ? "hover:bg-darkAccent  " : "hover:bg-uconn  hover:text-white "} hover:text-dark dark:hover:text-darkBrownBG  xl:w-auto lg:w-1/7`}
                   key={index}
                 >
                   <img
@@ -48,7 +48,7 @@ function Skills() {
                     alt={Skills.skillName}
                     className=" object-contain group-hover:hidden  transition duration-100 2xl:w-[100px] 2xl:h-[100px] w-[64px] h-[64px] "
                   />
-                  <p className="text-xs group-hover:block  ease-linear group-hover:text-xl pt-[35%]">
+                  <p className="text-xs group-hover:block   ease-linear group-hover:text-xl pt-[35%]">
                     {Skills.skillName}
                   </p>
                 </div>
