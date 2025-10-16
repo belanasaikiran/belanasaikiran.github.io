@@ -17,6 +17,9 @@ const IntroImage =
 const WHITEMOUNTAINS =
   "https://images.unsplash.com/photo-1743262629805-6ff1f640e680?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
+const profileImg =
+  "https://raw.githubusercontent.com/belanasaikiran/belanasaikiran.github.io/refs/heads/oct2025/src/assets/Images/profile_s.jpg";
+
 function Home() {
   const [showSecond, setShowSecond] = useState(false);
   const { theme } = useTheme();
@@ -73,6 +76,7 @@ function Home() {
                     <div
                       className=" lg:col-span-1 my-4 rounded-xl min-h-[330px] max-h-[400px] min-w-max"
                       style={{
+                        // backgroundImage: `url(${theme === "dark" ? IntroImage : profileImg})`,
                         backgroundImage: `url(${IntroImage})`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
@@ -95,7 +99,11 @@ function Home() {
                             .typeString("- CS Grad Student @UConn <br />")
                             .pauseFor(50)
                             .typeString(
-                              "- Student Developer at UConn ITS<br />",
+                              "- Research Technician at Goldenson Center, UConn<br />",
+                            )
+                            .pauseFor(50)
+                            .typeString(
+                              "- Student Developer at Campus Technology Services, UConn<br />",
                             )
                             .pauseFor(100)
                             .typeString(

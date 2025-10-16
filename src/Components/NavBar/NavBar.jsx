@@ -129,7 +129,7 @@ function NavBar() {
           <div className="flex items-center text-sm">
             <button
               onClick={toggleTheme}
-              className={`mr-2 flex items-center justify-center ${theme === "dark" ? "hover:bg-gray-800 " : "hover:bg-[#0C2443b9]"} hover:text-white p-2 rounded-full lg:hidden`}
+              className={`mr-2 flex items-center justify-center ${theme === "dark" ? "hover:bg-gray-800 bg-darkAccent " : "hover:bg-[#0C2443b9] bg-accent"} hover:text-white p-2 rounded-full lg:hidden`}
               aria-label={
                 theme === "dark"
                   ? "Switch to light mode"

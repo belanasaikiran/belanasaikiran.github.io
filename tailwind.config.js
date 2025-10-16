@@ -11,6 +11,7 @@ module.exports = {
         darkBrownBG: "#201201",
         leaf: "#544332",
         accent: "#1D4D8E",
+        // accent: "#843B39",
         brown: "#463F1A",
         customRed: "#9A3412",
         skin: "#EEEBE0",
