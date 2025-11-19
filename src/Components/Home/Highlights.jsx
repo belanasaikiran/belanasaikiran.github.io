@@ -11,6 +11,31 @@ export default function Highlights() {
 
   const recentHightlights = [
     {
+      event: "Smart Waste Bin Sorter",
+      description:
+        "An intelligent waste sorting system that uses computer vision and machine Learning...",
+      appBuilt: (
+        <p>
+          Built the{" "}
+          <a
+            href="https://github.com/belanasaikiran/Smart-Waste-Bin-Sorter"
+            target="_blank"
+            rel="noreferrer"
+            className={`${theme === "dark" ? "text-darkAccent" : "text-accent"} font-bold`}
+          >
+            Highlights NY IntelliNews{" "}
+          </a>
+        </p>
+      ),
+      // strictly one image only
+      img: "https://raw.githubusercontent.com/belanasaikiran/Smart-Waste-Bin-Sorter/refs/heads/main/setup.png",
+      platform: "LinkedIn",
+      github: "https://github.com/belanasaikiran/Smart-Waste-Bin-Sorter",
+      icon: <ImLinkedin />,
+      PostUrl:
+        "https://www.linkedin.com/posts/belanasaikiran_github-belanasaikiransmart-waste-bin-sorter-activity-7396936731247333378-5aCq?utm_source=share&utm_medium=member_desktop&rcm=ACoAACHSUQwBm7fuJiHjd3v-ZEEgpDUDLfEdpxU",
+    },
+    {
       event: "🦙 NY Intellinews",
       description:
         "NYIntelliNews is an AI-powered news summarization platform that offers users a dynamic...",
@@ -28,7 +53,7 @@ export default function Highlights() {
         </p>
       ),
       // strictly one image only
-      img: "https://media.licdn.com/dms/image/v2/D5622AQGFRNiDXU4wxQ/feedshare-shrink_2048_1536/B56Zc181CoHUAo-/0/1748956836609?e=1762992000&v=beta&t=cxfBhuPm6DuGihEragJ9A0ZNWV3Ph59pHgT9k88p2U4",
+      img: "https://raw.githubusercontent.com/belanasaikiran/belanasaikiran.github.io/refs/heads/oct2025/src/assets/Images/Projects/meta_hack.jpeg",
       platform: "LinkedIn",
       github: "https://github.com/belanasaikiran/NYIntelliNews",
       icon: <ImLinkedin />,
@@ -63,34 +88,34 @@ export default function Highlights() {
         "https://www.linkedin.com/posts/hiralchoksi_genai-rag-llm-activity-7333137461750960128-YzEe?utm_source=share&utm_medium=member_desktop&rcm=ACoAACHSUQwBm7fuJiHjd3v-ZEEgpDUDLfEdpxU",
     },
 
-    {
-      event: (
-        <p className="flex flex-1 gap-2 items-center align-middle">
-          <FaBell /> WayNotify
-        </p>
-      ),
-      description:
-        "A background service that listens for desktop notifications..",
-      appBuilt: (
-        <p>
-          Built the
-          <a
-            href="https://github.com/ramchandra3101/Hacakthan-Nyc"
-            target="_blank"
-            rel="noreferrer"
-            className={`${theme === "dark" ? "text-darkAccent" : "text-accent"} font-bold`}
-          >
-            Highlights NY IntelliNews{" "}
-          </a>
-        </p>
-      ),
-      // strictly one image onlyHighlights
-      img: "https://plus.unsplash.com/premium_photo-1682309524785-cf2288f7b544?q=80&w=2712&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      platform: "",
-      github: "https://github.com/belanasaikiran/WayNotify",
-      icon: <ImLinkedin />,
-      PostUrl: "",
-    },
+    // {
+    //   event: (
+    //     <p className="flex flex-1 gap-2 items-center align-middle">
+    //       <FaBell /> WayNotify
+    //     </p>
+    //   ),
+    //   description:
+    //     "A background service that listens for desktop notifications..",
+    //   appBuilt: (
+    //     <p>
+    //       Built the
+    //       <a
+    //         href="https://github.com/ramchandra3101/Hacakthan-Nyc"
+    //         target="_blank"
+    //         rel="noreferrer"
+    //         className={`${theme === "dark" ? "text-darkAccent" : "text-accent"} font-bold`}
+    //       >
+    //         Highlights NY IntelliNews{" "}
+    //       </a>
+    //     </p>
+    //   ),
+    //   // strictly one image onlyHighlights
+    //   img: "https://plus.unsplash.com/premium_photo-1682309524785-cf2288f7b544?q=80&w=2712&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //   platform: "",
+    //   github: "https://github.com/belanasaikiran/WayNotify",
+    //   icon: <ImLinkedin />,
+    //   PostUrl: "",
+    // },
   ];
 
   return (
@@ -114,7 +139,7 @@ export default function Highlights() {
               key={id}
             >
               {/* Image Section */}
-              <div className="min-w-[120px] max-w-[140px] h-[160px] overflow-hidden">
+              <div className="min-w-[120px] max-w-[145px] h-[170px] overflow-hidden">
                 <PhotoView src={event.img}>
                   <img
                     src={event.img}
@@ -125,7 +150,7 @@ export default function Highlights() {
               </div>
 
               {/* Content Section */}
-              <div className="p-4 flex flex-col h-[160px] flex-1">
+              <div className="px-4 py-2 flex flex-col h-[160px] flex-1">
                 <div>
                   <h2 className="font-semibold text-sm md:text-base leading-snug mb-1">
                     {event.event}
