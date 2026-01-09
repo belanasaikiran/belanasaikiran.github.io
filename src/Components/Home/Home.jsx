@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 import Highlights from "./Highlights";
 import Journey from "./Journey";
 import { useTheme } from "../../context/ThemeContext";
-import { FaCamera, FaLink } from "react-icons/fa";
+import { FaCamera, FaLink, FaUserGraduate } from "react-icons/fa";
 const HomeBG =
   "https://images.unsplash.com/photo-1724365437529-ae10ac6573e8?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
@@ -105,18 +105,18 @@ function Home() {
                               "I'm <span class='text-white  font-semibold'>Saikiran Belana</span><br />",
                             )
                             .pauseFor(50)
-                            .typeString("CS Graduate @UConn <br />")
+                            .typeString("🎓 CS Graduate @UConn <br />")
                             .pauseFor(50)
                             .typeString(
                               "For my next chapter, I aim to bridge the hardware-software gap by building end-to-end cloud applications integrated with AI. <br /> <br />",
                             )
                             .pauseFor(100)
                             .typeString(
-                              "Interests: Software Engineering in Hardware, Machine Learning, AI, and Cloud Computing <br />",
+                              "Interests: Software Engineering in Hardware, Machine Learning, AI, and Cloud Computing <br /><br />",
                             )
                             .pauseFor(50)
                             .typeString(
-                              "When I'm not coding, you can find me playing OverCooked 2 <br />",
+                              "When I'm not coding, you can find me playing Exo One 🎮 <br />",
                             )
                             .pauseFor(50)
                             .typeString(
