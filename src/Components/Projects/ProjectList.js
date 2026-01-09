@@ -17,6 +17,15 @@ export const ProjectList = [
     Link: "https://github.com/belanasaikiran/reid",
     type: "GitHub",
   },
+  {
+    Name: "Smart Bin Sorter for Trash",
+    Image:
+      "https://raw.githubusercontent.com/belanasaikiran/Smart-Waste-Bin-Sorter/refs/heads/main/setup.png",
+    techStack: "Machine Learning, Python, Arduino C++, UART",
+    Description: "",
+    Link: "https://github.com/belanasaikiran/Smart-Waste-Bin-Sorter",
+    type: "GitHub",
+  },
   // {
   //   Name: "NY IntelliNews",
   //   Image:
@@ -131,22 +140,22 @@ export const ProjectList = [
   //   Link: "https://belanasaikiran.github.io/ComputerSecurity/Project1/Report.html",
   //   type: "GitHub",
   // },
-  {
-    Name: "Buffer Overflow Attack Vulnerability Analysis",
-    Image:
-      "https://cdn.invicti.com/app/uploads/2022/06/28121124/buffer-overflow-attacks-1024x538.webp",
-    techStack: "C, GCC ",
-    Description: (
-      <div className="">
-        Executed an MD5 collision attack using md5collgen to generate two
-        distinct binary files with identical hashes, demonstrating cryptographic
-        vulnerabilities. Analyzed the security risks of hash collisions in
-        digital authentication and malware verification.
-      </div>
-    ),
-    Link: "https://belanasaikiran.github.io/ComputerSecurity/Project2/",
-    type: "GitHub",
-  },
+  // {
+  //   Name: "Buffer Overflow Attack Vulnerability Analysis",
+  //   Image:
+  //     "https://cdn.invicti.com/app/uploads/2022/06/28121124/buffer-overflow-attacks-1024x538.webp",
+  //   techStack: "C, GCC ",
+  //   Description: (
+  //     <div className="">
+  //       Executed an MD5 collision attack using md5collgen to generate two
+  //       distinct binary files with identical hashes, demonstrating cryptographic
+  //       vulnerabilities. Analyzed the security risks of hash collisions in
+  //       digital authentication and malware verification.
+  //     </div>
+  //   ),
+  //   Link: "https://belanasaikiran.github.io/ComputerSecurity/Project2/",
+  //   type: "GitHub",
+  // },
 
   {
     Name: "Car Make & Model Detection using Transfer Learning",
