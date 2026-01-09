@@ -105,18 +105,18 @@ function Home() {
                               "I'm <span class='text-white  font-semibold'>Saikiran Belana</span><br />",
                             )
                             .pauseFor(50)
-                            .typeString("CS Graduate @UConn <br /> <br />")
+                            .typeString("CS Graduate @UConn <br />")
                             .pauseFor(50)
                             .typeString(
                               "For my next chapter, I aim to bridge the hardware-software gap by building end-to-end cloud applications integrated with AI. <br /> <br />",
                             )
                             .pauseFor(100)
                             .typeString(
-                              "Interests: Software Engineering in Hardware, Machine Learning, AI, and Cloud Computing",
+                              "Interests: Software Engineering in Hardware, Machine Learning, AI, and Cloud Computing <br />",
                             )
                             .pauseFor(50)
                             .typeString(
-                              "When I'm not coding, you can find me playing OverCooked 2<br />",
+                              "When I'm not coding, you can find me playing OverCooked 2 <br />",
                             )
                             .pauseFor(50)
                             .typeString(

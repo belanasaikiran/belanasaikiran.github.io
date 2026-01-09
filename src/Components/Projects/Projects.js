@@ -72,16 +72,16 @@ export default function Projects() {
 
           <p className="my-8 text-center md:text-lg">
             For more projects, visit my{" "}
-            <span className="text-uconn dark:text-darkAccent  font-semibold">
-              {" "}
+            <span
+              className={`${theme === "dark" ? "text-darkAccent" : "text-accent"} underline decoration-4 underline-offset-4 font-semibold`}
+            >
               <a
                 href="https://github.com/belanasaikiran"
-                className="underline"
+                className=""
                 target="blank"
               >
-                {" "}
-                GitHub{" "}
-              </a>{" "}
+                GitHub
+              </a>
             </span>{" "}
             profile.
           </p>
