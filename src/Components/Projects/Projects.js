@@ -21,7 +21,7 @@ export default function Projects() {
             </h1>
           </div>
 
-          <div className=" min-w-full">
+          <div className="min-w-full">
             <div className="flex flex-col md:flex-row md:flex-wrap  gap-4 justify-center pt-4 text-left md:text-center">
               {ProjectList.map((Project, index) => (
                 <div
@@ -48,9 +48,9 @@ export default function Projects() {
                       <a
                         href={Project.Link}
                         target="blank"
-                        className="text-[12px] md:hidden pt-2 dark:bg-darkAccent/80  md:bg-uconn/80 flex md:items-center md:justify-center md:-bottom-10 md:group-hover:bottom-0 md:opacity-0 md:group-hover:opacity-100  transition-all duration-300"
+                        className="text-[12px] md:hidden pt-2   md:bg-uconn/80 flex md:items-center md:justify-center md:-bottom-10 md:group-hover:bottom-0 md:opacity-0 md:group-hover:opacity-100  transition-all duration-300"
                       >
-                        <button className="bg-accent   font-semibold inline-flex  p-[4px] px-[5px] rounded-lg text-white md:group  md:group-hover:bg-darkAccent  md:group-hover:text-uconn transition-all duration-300 ease-in-out  ">
+                        <button className="bg-accent dark:bg-darkAccent/80   font-semibold inline-flex  p-[4px] px-[5px] rounded-lg text-white md:group  md:group-hover:bg-darkAccent  md:group-hover:text-uconn transition-all duration-300 ease-in-out  ">
                           <span>{Project.type} ↗</span>
                         </button>
                       </a>
@@ -69,6 +69,18 @@ export default function Projects() {
               ))}
             </div>
           </div>
+
+          <p className="my-8 text-center md:text-lg">
+            For more projects, visit my{" "}
+            <span className="text-uconn dark:text-darkAccent underline font-semibold">
+              {" "}
+              <a href="https://github.com/belanasaikiran" target="blank">
+                {" "}
+                GitHub{" "}
+              </a>{" "}
+            </span>{" "}
+            profile.
+          </p>
         </div>
       </div>
     </div>

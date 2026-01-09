@@ -29,6 +29,9 @@ import Cpp from "../../assets/Images/Skills/CPlusPlus.webp";
 import UdemyLogo from "../../assets/Images/certifications/Udemy.png";
 import CourseraLogo from "../../assets/Images/certifications/Coursera.png";
 
+const CodePathLogo =
+  "https://newprofit.org/wp-content/uploads/2024/09/CodePath-Logo-Circle.png";
+
 const NCL_logo =
   "https://www.competitionsciences.org/wp-content/uploads/2020/01/National-Cyber-League-Logo.png";
 
@@ -207,6 +210,22 @@ export const CloudDevOpsSkills = [
 
 export const Certificates = [
   {
+    Image: CodePathLogo,
+    Course: "Android Development",
+    DateOfCompletion: "Dec 2025",
+    CredentialID: "347812",
+    VerifyLink:
+      "https://drive.google.com/file/d/1V-TcjH2lZMpperS-7pCqMhloO1lBSqiA/view",
+  },
+  {
+    Image: CodePathLogo,
+    Course: "Technical Interview Prep(Advanced)",
+    DateOfCompletion: "Dec 2025",
+    CredentialID: "352244",
+    VerifyLink:
+      "https://drive.google.com/file/d/18ceUbF3P44ER3DAsgv5XUUw4reETpldG/view",
+  },
+  {
     Image: NCL_logo,
     Course: "NCL Spring 2025 Team Game",
     DateOfCompletion: "May 2025",
@@ -230,12 +249,12 @@ export const Certificates = [
     VerifyLink:
       "https://www.udemy.com/certificate/UC-18f9c634-dda4-4d81-bb0f-71907de16cd5/",
   },
-  {
-    Image: CourseraLogo,
-    Course: "Azure: Create a Virtual Machine and Deploy a Web Server",
-    DateOfCompletion: "December 2022",
-    CredentialID: " EQ86HGC9DYM2",
-    VerifyLink:
-      "https://www.coursera.org/account/accomplishments/verify/EQ86HGC9DYM2",
-  },
+  // {
+  //   Image: CourseraLogo,
+  //   Course: "Azure: Create a Virtual Machine and Deploy a Web Server",
+  //   DateOfCompletion: "December 2022",
+  //   CredentialID: " EQ86HGC9DYM2",
+  //   VerifyLink:
+  //     "https://www.coursera.org/account/accomplishments/verify/EQ86HGC9DYM2",
+  // },
 ];

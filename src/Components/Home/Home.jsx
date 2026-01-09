@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import Typewriter from "typewriter-effect";
 import Highlights from "./Highlights";
+import Journey from "./Journey";
 import { useTheme } from "../../context/ThemeContext";
 import { FaCamera, FaLink } from "react-icons/fa";
 const HomeBG =
@@ -28,7 +29,15 @@ function Home() {
     <div
       className={`rounded-tr-full rounded-bl-full dark:bg-leaf   dark:bg-blend-multiply`}
     >
-      <div className={`border-none grid lg:grid-cols-1 gap-3 `}>
+      <h1 className="text-center text-xl 2xl:text-3xl mb-4 ">
+        <span
+          className={`font-[Quantico]  ${theme === "dark" ? "bg-darkAccent text-black border border-darkBrownBG shadow-md" : "bg-accent text-white"}  px-6 py-2 rounded-tl-full rounded-br-full heading-font`}
+        >
+          Introducing@Internet
+        </span>
+      </h1>
+
+      <div className={`border-none grid lg:grid-cols-1 gap-3 mt-2 `}>
         <div className="lg:min-h-[40vh] 2xl:text-lg transition-all duration-500 ease-in-out col-span-3">
           <div
             className="2xl:text-4xl lg:text-xl md:text-xl lg:min-h-[40vh]  text-base flex justify-left items-start text-left font-[Quantico] rounded-2xl shadow-2xl drop-shadow-2xl bg-gray-800 bg-blend-multiply transition-all duration-500 ease-in-out"
@@ -43,7 +52,7 @@ function Home() {
                 <span
                   className={`${theme === "dark" ? "text-darkAccent" : "text-[#B2E7AE]"}`}
                 >
-                  [ Introducing@Internet ~ ]$ &nbsp;
+                  [ ~ ]$ &nbsp;
                 </span>
                 <span className="inline-flex">
                   <Typewriter
@@ -93,64 +102,26 @@ function Home() {
                         onInit={(typewriter) => {
                           typewriter
                             .typeString(
-                              "I'm <span class='text-white font-semibold'>Saikiran Belana</span><br />",
+                              "I'm <span class='text-white  font-semibold'>Saikiran Belana</span><br />",
                             )
                             .pauseFor(50)
-                            .typeString("- CS Grad Student @UConn <br />")
+                            .typeString("CS Graduate @UConn <br /> <br />")
                             .pauseFor(50)
                             .typeString(
-                              "- Research Technician at Goldenson Center, UConn<br />",
-                            )
-                            .pauseFor(50)
-                            .typeString(
-                              "- Student Developer at Campus Technology Services, UConn<br />",
+                              "For my next chapter, I aim to bridge the hardware-software gap by building end-to-end cloud applications integrated with AI. <br /> <br />",
                             )
                             .pauseFor(100)
                             .typeString(
-                              "- Interests: Software Engineering, Operating Systems, Systems Security & Low Level Programmings<br /> <br />",
+                              "Interests: Software Engineering in Hardware, Machine Learning, AI, and Cloud Computing",
                             )
                             .pauseFor(50)
                             .typeString(
-                              "- When I'm not coding, you can find me playing OverCooked 2<br />",
+                              "When I'm not coding, you can find me playing OverCooked 2<br />",
                             )
                             .pauseFor(50)
                             .typeString(
-                              "- In my free time, I do street photography.<br /><br />",
+                              "In my free time, I do street photography.<br /><br />",
                             )
-                            // .typeString(
-                            //   `&nbsp;  <span id="camera-icon-placeholder"></span> Check out my
-                            // <a class='underline bg-white text-black' href='https://unsplash.com/@belanasaikiran' target='_blank'>Unsplash ↗</a> <br /> `,
-                            // )
-                            // .callFunction(() => {
-                            //   const placeholder = document.getElementById(
-                            //     "camera-icon-placeholder",
-                            //   );
-                            //   if (placeholder) {
-                            //     const iconWrapper =
-                            //       document.createElement("span");
-                            //     iconWrapper.style.display = "inline-block";
-                            //     iconWrapper.style.verticalAlign = "middle";
-                            //     iconWrapper.style.color = "white";
-                            //     const root = ReactDOM.createRoot(iconWrapper);
-                            //     root.render(<FaCamera />);
-                            //     placeholder.parentNode.replaceChild(
-                            //       iconWrapper,
-                            //       placeholder,
-                            //     );
-                            //   }
-                            // })
-
-                            //   .typeString(
-                            //     `&nbsp;🔗 Let's connect:<br />
-                            // `,
-                            //   )
-
-                            // .typeString(
-                            //   `
-                            // <a href='https://linkedin.com/in/belanasaikiran' target='_blank' class='text-blue-400 underline'>  LinkedIn</a> |
-                            // <a href='https://github.com/belanasaikiran' target='_blank' class='text-gray-300 underline'>GitHub</a>
-                            // `,
-                            // )
 
                             // My Social Media Profiles
                             // &nbsp; -> for space
@@ -201,7 +172,8 @@ function Home() {
           </div>
         </div>
       </div>
-      <Highlights />
+      {/* <Highlights />*/}
+      <Journey />
     </div>
   );
 }

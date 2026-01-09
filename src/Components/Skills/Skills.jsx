@@ -1,8 +1,15 @@
 import { AllSkills, Certificates } from "./SkillsConfig";
 import { useTheme } from "../../context/ThemeContext";
+import { useState } from "react";
+import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 
 function Skills() {
   const { theme } = useTheme();
+  const [openAccordions, setOpenAccordions] = useState(false);
+
+  const toggleAccordion = (index) => {
+    setOpenAccordions((prev) => (prev[index] ? {} : { [index]: true }));
+  };
 
   return (
     <div id="skills" className="flex ">
@@ -67,42 +74,59 @@ function Skills() {
               Certifications
             </span>
           </h1>
-          <div className="dark:text-white grid grid-cols-1 lg:grid-cols-2 pb-16 gap-4 lg:mx-[5%] md:place-content-center  mx-2">
+          <div className="dark:text-white  pb-16 gap-4 lg:mx-[20%] md:place-content-center mx-2">
             {Certificates.map((Certificate, index) => (
               <div
                 key={index}
-                className={`dark:text-white grid  grid-cols-12 text-left border-b-4 border-rounded dark:border-darkAccent border-uconn gap-4 ${theme === "dark" ? "text-uconn border-darkAccent" : "text-uconn"}  py-4 transition duration-500 ease-in-out `}
+                className={`dark:text-white text-left border-b-2 border-rounded dark:border-darkAccent border-uconn  ${theme === "dark" ? "text-uconn border-darkAccent" : "text-uconn"}  py-2 transition duration-500 ease-in-out `}
               >
-                <div className="col-span-1">
-                  <img
-                    src={Certificate.Image}
-                    alt=""
-                    className="xl:min-w-20 xl:min-h-20 min-h-16 min-w-16"
-                  />
-                </div>
-                <div className="text-left col-span-11">
-                  <div className="flex flex-col content-center justify-around min-w-full gap-2">
-                    <h1 className="2xl:text-2xl text-lg ">
-                      {Certificate.Course}
-                    </h1>
-                    <p className="2xl:text-lg text-sm  ">
-                      Issued:{" "}
-                      <span className="">{Certificate.DateOfCompletion}</span>
-                    </p>
-                    <p className="text-sm ">
-                      Credential ID: {Certificate.CredentialID}
-                    </p>
-                    <a
-                      href={Certificate.VerifyLink}
-                      target="blank"
-                      className=""
-                    >
-                      <button
-                        className={`${theme === "dark" ? "bg-darkAccent text-black" : "bg-uconn "} text-white  rounded-md text-base p-1 px-4 py-2`}
+                <button
+                  onClick={() => toggleAccordion(index)}
+                  className="flex w-full justify-between items-center transition-all duration-300 ease-in-out"
+                >
+                  <div className="flex items-center gap-2">
+                    <img
+                      src={Certificate.Image}
+                      alt={Certificate.Course}
+                      className="xl:min-w-20 xl:min-h-20 min-h-16 min-w-16 w-10"
+                    />
+                    <span className="text-left">{Certificate.Course}</span>
+                  </div>
+                  {openAccordions[index] ? <FaAngleUp /> : <FaAngleDown />}
+                </button>
+
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-out ${openAccordions[index] ? "max-h-96 opacity-100 pt-2" : "max-h-0 opacity-0 pt-0"} ${theme === "dark" ? "border-darkAccent" : "border-gray-300"}`}
+                  aria-labelledby="accordion-collapse-heading-1"
+                >
+                  <div className="text-left col-span-11">
+                    <div className="flex content-between justify-between min-w-full gap-2">
+                      {/* <h1 className="2xl:text-xl text-lg ">
+                        {Certificate.Course}
+                      </h1>*/}
+                      <div>
+                        <p className="2xl:text-lg text-sm  ">
+                          Issued:{" "}
+                          <span className="">
+                            {Certificate.DateOfCompletion}
+                          </span>
+                        </p>
+                        <p className="text-sm ">
+                          Credential ID: {Certificate.CredentialID}
+                        </p>
+                      </div>
+                      <a
+                        href={Certificate.VerifyLink}
+                        target="blank"
+                        className=""
                       >
-                        Verify
-                      </button>
-                    </a>
+                        <button
+                          className={`${theme === "dark" ? "bg-darkAccent text-black" : "bg-uconn "} text-white  rounded-md text-base p-1 px-4 py-2`}
+                        >
+                          Verify
+                        </button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

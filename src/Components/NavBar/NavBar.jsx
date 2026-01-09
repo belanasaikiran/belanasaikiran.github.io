@@ -228,7 +228,7 @@ function NavBar() {
         onClose={() => setIsOpen(false)}
       >
         <p className={`my-2 ${theme === "dark" ? "text-white" : "text-black"}`}>
-          Do you use CURL ? <br />
+          Trust me, the below command is not virus <br />
         </p>
 
         <div
@@ -272,7 +272,7 @@ function NavBar() {
               theme === "dark" ? "text-gray-300" : "text-gray-700"
             }`}
           >
-            Nah... I'm lazy, I'll just open it.
+            I'm a non-techie, I'll view the resume.
           </p>
           <a
             href="https://github.com/belanasaikiran/belanasaikiran.github.io/blob/2025/src/Components/Resume/Resume-Saikiran-Belana.pdf"
