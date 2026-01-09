@@ -72,9 +72,13 @@ export default function Projects() {
 
           <p className="my-8 text-center md:text-lg">
             For more projects, visit my{" "}
-            <span className="text-uconn dark:text-darkAccent underline font-semibold">
+            <span className="text-uconn dark:text-darkAccent  font-semibold">
               {" "}
-              <a href="https://github.com/belanasaikiran" target="blank">
+              <a
+                href="https://github.com/belanasaikiran"
+                className="underline"
+                target="blank"
+              >
                 {" "}
                 GitHub{" "}
               </a>{" "}
