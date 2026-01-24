@@ -29,6 +29,9 @@ import Cpp from "../../assets/Images/Skills/CPlusPlus.webp";
 import UdemyLogo from "../../assets/Images/certifications/Udemy.png";
 import CourseraLogo from "../../assets/Images/certifications/Coursera.png";
 
+const AWSLogo =
+  "https://raw.githubusercontent.com/belanasaikiran/belanasaikiran.github.io/refs/heads/jan2026/src/assets/Images/certifications/aws.png";
+
 const CodePathLogo =
   "https://newprofit.org/wp-content/uploads/2024/09/CodePath-Logo-Circle.png";
 
@@ -209,6 +212,14 @@ export const CloudDevOpsSkills = [
 ];
 
 export const Certificates = [
+  {
+    Image: AWSLogo,
+    Course: "AWS Cloud Technical Essentials",
+    DateOfCompletion: "Jan 2026",
+    CredentialID: "06RAJX102HHH",
+    VerifyLink:
+      "https://www.coursera.org/account/accomplishments/verify/06RAJX102HHH",
+  },
   {
     Image: CodePathLogo,
     Course: "Android Development",
