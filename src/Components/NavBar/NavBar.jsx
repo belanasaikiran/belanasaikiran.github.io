@@ -161,7 +161,7 @@ function NavBar() {
 
           <div
             className={`${window.scrollY > 80 ? "" : roundedNavCSS} text-white ${theme === "dark" ? "bg-darkAccent text-black" : "bg-accent"}
-              lg:flex  lg:flex-row justify-self-center
+              lg:flex lg:flex-row justify-self-center
               content-between justify-center items-center transition-all ease-in-out duration-300 text-sm
               ${nav ? "flex flex-col absolute z-100 right-4 top-12 py-4 rounded-3xl" : "hidden"}
               ${window.scrollY > 80 ? `${theme === "dark" ? "bg-darkAccent" : "bg-accent"} rounded-br-[25px] text-xs ` : ""}
@@ -170,7 +170,7 @@ function NavBar() {
             {/* Toggle Light and Dark Modes */}
             <button
               onClick={toggleTheme}
-              className={`flex items-center justify-center ${theme === "dark" ? "hover:bg-darkAccent" : "hover:bg-[#0C2443b9]"} hover:text-white p-2 rounded-full ${window.scrollY > 80 ? "hidden" : ""}`}
+              className={`hidden lg:flex items-center justify-center ${theme === "dark" ? "hover:bg-darkAccent" : "hover:bg-[#0C2443b9]"} hover:text-white p-2 rounded-full ${window.scrollY > 80 ? "hidden" : ""}`}
               aria-label={
                 theme === "dark"
                   ? "Switch to light mode"
