@@ -81,7 +81,6 @@ function NavBar() {
         inline: "nearest",
         alignToTop: true,
       });
-      console.log("Position:", el.getBoundingClientRect().top);
       // set position to position - 100px
       el.scrollTo({
         top: el.getBoundingClientRect().top - 100,
