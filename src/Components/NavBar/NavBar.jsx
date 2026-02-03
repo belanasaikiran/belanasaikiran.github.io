@@ -12,10 +12,10 @@ const Image =
 const navLinks = [
   // Example for UCONN section:
   // { name: "UCONN", link: "#uconn" },
-  {
-    name: "Get CV",
-    link: "https://raw.githubusercontent.com/belanasaikiran/belanasaikiran/main/Resume-Saikiran-Belana.pdf",
-  },
+  // {
+  //   name: "Get CV",
+  //   link: "https://raw.githubusercontent.com/belanasaikiran/belanasaikiran/main/Resume-Saikiran-Belana.pdf",
+  // },
   { name: "Projects", link: "#projects" },
   { name: "Skills", link: "#skills" },
   { name: "Contact", link: "#contact" },
